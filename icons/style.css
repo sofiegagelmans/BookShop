@@ -1,0 +1,80 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-appstore {
+  width: 0.8603515625em;
+}
+
+.icon-mobile {
+  width: 0.6865234375em;
+}
+
+.icon-friendfeed {
+  width: 0.94921875em;
+}
+
+.icon-invoice {
+  width: 0.75em;
+}
+
+.icon-insurance {
+  width: 0.80078125em;
+}
+
+.icon-comment-alt {
+  width: 1.1787109375em;
+}
+
+.icon-down-micro {
+  width: 0.470703125em;
+}
+
+.icon-lifebuoy {
+  width: 0.884765625em;
+}
+
+.icon-pin {
+  width: 0.927734375em;
+}
+
+.icon-th-list {
+  width: 0.80078125em;
+}
+
+.icon-emo-displeased {
+  width: 0.8173828125em;
+}
+
+.icon-upload {
+  width: 0.927734375em;
+}
+
+.icon-crown-minus {
+  width: 0.8525390625em;
+}
+
+.icon-instagram-circled {
+  width: 0.9365234375em;
+}
+
+.icon-filter {
+  width: 0.78515625em;
+}
+
+.icon-tow-truck {
+  width: 1.951171875em;
+}
