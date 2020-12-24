@@ -7,4 +7,194 @@
 
 body {
   font-family: "Inter", sans-serif;
+  font-weight: 600;
+  height: 100%;
+}
+// .main {
+//   //   height: 100%;
+//   overflow: hidden;
+//   min-height: 100vh;
+// }
+
+header {
+  background-color: red;
+  //   position: fixed;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  background-color: yellow;
+  align-items: stretch;
+  height: 100%;
+
+  aside {
+    padding: 10px;
+    width: 250px;
+    // position: fixed;
+    span {
+      padding-bottom: 30px;
+      text-transform: uppercase;
+    }
+    ul {
+      margin-top: 80px;
+      li {
+        margin: 15px 0px;
+        a {
+          text-decoration: none;
+          color: black;
+          text-transform: uppercase;
+
+          &:hover {
+            color: rgba($color: #000000, $alpha: 0.7);
+            text-shadow: black;
+          }
+        }
+        &:last-child {
+          margin-top: 70px;
+        }
+      }
+    }
+  }
+  section {
+    width: 100%;
+
+    .section-book-header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      z-index: 10;
+
+      ul {
+        padding-left: 10px;
+        .sorted-by {
+          position: relative;
+          width: 130px;
+          padding: 5px;
+          text-transform: uppercase;
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              color: rgba($color: #000000, $alpha: 0.7);
+              text-shadow: black;
+            }
+          }
+          .sorted-items {
+            background-color: #fff;
+            display: none;
+            width: 140px;
+            position: absolute;
+            top: 0;
+            right: -140px;
+            z-index: 100;
+            li {
+              padding: 5px;
+            }
+          }
+          &:hover {
+            .sorted-items {
+              display: block;
+            }
+          }
+        }
+      }
+      .change-view {
+        padding-right: 20px;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        &:hover {
+          color: rgba($color: #000000, $alpha: 0.7);
+          text-shadow: black;
+        }
+      }
+    }
+    .section-book-body {
+      //   background-color: red;
+      @include make-col(2, 30px);
+      padding: 0 15px;
+      position: absolute;
+
+      .block {
+        max-width: 400px;
+
+        &-body {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+          padding: 30px 30px;
+          background: rgb(236, 236, 244);
+          background: radial-gradient(
+            circle,
+            rgba(236, 236, 244, 0.7) 3%,
+            rgba(172, 172, 172, 0.7) 20%,
+            rgba(109, 113, 113, 0.7) 100%
+          );
+          &-a {
+            position: relative;
+
+            .add-to-cart {
+              display: none;
+              transition: 0.7s linear;
+            }
+
+            a {
+              transition: 0.6s linear;
+              img {
+                max-width: 220px;
+                width: 95%;
+                box-shadow: 7px 5px 31px black;
+              }
+            }
+            &:hover {
+              .add-to-cart {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba($color: rgb(129, 123, 123), $alpha: 0.5);
+                max-width: 209px;
+                width: 100%;
+                max-height: 327px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  color: white;
+                  padding: 20px;
+                  border-radius: 3px;
+                  background-color: rgba($color: rgb(212, 116, 5), $alpha: 0.7);
+
+                  &:hover {
+                    background-color: rgba($color: rgb(212, 116, 5), $alpha: 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-footer {
+          display: flex;
+          text-transform: capitalize;
+          padding: 5px;
+          .book-title {
+            margin-right: 15px;
+          }
+          .book-stock {
+            margin-left: auto;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
 }
