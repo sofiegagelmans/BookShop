@@ -3,10 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Active Box</title>
-    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Bookshop</title>
   </head>
   <body>
-    <script src="./icons/svgxuse.js"></script>
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <span class="logo">Bookshop</span>
+
+          <input
+            class="dropshadow search-collection toolbar"
+            type="text"
+            placeholder="search for books"
+            name="search"
+          />
+          <a href="#" class="search-button">
+            <svg class="icon icon-plus">
+              <use xlink:href="./icomoon/symbol-defs.svg#icon-plus"></use>
+            </svg>
+          </a>
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Cart(0)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="categorie"></aside>
+      <section class="img-books"></section>
+    </main>
   </body>
 </html>
