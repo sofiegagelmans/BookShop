@@ -35,7 +35,7 @@ header {
     }
     .search-collection {
       width: 500px;
-      height: 28px;
+      height: 33px;
       font-size: 15px;
       font-family: "Inter", sans-serif;
       text-align: center;
@@ -154,7 +154,7 @@ main {
       }
     }
     .section-book-body {
-      background-color: orange;
+      background-color: lightgrey;
       @include make-col(2, 20px);
       position: absolute;
       padding: 0 15px;
