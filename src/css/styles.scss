@@ -59,7 +59,7 @@ main {
   section {
     width: 100%;
 
-    .section-book-header {
+    .section-header {
       background-color: #fff;
       display: flex;
       justify-content: space-between;
@@ -69,7 +69,7 @@ main {
 
       ul {
         padding-left: 10px;
-        .sorted-by {
+        .sort {
           position: relative;
           width: 130px;
           padding: 5px;
@@ -82,7 +82,7 @@ main {
               text-shadow: black;
             }
           }
-          .sorted-items {
+          .sort-items {
             background-color: #fff;
             display: none;
             width: 140px;
@@ -95,7 +95,7 @@ main {
             }
           }
           &:hover {
-            .sorted-items {
+            .sort-items {
               display: block;
             }
           }
@@ -113,13 +113,14 @@ main {
       }
     }
     .section-book-body {
-      //   background-color: red;
+      // background-color: red;
       @include make-col(2, 30px);
       padding: 0 15px;
       position: absolute;
 
       .block {
         max-width: 400px;
+        background-color: #fff;
 
         &-body {
           position: relative;
@@ -137,7 +138,6 @@ main {
           );
           &-a {
             position: relative;
-
             .add-to-cart {
               display: none;
               transition: 0.7s linear;
