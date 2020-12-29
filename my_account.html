@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account</title>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <span class="brand-name">Bookshop</span>
+          <input
+            class="search-collection"
+            type="text"
+            placeholder="Search for Books"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Search for Books'"
+            name="search"
+          />
+          <!-- <a href="#" class="search-button">
+              <svg class="icon icon-plus">
+                <use xlink:href="./icomoon/symbol-defs.svg#icon-plus"></use>
+              </svg>
+            </a> -->
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Cart(0)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="aside-category-list">
+        <span>My Account</span>
+        <ul>
+          <li><a href="#">Order History</a></li>
+          <li><a href="#">Detail Information</a></li>
+        </ul>
+      </aside>
+      <section class="account">
+        <h2 class="form_h2">Detail Information</h2>
+
+        <div class="my_account_form">
+          <form action="/change.php" class="form">
+            <div class="col_fillin_form">
+              <div class="col1_form">
+                <input
+                  class="my_account_input"
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="First name"
+                />
+                <label class="my_accaunt_label" for="fname">First Name</label>
+
+                <input
+                  class="my_account_input"
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Last name"
+                />
+                <label class="my_accaunt_label" for="lname">Last Name</label>
+
+                <input
+                  class="my_account_input"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                />
+                <label class="my_accaunt_label" for="lname">Password</label>
+              </div>
+
+              <div class="col2_form">
+                <input
+                  class="my_account_input"
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Address"
+                />
+                <label class="my_accaunt_label" for="fname">Adress</label>
+
+                <input
+                  class="my_account_input"
+                  type="text"
+                  id="postal code"
+                  name="postel code"
+                  placeholder="Postal code"
+                />
+                <label class="my_accaunt_label" for="lname">Postal code</label>
+
+                <input
+                  class="my_account_input"
+                  type="tel"
+                  id="phone number"
+                  name="phone number"
+                  placeholder="Phone number"
+                />
+                <label class="my_accaunt_label" for="lname">phone number</label>
+              </div>
+            </div>
+            <input class="btn submit" type="submit" value="Submit" />
+            <input class="btn reset" type="reset" value="Cancel" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
