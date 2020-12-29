@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./dist/style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
     <title>Bookshop</title>
   </head>
   <body>
@@ -11,7 +11,14 @@
       <div class="container">
         <nav class="nav">
           <span class="brand-name">Bookshop</span>
-          <input class="search-collection" type="text" placeholder="Search for Books" name="search"/>
+          <input
+            class="search-collection"
+            type="text"
+            placeholder="Search for Books"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Search for Books'"
+            name="search"
+          />
           <!-- <a href="#" class="search-button">
             <svg class="icon icon-plus">
               <use xlink:href="./icomoon/symbol-defs.svg#icon-plus"></use>
@@ -58,7 +65,7 @@
             <div class="block-body">
               <div class="block-body-a">
                 <a class="#" href="">
-                  <img src="images/21.jpg" alt="bookcover">
+                  <img src="images/21.jpg" alt="bookcover" />
                 </a>
                 <div class="add-to-cart">
                   <a href="#">Add To Cart</a>
@@ -66,7 +73,9 @@
               </div>
             </div>
             <div class="block-footer">
-              <div class="book-title">Two or Three Things I know about Provo</div>
+              <div class="book-title">
+                Two or Three Things I know about Provo
+              </div>
               <div class="book-price">€20</div>
               <div class="book-stock">Sold Out</div>
             </div>
@@ -75,7 +84,8 @@
             <div class="block-body">
               <div class="block-body-a">
                 <a class="#" href="">
-                  <img src="images/55.jpg" alt="bookcover">                </a>
+                  <img src="images/55.jpg" alt="bookcover" />
+                </a>
                 <div class="add-to-cart">
                   <a href="#">Add To Cart</a>
                 </div>
@@ -91,7 +101,7 @@
             <div class="block-body">
               <div class="block-body-a">
                 <a class="#" href="">
-                  <img src="images/4.jpg" alt="bookcover">                
+                  <img src="images/4.jpg" alt="bookcover" />
                 </a>
                 <div class="add-to-cart">
                   <a href="#">Add To Cart</a>
@@ -108,7 +118,7 @@
             <div class="block-body">
               <div class="block-body-a">
                 <a class="#" href="">
-                  <img src="images/48.jpg" alt="bookcover">
+                  <img src="images/48.jpg" alt="bookcover" />
                 </a>
                 <div class="add-to-cart">
                   <a href="#">Add To Cart</a>
@@ -125,7 +135,7 @@
             <div class="block-body">
               <div class="block-body-a">
                 <a class="#" href="">
-                  <img src="images/1.jpg" alt="bookcover">                
+                  <img src="images/1.jpg" alt="bookcover" />
                 </a>
                 <div class="add-to-cart">
                   <a href="#">Add To Cart</a>
@@ -142,7 +152,7 @@
             <div class="block-body">
               <div class="block-body-a">
                 <a class="#" href="">
-                  <img src="images/50.jpg" alt="bookcover">                
+                  <img src="images/50.jpg" alt="bookcover" />
                 </a>
                 <div class="add-to-cart">
                   <a href="#">Add To Cart</a>
@@ -158,5 +168,6 @@
         </div>
       </section>
     </main>
+    <!-- <footer></footer> -->
   </body>
 </html>
