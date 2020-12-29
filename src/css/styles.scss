@@ -69,14 +69,12 @@ header {
 
 main {
   display: flex;
-  background-color: yellow;
   align-items: stretch;
   height: 100%;
 
   aside {
     padding: 10px;
     width: 300px;
-    background-color: lightblue;
     // position: fixed;
     span {
       text-transform: uppercase;
@@ -127,9 +125,8 @@ main {
             position: absolute;
             line-height: 20px;
             background-color: #fff;
-            top: 0;
-            left: 120px;
             padding: 10px;
+            left: 120px;
             z-index: 2;
             li {
               padding: 5px;
@@ -154,7 +151,6 @@ main {
       }
     }
     .section-book-body {
-      background-color: lightgrey;
       @include make-col(2, 20px);
       position: absolute;
       padding: 0 15px;
@@ -164,6 +160,7 @@ main {
         font-family: "Inter", sans-serif;
         font-size: 14px;
         background-color: #fff;
+
         &-body {
           position: relative;
           display: flex;
@@ -207,7 +204,7 @@ main {
                   padding: 12px 20px;
                   &:hover {
                     background-color: #00ff00;
-                    transition: background-color 0.5s ease;
+                    transition: background-color 0.8s ease;
                   }
                 }
               }
@@ -217,16 +214,13 @@ main {
         &-footer {
           display: flex;
           text-transform: capitalize;
-          padding: 5px;
+          margin-top: 15px;
           .book-title {
-            margin-top: 5px;
           }
           .book-price {
-            margin-top: 5px;
-            margin-left: 50px;
+            margin-left: 55px;
           }
           .book-stock {
-            margin-top: 5px;
             margin-left: auto;
             text-transform: uppercase;
           }
