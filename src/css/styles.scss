@@ -165,7 +165,6 @@ main {
         max-width: 400px;
         font-family: "Inter", sans-serif;
         font-size: 14px;
-        background-color: #fff;
         &-body {
           height: 380px;
           position: relative;
@@ -183,7 +182,7 @@ main {
               transition: 0.5s linear;
               img {
                 width: 100%;
-                max-width: 200px;
+                max-width: 220px;
                 box-shadow: 10px 10px 20px 0px #c8c8c8;
               }
             }
@@ -219,7 +218,8 @@ main {
         &-footer {
           display: flex;
           text-transform: capitalize;
-          margin-top: 10px;
+          margin-top: 17px;
+          margin-bottom: 10px;
           .book-title {
           }
           .book-price {
