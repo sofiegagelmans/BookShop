@@ -13,7 +13,7 @@ body {
 
 header {
   // position: fixed;
-  // background-color: red;
+  // background-color: lightblue;
   width: 100%;
   min-height: 220px;
   padding: 12px;
@@ -45,6 +45,7 @@ header {
       margin-left: 85px;
     }
     .search-button {
+      background-color: red;
     }
     ul {
       display: flex;
@@ -160,7 +161,7 @@ main {
         font-size: 14px;
         background-color: #fff;
         &-body {
-          height: 350px;
+          height: 380px;
           position: relative;
           display: flex;
           justify-content: center;
@@ -236,7 +237,7 @@ main {
   text-transform: uppercase;
 }
 .my_account_form {
-  margin: 25px 0px 25px;
+  margin: 22px 0px 25px;
   .form {
     .col_fillin_form {
       display: flex;
@@ -264,7 +265,7 @@ main {
         font-family: "Inter", sans-serif;
         text-transform: capitalize;
         text-decoration: none;
-        color: black;
+        color: #000;
         padding-right: 5px;
         margin-bottom: 5px;
       }
@@ -295,7 +296,7 @@ main {
     .submit {
       background-color: #00ff00;
       margin-right: 20px;
-      margin-bottom: 34px;
+      margin-bottom: 37px;
     }
   }
 }
@@ -309,7 +310,7 @@ footer {
   h3 {
     font-size: 16px;
     text-transform: uppercase;
-    color: black;
+    color: #000;
     margin-bottom: 20px;
   }
   p {
@@ -320,9 +321,11 @@ footer {
 }
 
 // ----- Order History ----- //
+
 .order_history_h2 {
   text-transform: uppercase;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .order_history {
@@ -330,7 +333,7 @@ footer {
   display: flex;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 40px 0;
+  margin: 40px 10px;
   @include make-col(2, 70px);
 
   .order_history_block {
@@ -356,6 +359,28 @@ footer {
       }
       .data_col1 {
         margin-right: 25px;
+      }
+    }
+  }
+}
+
+// ----- Detail Book ----- //
+
+.detail-img-cover {
+  display: flex;
+  .detail-book {
+    .detail-book-detail {
+      .detail-book-img {
+        a {
+          img {
+          }
+        }
+        ul {
+          li {
+            a {
+            }
+          }
+        }
       }
     }
   }
