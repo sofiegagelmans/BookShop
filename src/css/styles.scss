@@ -214,16 +214,13 @@ main {
         &-footer {
           display: flex;
           text-transform: capitalize;
-          padding: 5px;
+          margin-top: 10px;
           .book-title {
-            margin-top: 5px;
           }
           .book-price {
-            margin-top: 5px;
             margin-left: 50px;
           }
           .book-stock {
-            margin-top: 5px;
             margin-left: auto;
             text-transform: uppercase;
           }
@@ -233,6 +230,8 @@ main {
   }
 }
 
+// ---- MY ACOUNT MAIN ----- //
+
 .form_h2 {
   margin-top: 10px;
   margin-left: 10px;
@@ -241,10 +240,7 @@ main {
 .my_account_form {
   margin: 25px 0px 25px;
   .form {
-    // display: flex;
-
     .col_fillin_form {
-      // @include make-col(2, 15px);
       display: flex;
 
       .col1_form {
@@ -322,5 +318,49 @@ footer {
     font-size: 14px;
     line-height: 20px;
     margin-right: 20px;
+  }
+}
+
+// ----- Order History ----- //
+.order_history_h2 {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.order_history {
+  display: flex;
+  text-transform: uppercase;
+  margin: 50px 0 0 0px;
+  font-size: 14px;
+  max-width: 80%;
+  width: 100%;
+  @include make-col(2, 70px);
+
+  .order_history_block {
+    display: flex;
+
+    // margin-right: 80px;
+    .order_history_block_img {
+      margin: 0 25px;
+      img {
+        width: 100px;
+        height: 150px;
+        box-shadow: 5px 0 10px grey;
+      }
+    }
+    .order_history_block_data {
+      display: flex;
+
+      h5 {
+        padding: 5px;
+        padding-left: 0;
+      }
+      p {
+        padding-bottom: 15px;
+      }
+      .data_col1 {
+        margin-right: 30px;
+      }
+    }
   }
 }
