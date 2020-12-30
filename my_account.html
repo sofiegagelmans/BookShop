@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Account</title>
-    <link rel="stylesheet" href="./dist/style.css"/>
+    <link rel="stylesheet" href="./dist/style.css" />
   </head>
   <body>
     <header>
@@ -19,11 +19,11 @@
             onblur="this.placeholder = 'Search for Books'"
             name="search"
           />
-          <!-- <a href="#" class="search-button">
-              <svg class="icon icon-plus">
-                <use xlink:href="./icomoon/symbol-defs.svg#icon-plus"></use>
-              </svg>
-            </a> -->
+          <a href="#" class="search-button">
+            <svg class="icon icon-search">
+              <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+            </svg>
+          </a>
           <ul>
             <li><a href="#">Account</a></li>
             <li><a href="#">Cart(0)</a></li>
@@ -100,8 +100,8 @@
                 <label class="my_account_label" for="lname">Phone Number</label>
               </div>
             </div>
-            <input class="btn submit" type="submit" value="Submit"/>
-            <input class="btn reset" type="reset" value="Cancel"/>
+            <input class="btn submit" type="submit" value="Submit" />
+            <input class="btn reset" type="reset" value="Cancel" />
           </form>
         </div>
       </section>
@@ -133,5 +133,6 @@
         </p>
       </div>
     </footer>
+    <script src="./icons/svgxuse.js"></script>
   </body>
 </html>
