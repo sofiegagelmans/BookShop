@@ -212,6 +212,18 @@ main {
         &-footer {
           display: flex;
           text-transform: capitalize;
+<<<<<<< HEAD
+          padding: 5px;
+          .book-title {
+            margin-top: 5px;
+          }
+          .book-price {
+            margin-top: 5px;
+            margin-left: 50px;
+          }
+          .book-stock {
+            margin-top: 5px;
+=======
           margin-top: 10px;
           .book-title {
           }
@@ -219,6 +231,7 @@ main {
             margin-left: 50px;
           }
           .book-stock {
+>>>>>>> 202f3e87ad84f24be024356d6f2cec8f3e411443
             margin-left: auto;
             text-transform: uppercase;
           }
@@ -297,5 +310,23 @@ main {
       background-color: #00ff00;
       margin-right: 20px;
     }
+  }
+}
+
+// ------ FOOTER ------//
+
+footer {
+  display: flex;
+  margin-top: 50px;
+  box-shadow: 0 5px 10px;
+  padding: 15px;
+  h3 {
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 14px;
+    margin-right: 20px;
   }
 }
