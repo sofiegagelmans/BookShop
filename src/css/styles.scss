@@ -302,7 +302,7 @@ main {
     .submit {
       background-color: #00ff00;
       margin-right: 20px;
-      margin-bottom: 37px;
+      margin-bottom: 48px;
     }
   }
 }
@@ -341,10 +341,9 @@ footer {
   text-transform: uppercase;
   margin: 40px 10px;
   @include make-col(2, 70px);
-
   .order_history_block {
     display: flex;
-    margin-bottom: 28px;
+    margin-bottom: 34px;
     .order_history_block_img {
       img {
         width: 93px;
@@ -354,7 +353,6 @@ footer {
     }
     .order_history_block_data {
       display: flex;
-
       h5 {
         line-height: 25px;
         padding-left: 25px;
