@@ -375,10 +375,12 @@ footer {
 .detail-img-cover {
   display: flex;
   .detail-book {
-    .detail-book-detail {
-      .detail-book-img {
+    .detail-book-block {
+      .detail-bookblock-img {
         a {
           img {
+            width: 500px;
+            height: 700px;
           }
         }
         ul {
