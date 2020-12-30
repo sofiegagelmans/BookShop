@@ -1,57 +1,50 @@
 @import "./base/reset";
 @import "./base/fonts";
-@import "./base/variables";
 @import "./base/mixins";
-
-// import icons
+@import "./base/variables";
 @import "../../icons/style.css";
 
 body {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  height: 100%;
+  font-size: 16px;
+  color: #000;
 }
 
 header {
   // position: fixed;
   // background-color: lightblue;
   width: 100%;
-  min-height: 220px;
+  height: 220px;
   padding: 12px;
   nav {
     display: flex;
     justify-content: space-between;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
     text-transform: uppercase;
-    color: #000;
     .brand-name {
-      display: flex;
       margin-right: 80px;
     }
     .search-collection {
       width: 500px;
-      height: 33px;
-      font-size: 16px;
-      font-family: "Inter", sans-serif;
+      height: 35px;
       text-align: center;
-      text-transform: uppercase;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
       text-decoration: none;
-      background-color: #fff;
+      text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 20px;
       border: none;
       outline: none;
+      margin-left: 90px;
       padding: 5px;
-      margin-left: 85px;
     }
     .search-button {
       position: absolute;
       text-align: center;
       font-size: 20px;
-      padding: 5px;
-      padding-top: 6px;
       margin-left: 905px;
+      padding: 7px;
     }
     ul {
       display: flex;
@@ -60,8 +53,8 @@ header {
       li {
         display: inline;
         a {
-          color: #000;
           text-decoration: none;
+          color: #000;
           margin-left: 60px;
         }
       }
@@ -71,29 +64,27 @@ header {
 
 main {
   display: flex;
-
   aside {
-    padding: 10px;
     width: 300px;
-
+    padding: 10px;
+    margin-left: 3px;
     span {
       text-transform: uppercase;
-      margin-left: 3px;
     }
     ul {
       margin-top: 40px;
       li {
-        margin: 20px 3px;
+        margin: 20px 0;
         a {
-          text-decoration: none;
           text-transform: uppercase;
+          text-decoration: none;
           color: black;
 
           &:hover {
             color: #cccccc;
           }
         }
-        .show_all {
+        .all-items {
           display: block;
           margin-top: 40px;
         }
@@ -111,7 +102,7 @@ main {
       ul {
         padding-top: 5px;
         padding-left: 10px;
-        .sort {
+        .sort-by {
           position: relative;
           text-transform: uppercase;
           padding: 5px;
@@ -128,11 +119,11 @@ main {
             position: absolute;
             line-height: 20px;
             background-color: #fff;
-            padding-top: 0px;
-            padding-left: 15px;
-            padding-bottom: 15px;
             top: 0;
             left: 120px;
+            padding-top: 0;
+            padding-left: 15px;
+            padding-bottom: 15px;
             z-index: 2;
             li {
               padding: 5px;
@@ -145,7 +136,7 @@ main {
           }
         }
       }
-      .item-amount {
+      .amount-items {
         text-transform: uppercase;
         text-decoration: none;
         color: #cccccc;
@@ -156,14 +147,12 @@ main {
         }
       }
     }
-    .section-book-body {
+    .section-body {
       @include make-col(2, 20px);
       position: absolute;
       padding: 0 15px;
-
-      .block {
+      .book-info {
         max-width: 400px;
-        font-family: "Inter", sans-serif;
         font-size: 14px;
         &-body {
           height: 380px;
@@ -173,9 +162,9 @@ main {
           align-items: center;
           background-color: #f5f5f5;
           padding: 30px;
-          &-a {
+          &-text {
             position: relative;
-            .add-to-cart {
+            .cart {
               display: none;
             }
             a {
@@ -187,23 +176,21 @@ main {
               }
             }
             &:hover {
-              .add-to-cart {
+              .cart {
+                width: 100%;
+                height: 100%;
+                position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                position: absolute;
-                width: 100%;
-                height: 100%;
                 top: 0;
                 padding-top: 8px;
                 a {
-                  font-size: 16px;
-                  font-family: "Inter", sans-serif;
                   text-decoration: none;
                   text-transform: uppercase;
+                  border-radius: 20px;
                   background-color: #fff;
                   color: #000;
-                  border-radius: 20px;
                   margin-bottom: 10px;
                   padding: 12px 20px;
                   &:hover {
@@ -217,11 +204,8 @@ main {
         }
         &-footer {
           display: flex;
-          text-transform: capitalize;
-          margin-top: 12px;
-          margin-bottom: 8px;
-          .book-title {
-          }
+          margin-top: 15px;
+          margin-bottom: 5px;
           .book-price {
             margin-left: 50px;
           }
@@ -235,59 +219,173 @@ main {
   }
 }
 
-// ---- MY ACOUNT MAIN ----- //
+// ---- DETAIL BOOK ---- //
 
-.form_h2 {
-  margin-top: 10px;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-.my_account_form {
-  margin: 22px 0px 25px;
-  .form {
-    .col_fillin_form {
-      display: flex;
-
-      .col1_form {
+.main {
+  .detail-book {
+    .detail-book-cover {
+      padding-left: 15px;
+      .detail-book-header {
+        width: 820px;
+        height: 520px;
         display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        width: 100%;
-        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+        a {
+          img {
+            width: 280px;
+            height: 400px;
+            box-shadow: 0px 5px 20px 0px #c8c8c8;
+          }
+        }
       }
-      .col2_form {
+      .detail-book-button {
         display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        width: 100%;
-        padding: 10px;
+        justify-content: space-between;
+        padding-top: 15px;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: black;
+        }
       }
-      .my_account_input {
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #cccccc;
-        height: 33px;
-        font-size: 16px;
-        font-family: "Inter", sans-serif;
-        text-transform: capitalize;
-        text-decoration: none;
-        color: #000;
-        padding-right: 5px;
-        margin-bottom: 5px;
+    }
+  }
+  .detail-text {
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 15px;
+    }
+  }
+  .detail-button {
+    display: flex;
+    justify-content: space-between;
+    .detail-cart {
+      width: 150px;
+      height: 33px;
+      text-align: center;
+      box-shadow: 0px 5px 20px 0px #c8c8c8;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      margin-top: 5px;
+      margin-left: 15px;
+      padding-top: 8px;
+      &:hover {
+        background-color: #00ff00;
+        transition: background-color 0.8s ease;
       }
-      .my_account_label {
-        color: #cccccc;
+      a {
         font-size: 14px;
         font-family: "Inter", sans-serif;
         text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+  .detail-return {
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    padding-top: 90px;
+    padding-left: 452px;
+  }
+}
+
+// ---- ORDER HISTORY ---- //
+
+.order-text {
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.order {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 40px 10px;
+  @include make-col(2, 70px);
+  .order-body {
+    display: flex;
+    margin-bottom: 34px;
+    .order-body-book {
+      img {
+        width: 93px;
+        height: 130px;
+        box-shadow: 0px 5px 20px 0px #c8c8c8;
+      }
+    }
+    .order-body-text {
+      display: flex;
+      h5 {
+        line-height: 25px;
+        padding-left: 25px;
+      }
+      p {
+        padding-left: 25px;
+        padding-bottom: 20px;
+      }
+      .text-col-first {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+// ---- USER INFORMATION ---- //
+
+.form-user {
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.form-account {
+  margin: 22px 0px 25px;
+  .form {
+    .form-empty {
+      display: flex;
+      .form-col-first {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+      .form-col-second {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+      .account-input {
+        height: 33px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #cccccc;
+        padding-right: 5px;
+        margin-bottom: 5px;
+      }
+      .account-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #cccccc;
         margin-bottom: 30px;
       }
     }
     .btn {
       width: 100%;
       max-width: 100px;
+      font-family: "Inter", serif;
       font-size: 16px;
-      font-family: "Inter", sans-serif;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 30px;
@@ -301,13 +399,13 @@ main {
     }
     .submit {
       background-color: #00ff00;
-      margin-right: 20px;
       margin-bottom: 48px;
+      margin-right: 20px;
     }
   }
 }
 
-// ------ FOOTER ------//
+// ---- FOOTER ---- //
 
 footer {
   display: flex;
@@ -323,131 +421,5 @@ footer {
     font-size: 14px;
     line-height: 20px;
     margin-right: 20px;
-  }
-}
-
-// ----- Order History ----- //
-
-.order_history_h2 {
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.order_history {
-  width: 100%;
-  display: flex;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 40px 10px;
-  @include make-col(2, 70px);
-  .order_history_block {
-    display: flex;
-    margin-bottom: 34px;
-    .order_history_block_img {
-      img {
-        width: 93px;
-        height: 130px;
-        box-shadow: 0px 5px 20px 0px #c8c8c8;
-      }
-    }
-    .order_history_block_data {
-      display: flex;
-      h5 {
-        line-height: 25px;
-        padding-left: 25px;
-      }
-      p {
-        padding-left: 25px;
-        padding-bottom: 20px;
-      }
-      .data_col1 {
-        margin-right: 25px;
-      }
-    }
-  }
-}
-
-// ----- Detail Book ----- //
-
-.detail-img-cover {
-  display: flex;
-  .detail-book {
-    .detail-book-block {
-      padding-left: 15px;
-      .detail-bookblock-img {
-        width: 820px;
-        height: 520px;
-        background-color: #f5f5f5;
-        a {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 30px;
-          padding-top: 55px;
-          img {
-            width: 280px;
-            height: 400px;
-            box-shadow: 0px 5px 20px 0px #c8c8c8;
-          }
-        }
-        ul {
-          li {
-            a {
-              display: inline;
-              justify-content: center;
-              align-items: center;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: #000;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.detail-text {
-  p {
-    font-size: 14px;
-    line-height: 18px;
-    padding: 0 15px;
-  }
-}
-.detail-add-to-cart {
-  width: 150px;
-  height: 33px;
-  text-align: center;
-  box-shadow: 0px 5px 20px 0px #c8c8c8;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  margin-top: 5px;
-  margin-left: 15px;
-  padding-top: 8px;
-  &:hover {
-    background-color: #00ff00;
-    transition: background-color 0.8s ease;
-  }
-  a {
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-  }
-}
-ul {
-  .back {
-    a {
-      display: flex;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #000;
-      padding-top: 125px;
-      padding-left: 452px;
-    }
   }
 }

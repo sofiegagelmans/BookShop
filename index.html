@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
     <title>Bookshop</title>
   </head>
+
   <body>
     <header>
       <div class="container">
         <nav class="nav">
           <span class="brand-name">Bookshop</span>
-          <input
-            class="search-collection"
-            type="text"
-            placeholder="Search for Books"
-            onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Search for Books'"
-            name="search"
-          />
+          <input class="search-collection" type="text" name="search" placeholder="Search for Books">
           <a href="#" class="search-button">
-            <svg class="icon icon-search-2">
-              <use xlink:href="./icons/symbol-defs.svg#icon-search-2"></use>
+            <svg class="icon icon-search">
+              <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
             </svg>
           </a>
           <ul>
@@ -33,7 +27,7 @@
     </header>
 
     <main class="main">
-      <aside class="aside-category-list">
+      <aside>
         <span>Categories</span>
         <ul>
           <li><a href="#">Art</a></li>
@@ -42,13 +36,13 @@
           <li><a href="#">Architecture</a></li>
           <li><a href="#">Fashion</a></li>
           <li><a href="#">Lifestyle</a></li>
-          <li><a class="show_all" href="#">Show All</a></li>
+          <li><a href="#" class="all-items">Show All</a></li>
         </ul>
       </aside>
-      <section class="img-cover">
+      <section>
         <div class="section-header">
           <ul>
-            <li class="sort">
+            <li class="sort-by">
               <a href="#">Sort By ---></a>
               <ul class="sort-items">
                 <li><a href="#">Name</a></li>
@@ -58,21 +52,21 @@
               </ul>
             </li>
           </ul>
-          <span href="#" class="item-amount">(12 items)</span>
+          <span href="#" class="amount-items">(12 items)</span>
         </div>
-        <div class="section-book-body">
-          <div class="block">
-            <div class="block-body">
-              <div class="block-body-a">
+        <div class="section-body">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
                 <a class="#" href="">
                   <img src="images/21.jpg" alt="bookcover" />
                 </a>
-                <div class="add-to-cart">
+                <div class="cart">
                   <a href="#">Add To Cart</a>
                 </div>
               </div>
             </div>
-            <div class="block-footer">
+            <div class="book-info-footer">
               <div class="book-title">
                 Two or Three Things I know about Provo
               </div>
@@ -80,86 +74,86 @@
               <div class="book-stock">Sold Out</div>
             </div>
           </div>
-          <div class="block">
-            <div class="block-body">
-              <div class="block-body-a">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
                 <a class="#" href="">
                   <img src="images/55.jpg" alt="bookcover" />
                 </a>
-                <div class="add-to-cart">
+                <div class="cart">
                   <a href="#">Add To Cart</a>
                 </div>
               </div>
             </div>
-            <div class="block-footer">
+            <div class="book-info-footer">
               <div class="book-title">The Divided Self</div>
               <div class="book-price">€15</div>
               <div class="book-stock">In Stock</div>
             </div>
           </div>
-          <div class="block">
-            <div class="block-body">
-              <div class="block-body-a">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
                 <a class="#" href="">
                   <img src="images/4.jpg" alt="bookcover" />
                 </a>
-                <div class="add-to-cart">
+                <div class="cart">
                   <a href="#">Add To Cart</a>
                 </div>
               </div>
             </div>
-            <div class="block-footer">
+            <div class="book-info-footer">
               <div class="book-title">Construction Workers</div>
               <div class="book-price">€15</div>
               <div class="book-stock">In Stock</div>
             </div>
           </div>
-          <div class="block">
-            <div class="block-body">
-              <div class="block-body-a">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
                 <a class="#" href="">
                   <img src="images/48.jpg" alt="bookcover" />
                 </a>
-                <div class="add-to-cart">
+                <div class="cart">
                   <a href="#">Add To Cart</a>
                 </div>
               </div>
             </div>
-            <div class="block-footer">
+            <div class="book-info-footer">
               <div class="book-title">Zett</div>
               <div class="book-price">€15</div>
               <div class="book-stock">In Stock</div>
             </div>
           </div>
-          <div class="block">
-            <div class="block-body">
-              <div class="block-body-a">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
                 <a class="#" href="">
                   <img src="images/1.jpg" alt="bookcover" />
                 </a>
-                <div class="add-to-cart">
+                <div class="cart">
                   <a href="#">Add To Cart</a>
                 </div>
               </div>
             </div>
-            <div class="block-footer">
+            <div class="book-info-footer">
               <div class="book-title">Accidents</div>
               <div class="book-price">€20</div>
               <div class="book-stock">In Stock</div>
             </div>
           </div>
-          <div class="block">
-            <div class="block-body">
-              <div class="block-body-a">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
                 <a class="#" href="">
                   <img src="images/50.jpg" alt="bookcover" />
                 </a>
-                <div class="add-to-cart">
+                <div class="cart">
                   <a href="#">Add To Cart</a>
                 </div>
               </div>
             </div>
-            <div class="block-footer">
+            <div class="book-info-footer">
               <div class="book-title">Zürcher Hochschule Der Künste</div>
               <div class="book-price">€20</div>
               <div class="book-stock">Sold Out</div>
@@ -168,7 +162,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer></footer> -->
+    
     <script src="./icons/svgxuse.js"></script>
   </body>
 </html>
