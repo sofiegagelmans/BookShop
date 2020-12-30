@@ -208,23 +208,20 @@ main {
             }
           }
         }
-        // &-footer {
-        //   display: flex;
-        //   text-transform: capitalize;
-        //   padding: 5px;
-        //   .book-title {
-        //     margin-top: 5px;
-        //   }
-        //   .book-price {
-        //     margin-top: 5px;
-        //     margin-left: 50px;
-        //   }
-        //   .book-stock {
-        //     margin-top: 5px;
-        //     margin-left: auto;
-        //     text-transform: uppercase;
-        //   }
-        // }
+        &-footer {
+          display: flex;
+          text-transform: capitalize;
+          margin-top: 10px;
+          .book-title {
+          }
+          .book-price {
+            margin-left: 50px;
+          }
+          .book-stock {
+            margin-left: auto;
+            text-transform: uppercase;
+          }
+        }
       }
     }
   }
