@@ -218,8 +218,8 @@ main {
         &-footer {
           display: flex;
           text-transform: capitalize;
-          margin-top: 17px;
-          margin-bottom: 10px;
+          margin-top: 12px;
+          margin-bottom: 8px;
           .book-title {
           }
           .book-price {
@@ -442,7 +442,7 @@ footer {
   }
 }
 ul {
-  .sort {
+  .back {
     a {
       display: flex;
       text-transform: uppercase;
