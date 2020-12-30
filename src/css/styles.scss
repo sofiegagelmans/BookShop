@@ -46,7 +46,12 @@ header {
       margin-left: 85px;
     }
     .search-button {
-      background-color: red;
+      position: absolute;
+      text-align: center;
+      font-size: 20px;
+      padding: 5px;
+      padding-top: 6px;
+      margin-left: 905px;
     }
     ul {
       display: flex;
