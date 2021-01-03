@@ -5,10 +5,10 @@
 @import "../../icons/style.css";
 
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #000;
+  font-family: $primary-font;
+  font-weight: $primary-font-weight;
+  font-size: $primary-font-size;
+  color: $black;
 }
 
 .wrapper {
@@ -35,8 +35,8 @@ header {
       width: 500px;
       height: 35px;
       text-align: center;
-      font-family: "Inter", sans-serif;
-      font-size: 16px;
+      font-family: $primary-font;
+      font-size: $primary-font-size;
       text-decoration: none;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
@@ -46,7 +46,7 @@ header {
       margin-left: 90px;
       padding: 5px;
       &::placeholder {
-        color: #cccccc;
+        color: $grey;
       }
     }
     .search-button {
@@ -64,7 +64,7 @@ header {
         display: inline;
         a {
           text-decoration: none;
-          color: #000;
+          color: $black;
           margin-left: 60px;
         }
       }
@@ -90,10 +90,10 @@ main {
         a {
           text-transform: uppercase;
           text-decoration: none;
-          color: #000;
+          color: $black;
 
           &:hover {
-            color: #cccccc;
+            color: $grey;
           }
         }
         .all-items {
@@ -122,9 +122,9 @@ main {
           padding: 5px;
           a {
             text-decoration: none;
-            color: #000;
+            color: $black;
             &:hover {
-              color: #cccccc;
+              color: $grey;
             }
           }
           .sort-items {
@@ -132,7 +132,7 @@ main {
             display: none;
             position: absolute;
             line-height: 20px;
-            background-color: #fff;
+            background-color: $white;
             top: 0;
             left: 120px;
             padding-top: 0;
@@ -153,11 +153,11 @@ main {
       .amount-items {
         text-transform: uppercase;
         text-decoration: none;
-        color: #cccccc;
+        color: $grey;
         padding-top: 5px;
         padding-right: 15px;
         &:hover {
-          color: #cccccc;
+          color: $grey;
         }
       }
     }
@@ -203,12 +203,12 @@ main {
                   text-decoration: none;
                   text-transform: uppercase;
                   border-radius: 20px;
-                  background-color: #fff;
-                  color: #000;
+                  background-color: $white;
+                  color: $black;
                   margin-bottom: 10px;
                   padding: 12px 20px;
                   &:hover {
-                    background-color: #00ff00;
+                    background-color: $green;
                     transition: background-color 0.8s ease;
                   }
                 }
@@ -280,7 +280,6 @@ main {
       width: 150px;
       height: 33px;
       text-align: center;
-      box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 20px;
       border: none;
       outline: none;
@@ -288,15 +287,15 @@ main {
       margin-left: 15px;
       padding-top: 8px;
       &:hover {
-        background-color: #00ff00;
+        background-color: $green;
         transition: background-color 0.8s ease;
       }
       a {
         font-size: 14px;
-        font-family: "Inter", sans-serif;
+        font-family: $primary-font;
         text-transform: uppercase;
         text-decoration: none;
-        color: #000;
+        color: $black;
       }
     }
   }
@@ -304,7 +303,7 @@ main {
     display: flex;
     text-transform: uppercase;
     text-decoration: none;
-    color: #000;
+    color: $black;
     padding-top: 154px;
     padding-left: 468px;
   }
@@ -379,30 +378,30 @@ main {
       }
       .account-input {
         height: 33px;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
+        font-family: $primary-font;
+        font-weight: $primary-font-weight;
+        font-size: $primary-font-size;
         text-transform: uppercase;
         text-decoration: none;
-        color: #000;
+        color: $black;
         outline: none;
         border: none;
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid $grey;
         padding-right: 5px;
         margin-bottom: 5px;
       }
       .account-label {
         font-size: 14px;
         text-transform: uppercase;
-        color: #cccccc;
+        color: $grey;
         margin-bottom: 28px;
       }
     }
     .btn {
       width: 100%;
       max-width: 100px;
-      font-family: "Inter", serif;
-      font-size: 16px;
+      font-family: $primary-font;
+      font-size: $primary-font-size;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 30px;
@@ -412,12 +411,18 @@ main {
       margin-top: 10px;
     }
     .reset {
-      background-color: #fff;
+      background-color: $white;
+      cursor: pointer;
+      &:hover {
+        background-color: $green;
+        transition: background-color 0.8s ease;
+      }
     }
     .submit {
-      background-color: #00ff00;
+      background-color: $green;
       margin-bottom: 48px;
       margin-right: 20px;
+      cursor: pointer;
     }
   }
 }
@@ -431,9 +436,9 @@ footer {
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   padding: 15px;
   h3 {
-    font-size: 16px;
+    font-size: $primary-font-size;
     text-transform: uppercase;
-    color: #000;
+    color: $black;
     margin-bottom: 20px;
   }
   p {
