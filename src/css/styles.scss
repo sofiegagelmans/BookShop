@@ -5,10 +5,10 @@
 @import "../../icons/style.css";
 
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #000;
+  font-family: $primary-font;
+  font-weight: $primary-font-weight;
+  font-size: $primary-font-size;
+  color: $black;
 }
 
 header {
@@ -28,8 +28,8 @@ header {
       width: 500px;
       height: 35px;
       text-align: center;
-      font-family: "Inter", sans-serif;
-      font-size: 16px;
+      font-family: $primary-font;
+      font-size: $primary-font-size;
       text-decoration: none;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
@@ -39,7 +39,7 @@ header {
       margin-left: 90px;
       padding: 5px;
       &::placeholder {
-        color: #cccccc;
+        color: $grey;
       }
     }
     .search-button {
@@ -57,7 +57,7 @@ header {
         display: inline;
         a {
           text-decoration: none;
-          color: #000;
+          color: $black;
           margin-left: 60px;
         }
       }
@@ -192,7 +192,6 @@ main {
                   text-decoration: none;
                   text-transform: uppercase;
                   border-radius: 20px;
-                  box-shadow: 0px 5px 20px 0px #c8c8c8;
                   background-color: #fff;
                   color: #000;
                   margin-bottom: 10px;
@@ -282,7 +281,7 @@ main {
       }
       a {
         font-size: 14px;
-        font-family: "Inter", sans-serif;
+        font-family: $primary-font;
         text-transform: uppercase;
         text-decoration: none;
         color: #000;
@@ -368,9 +367,9 @@ main {
       }
       .account-input {
         height: 33px;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
+        font-family: $primary-font;
+        font-weight: $primary-font-weight;
+        font-size: $primary-font-size;
         text-transform: uppercase;
         text-decoration: none;
         color: #000;
@@ -390,8 +389,8 @@ main {
     .btn {
       width: 100%;
       max-width: 100px;
-      font-family: "Inter", serif;
-      font-size: 16px;
+      font-family: $primary-font;
+      font-size: $primary-font-size;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 30px;
@@ -402,11 +401,17 @@ main {
     }
     .reset {
       background-color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: #00ff00;
+        transition: background-color 0.8s ease;
+      }
     }
     .submit {
       background-color: #00ff00;
       margin-bottom: 48px;
       margin-right: 20px;
+      cursor: pointer;
     }
   }
 }
@@ -418,7 +423,7 @@ footer {
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   padding: 15px;
   h3 {
-    font-size: 16px;
+    font-size: $primary-font-size;
     text-transform: uppercase;
     color: #000;
     margin-bottom: 20px;
