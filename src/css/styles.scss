@@ -56,9 +56,9 @@ header {
     .search-button {
       position: absolute;
       text-align: center;
-      font-size: 20px;
-      margin-left: 912px;
-      padding: 6px;
+      font-size: 18px;
+      margin-left: 915px;
+      padding: 8px;
     }
     ul {
       display: flex;
@@ -284,6 +284,7 @@ main {
       height: 33px;
       text-align: center;
       border-radius: 20px;
+      box-shadow: 0px 5px 20px 0px #c8c8c8;
       border: none;
       outline: none;
       margin-top: 5px;
@@ -292,6 +293,7 @@ main {
       &:hover {
         background-color: $green;
         transition: background-color 0.8s ease;
+        cursor: pointer;
       }
       a {
         font-size: 14px;
@@ -384,7 +386,6 @@ main {
         font-family: $primary-font;
         font-weight: $primary-font-weight;
         font-size: $primary-font-size;
-        text-transform: uppercase;
         text-decoration: none;
         color: $black;
         outline: none;

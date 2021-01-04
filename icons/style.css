@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icon-test {
+  width: 0.9814453125em;
+}
+
 .icon-search {
   width: 0.9814453125em;
 }
