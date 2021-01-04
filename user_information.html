@@ -40,17 +40,24 @@
     </div>
     <div class="wrapper">
       <div class="contender">
-         <!-- HEADER -->
+        <!-- HEADER -->
         <header>
           <div class="container">
             <nav class="nav">
               <span class="brand-name">Bookshop</span>
-              <input class="search-collection" type="text" name="search" placeholder="search for books">
-              <a href="#" class="search-button">
-                <svg class="icon icon-test">
-                  <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
-                </svg>
-              </a>
+              <form action="" class="form-search">
+                <input
+                  class="search-collection"
+                  type="text"
+                  name="search"
+                  placeholder="search for books"
+                />
+                <a href="#" class="search-button">
+                  <svg class="icon icon-test">
+                    <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
+                  </svg>
+                </a>
+              </form>
               <ul>
                 <li><a href="#">Account</a></li>
                 <li><a href="#" onclick="openNav()">Cart(0)</a></li>
@@ -74,19 +81,53 @@
               <form action="/change.php" class="form">
                 <div class="form-empty">
                   <div class="form-col-first">
-                    <input class="account-input" type="text" id="name" name="name">
+                    <input
+                      class="account-input"
+                      type="text"
+                      id="name"
+                      name="name"
+                    />
                     <label class="account-label" for="name">Full Name</label>
-                    <input class="account-input" type="text" id="address" name="address">
+                    <input
+                      class="account-input"
+                      type="text"
+                      id="address"
+                      name="address"
+                    />
                     <label class="account-label" for="address">Address</label>
-                    <input class="account-input" type="text" id="postal" name="postal">
-                    <label class="account-label" for="postal">Postal Code</label>  
+                    <input
+                      class="account-input"
+                      type="text"
+                      id="postal"
+                      name="postal"
+                    />
+                    <label class="account-label" for="postal"
+                      >Postal Code</label
+                    >
                   </div>
                   <div class="form-col-second">
-                    <input class="account-input" type="tel" id="phone" name="phone">
-                    <label class="account-label" for="phone">Phone Number</label>
-                    <input class="account-input" type="text" id="email" name="email">
+                    <input
+                      class="account-input"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                    />
+                    <label class="account-label" for="phone"
+                      >Phone Number</label
+                    >
+                    <input
+                      class="account-input"
+                      type="text"
+                      id="email"
+                      name="email"
+                    />
                     <label class="account-label" for="email">Email</label>
-                    <input class="account-input" type="password" id="password" name="password">
+                    <input
+                      class="account-input"
+                      type="password"
+                      id="password"
+                      name="password"
+                    />
                     <label class="account-label" for="password">Password</label>
                   </div>
                 </div>
