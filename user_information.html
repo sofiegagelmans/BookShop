@@ -10,19 +10,15 @@
   <body>
     <div class="wrapper">
       <div class="contender">
+         <!-- HEADER -->
         <header>
           <div class="container">
             <nav class="nav">
               <span class="brand-name">Bookshop</span>
-              <input
-                class="search-collection"
-                type="text"
-                name="search"
-                placeholder="Search for Books"
-              />
+              <input class="search-collection" type="text" name="search" placeholder="search for books">
               <a href="#" class="search-button">
-                <svg class="icon icon-search">
-                  <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+                <svg class="icon icon-test">
+                  <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
                 </svg>
               </a>
               <ul>
@@ -32,7 +28,7 @@
             </nav>
           </div>
         </header>
-
+        <!-- MAIN -->
         <main class="main">
           <aside>
             <span>My Account</span>
@@ -41,60 +37,27 @@
               <li><a href="#">User Information</a></li>
             </ul>
           </aside>
+          <!-- USER INFORMATION -->
           <section>
             <h2 class="form-user">User Information</h2>
             <div class="form-account">
               <form action="/change.php" class="form">
                 <div class="form-empty">
                   <div class="form-col-first">
-                    <input
-                      class="account-input"
-                      type="text"
-                      id="f-name"
-                      name="firstname"
-                    />
-                    <label class="account-label" for="f-name">First Name</label>
-                    <input
-                      class="account-input"
-                      type="text"
-                      id="l-name"
-                      name="lastname"
-                    />
-                    <label class="account-label" for="l-name">Last Name</label>
-                    <input
-                      class="account-input"
-                      type="password"
-                      id="password"
-                      name="password"
-                    />
-                    <label class="account-label" for="password">Password</label>
+                    <input class="account-input" type="text" id="name" name="name">
+                    <label class="account-label" for="name">Full Name</label>
+                    <input class="account-input" type="text" id="address" name="address">
+                    <label class="account-label" for="address">Address</label>
+                    <input class="account-input" type="text" id="postal" name="postal">
+                    <label class="account-label" for="postal">Postal Code</label>  
                   </div>
                   <div class="form-col-second">
-                    <input
-                      class="account-input"
-                      type="text"
-                      id="address"
-                      name="address"
-                    />
-                    <label class="account-label" for="address">Address</label>
-                    <input
-                      class="account-input"
-                      type="number"
-                      id="postal"
-                      name="postal"
-                    />
-                    <label class="account-label" for="postal"
-                      >Postal Code</label
-                    >
-                    <input
-                      class="account-input"
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                    />
-                    <label class="account-label" for="phone"
-                      >Phone Number</label
-                    >
+                    <input class="account-input" type="tel" id="phone" name="phone">
+                    <label class="account-label" for="phone">Phone Number</label>
+                    <input class="account-input" type="text" id="email" name="email">
+                    <label class="account-label" for="email">Email</label>
+                    <input class="account-input" type="password" id="password" name="password">
+                    <label class="account-label" for="password">Password</label>
                   </div>
                 </div>
                 <input class="btn submit" type="submit" value="submit" />
@@ -104,6 +67,7 @@
           </section>
         </main>
       </div>
+      <!-- FOOTER -->
       <footer class="footer">
         <div>
           <h3>Contact</h3>
