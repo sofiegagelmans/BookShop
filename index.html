@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
     <title>Bookshop</title>
   </head>
 
   <body>
+    <!-- SIDEBAR  -->
+    <div id="mySidenav" class="sidenav">
+      <div class="sidebar-content">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <h4 class="sidebar-h3">CART(1)</h4>
+        <div class="order-body">
+          <div class="order-body-book">
+            <img src="images/21.jpg" alt="bookcover" />
+          </div>
+          <div class="order-body-text">
+            <div class="text-col-first">
+              <p>Two or Three Things I know about Provo</p>
+              <p>€20</p>
+              <p>Quantity #1</p>
+              <div class="card-add-reset">
+                <a href="#">Remove </a>
+                <p>/</p>
+                <a href="#"> add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-downstairs">
+          <input class="cart-button" type="button" value="SHOW SHOPING CART" />
+          <input class="cart-button" type="button" value="CHECK OUT" />
+          <input class="cart-button" type="button" value="CONTINUE SHOOPPING" />
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <!-- HEADER -->
       <header>
         <div class="container">
           <nav class="nav">
             <span class="brand-name">Bookshop</span>
-            <input class="search-collection" type="text" name="search" placeholder="search for books">
+            <input
+              class="search-collection"
+              type="text"
+              name="search"
+              placeholder="search for books"
+            />
             <a href="#" class="search-button">
               <svg class="icon icon-test">
                 <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
@@ -22,7 +58,7 @@
             </a>
             <ul>
               <li><a href="#">Account</a></li>
-              <li><a href="#">Cart(0)</a></li>
+              <li><a href="#" onclick="openNav()">Cart(0)</a></li>
             </ul>
           </nav>
         </div>
@@ -63,7 +99,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/21.jpg" alt="bookcover">
+                    <img src="images/21.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -82,7 +118,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/55.jpg" alt="bookcover">
+                    <img src="images/55.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -99,7 +135,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/4.jpg" alt="bookcover">
+                    <img src="images/4.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -116,7 +152,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/48.jpg" alt="bookcover">
+                    <img src="images/48.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -133,7 +169,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/1.jpg" alt="bookcover">
+                    <img src="images/1.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -150,7 +186,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/50.jpg" alt="bookcover">
+                    <img src="images/50.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -167,7 +203,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/3.jpg" alt="bookcover">
+                    <img src="images/3.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -184,7 +220,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/5.jpg" alt="bookcover">
+                    <img src="images/5.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -201,7 +237,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/14.jpg" alt="bookcover">
+                    <img src="images/14.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -218,7 +254,7 @@
               <div class="book-info-body">
                 <div class="book-info-body-text">
                   <a class="#" href="">
-                    <img src="images/32.jpg" alt="bookcover">
+                    <img src="images/32.jpg" alt="bookcover" />
                   </a>
                   <div class="cart">
                     <a href="#">Add To Cart</a>
@@ -235,6 +271,9 @@
         </section>
       </main>
       <!-- FOOTER -->
+      <footer></footer>
+    </div>
     <script src="./icons/svgxuse.js"></script>
+    <script src="./src/js/sidebar.js"></script>
   </body>
 </html>

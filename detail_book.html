@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
     <title>Bookshop</title>
   </head>
   <body>
+    <!-- SIDEBAR  -->
+    <div id="mySidenav" class="sidenav">
+      <div class="sidebar-content">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <h4 class="sidebar-h3">CART(1)</h4>
+        <div class="order-body">
+          <div class="order-body-book">
+            <img src="images/21.jpg" alt="bookcover" />
+          </div>
+          <div class="order-body-text">
+            <div class="text-col-first">
+              <p>Two or Three Things I know about Provo</p>
+              <p>€20</p>
+              <p>Quantity #1</p>
+              <div class="card-add-reset">
+                <a href="#">Remove </a>
+                <p>/</p>
+                <a href="#"> add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-downstairs">
+          <input class="cart-button" type="button" value="SHOW SHOPING CART" />
+          <input class="cart-button" type="button" value="CHECK OUT" />
+          <input class="cart-button" type="button" value="CONTINUE SHOOPPING" />
+        </div>
+      </div>
+    </div>
     <!-- HEADER -->
     <header>
       <div class="container">
         <nav class="nav">
           <span class="brand-name">Bookshop</span>
-          <input class="search-collection" type="text" name="search" placeholder="Search for Books">
+          <input
+            class="search-collection"
+            type="text"
+            name="search"
+            placeholder="Search for Books"
+          />
           <a href="#" class="search-button">
             <svg class="icon icon-search">
               <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
@@ -20,7 +56,7 @@
           </a>
           <ul>
             <li><a href="#">Account</a></li>
-            <li><a href="#">Cart(0)</a></li>
+            <li><a href="#" onclick="openNav()">Cart(0)</a></li>
           </ul>
         </nav>
       </div>
@@ -31,7 +67,7 @@
         <div class="detail-book-cover">
           <div class="detail-book-header">
             <a class="#" href="">
-              <img src="images/21.jpg" alt="bookcover">
+              <img src="images/21.jpg" alt="bookcover" />
             </a>
           </div>
           <div class="detail-book-button">
@@ -42,28 +78,30 @@
       </div>
       <div class="detail-text">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noste 
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo. Excepteur sint occaecat 
-          cupidatat non proident, deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis noste exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo. Excepteur sint occaecat cupidatat non proident,
+          deserunt mollit anim id est laborum.
         </p>
-        <br>
+        <br />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noste 
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo. Excepteur sint occaecat 
-          cupidatat non proident, deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis noste exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo. Excepteur sint occaecat cupidatat non proident,
+          deserunt mollit anim id est laborum.
         </p>
-        <br>
+        <br />
         <p>
-          Title <br>
-          Author <br>
-          Publisher <br>
-          Year of publication <br>
-          Number of pages <br>
-          Price <br>
+          Title <br />
+          Author <br />
+          Publisher <br />
+          Year of publication <br />
+          Number of pages <br />
+          Price <br />
         </p>
-        <br>
+        <br />
         <div class="detail-button">
           <div class="detail-cart">
             <a href="#">Add To Cart</a>
@@ -74,5 +112,6 @@
     </main>
 
     <script src="./icons/svgxuse.js"></script>
+    <script src="./src/js/sidebar.js"></script>
   </body>
 </html>
