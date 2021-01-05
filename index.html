@@ -39,6 +39,63 @@
         </div>
       </div>
     </div>
+
+    <div id="accountSidenav" class="sidenav">
+      <div class="sidebar-content">
+        <a
+          href="javascript:void(0)"
+          class="closebtn"
+          onclick="closeAccountNav()"
+          >&times;</a
+        >
+        <h4 class="sidebar-h3">SIGN IN</h4>
+        <div class="account-signin">
+          <input class="account-input" type="text" id="email" name="email" />
+          <label class="account-label" for="email">Email</label>
+
+          <input
+            class="account-input"
+            type="password"
+            id="password"
+            name="password"
+          />
+          <label class="account-label" for="password">Password</label>
+          <div class="account-signin-btn">
+            <input class="btn signin" type="button" value="signin" />
+            <input class="btn signout" type="button" value="signout" />
+          </div>
+        </div>
+
+        <h4 class="sidebar-h3">NEW CUSTOMER</h4>
+        <div class="account-newcustumer">
+          <input class="account-input" type="text" id="email" name="email" />
+          <label class="account-label" for="email">Email</label>
+
+          <input
+            class="account-input"
+            type="password"
+            id="password"
+            name="password"
+          />
+          <label class="account-label" for="password">Password</label>
+
+          <input
+            class="account-input"
+            type="password"
+            id="repeat-password"
+            name="repeat-password"
+          />
+          <label class="account-label" for="repeat-password"
+            >repeat-password</label
+          >
+        </div>
+
+        <div class="sidebar-downstairs">
+          <input class="cart-button" type="button" value="CREATE ACCOUNT" />
+        </div>
+      </div>
+    </div>
+
     <div class="wrapper">
       <!-- HEADER -->
       <header>
@@ -59,7 +116,9 @@
               </a>
             </form>
             <ul>
-              <li><a href="order_history.html">Account</a></li>
+              <li>
+                <a href="#" onclick="openAccountNav()">Account</a>
+              </li>
               <li><a href="#" onclick="openNav()">Cart(0)</a></li>
             </ul>
           </nav>
