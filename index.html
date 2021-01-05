@@ -39,244 +39,269 @@
       </div>
     </div>
 
-    <div class="wrapper">
-      <!-- HEADER -->
-      <header>
-        <div class="container">
-          <nav class="nav">
-            <a class="brand-name" href="index.html">Bookshop</a>
-            <form action="" class="form-search">
-              <input
-                class="search-collection"
-                type="text"
-                name="search"
-                placeholder="search for books"
-              />
-              <a href="#" class="search-button">
-                <svg class="icon icon-test">
-                  <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
-                </svg>
-              </a>
-            </form>
-            <ul>
-              <li>
-                <a href="user_information.html">Account</a>
-              </li>
-              <li><a href="#" onclick="openNav()">Cart(0)</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <!-- MENU -->
-      <main class="main">
-        <aside>
-          <span>Categories</span>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <a class="brand-name" href="index.html">Bookshop</a>
+          <form action="" class="form-search">
+            <input
+              class="search-collection"
+              type="text"
+              name="search"
+              placeholder="search for books"
+            />
+            <a href="#" class="search-button">
+              <svg class="icon icon-test">
+                <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
+              </svg>
+            </a>
+          </form>
           <ul>
-            <li><a href="#">Art</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Photography</a></li>
-            <li><a href="#">Architecture</a></li>
-            <li><a href="#">Fashion</a></li>
-            <li><a href="#">Lifestyle</a></li>
-            <li><a href="#" class="all-items">Show All</a></li>
+            <li>
+              <a href="user_information.html">Account</a>
+            </li>
+            <li><a href="#" onclick="openNav()">Cart(0)</a></li>
           </ul>
-        </aside>
-        <!-- SORT BY -->
-        <section>
-          <div class="section-header">
-            <ul>
-              <li class="sort-by">
-                <a href="#">Sort By ---></a>
-                <ul class="sort-items">
-                  <li><a href="#">Name</a></li>
-                  <li><a href="#">Newest Item</a></li>
-                  <li><a href="#">Highest Price</a></li>
-                  <li><a href="#">Lowest Price</a></li>
-                </ul>
-              </li>
-            </ul>
-            <span href="#" class="amount-items">(12 items)</span>
-          </div>
-          <!-- CONTENT -->
-          <div class="section-body">
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/21.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="detail_book.html">Add To Cart</a>
-                  </div>
+        </nav>
+      </div>
+    </header>
+    <!-- MENU -->
+    <main class="main main-buttom">
+      <aside>
+        <span>Categories</span>
+        <ul>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#" class="all-items">Show All</a></li>
+        </ul>
+      </aside>
+      <!-- SORT BY -->
+      <section>
+        <div class="section-header">
+          <ul>
+            <li class="sort-by">
+              <a href="#">Sort By ---></a>
+              <ul class="sort-items">
+                <li><a href="#">Name</a></li>
+                <li><a href="#">Newest Item</a></li>
+                <li><a href="#">Highest Price</a></li>
+                <li><a href="#">Lowest Price</a></li>
+              </ul>
+            </li>
+          </ul>
+          <span href="#" class="amount-items">(12 items)</span>
+        </div>
+        <!-- CONTENT -->
+        <div class="section-body">
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/21.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="detail_book.html">Add To Cart</a>
                 </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">
-                  Two or Three Things I know about Provo
-                </div>
-                <div class="book-price">€25</div>
-                <div class="book-stock">In Stock</div>
               </div>
             </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/55.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
+            <div class="book-info-footer">
+              <div class="book-title">
+                Two or Three Things I know about Provo
               </div>
-              <div class="book-info-footer">
-                <div class="book-title">The Divided Self</div>
-                <div class="book-price">€20</div>
-                <div class="book-stock">Sold Out</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/4.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Construction Workers</div>
-                <div class="book-price">€40</div>
-                <div class="book-stock">In Stock</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/48.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Zett</div>
-                <div class="book-price">€20</div>
-                <div class="book-stock">In Stock</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/1.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Accidents</div>
-                <div class="book-price">€25</div>
-                <div class="book-stock">In Stock</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/50.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Zürcher Hochschule Der Künste</div>
-                <div class="book-price">€20</div>
-                <div class="book-stock">Sold Out</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/3.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Not a Day Without a Line</div>
-                <div class="book-price">€20</div>
-                <div class="book-stock">In Stock</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/5.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Dominique Somers</div>
-                <div class="book-price">€30</div>
-                <div class="book-stock">In Stock</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/14.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">Compiled Daydreaming</div>
-                <div class="book-price">€25</div>
-                <div class="book-stock">Sold Out</div>
-              </div>
-            </div>
-            <div class="book-info">
-              <div class="book-info-body">
-                <div class="book-info-body-text">
-                  <a class="#" href="">
-                    <img src="images/32.jpg" alt="bookcover" />
-                  </a>
-                  <div class="cart">
-                    <a href="#">Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="book-info-footer">
-                <div class="book-title">The Summer Of</div>
-                <div class="book-price">€25</div>
-                <div class="book-stock">In Stock</div>
-              </div>
+              <div class="book-price">€25</div>
+              <div class="book-stock">In Stock</div>
             </div>
           </div>
-        </section>
-      </main>
-      <!-- FOOTER -->
-      <footer></footer>
-    </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/55.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">The Divided Self</div>
+              <div class="book-price">€20</div>
+              <div class="book-stock">Sold Out</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/4.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Construction Workers</div>
+              <div class="book-price">€40</div>
+              <div class="book-stock">In Stock</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/48.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Zett</div>
+              <div class="book-price">€20</div>
+              <div class="book-stock">In Stock</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/1.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Accidents</div>
+              <div class="book-price">€25</div>
+              <div class="book-stock">In Stock</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/50.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Zürcher Hochschule Der Künste</div>
+              <div class="book-price">€20</div>
+              <div class="book-stock">Sold Out</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/3.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Not a Day Without a Line</div>
+              <div class="book-price">€20</div>
+              <div class="book-stock">In Stock</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/5.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Dominique Somers</div>
+              <div class="book-price">€30</div>
+              <div class="book-stock">In Stock</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/14.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">Compiled Daydreaming</div>
+              <div class="book-price">€25</div>
+              <div class="book-stock">Sold Out</div>
+            </div>
+          </div>
+          <div class="book-info">
+            <div class="book-info-body">
+              <div class="book-info-body-text">
+                <a class="#" href="">
+                  <img src="images/32.jpg" alt="bookcover" />
+                </a>
+                <div class="cart">
+                  <a href="#">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-info-footer">
+              <div class="book-title">The Summer Of</div>
+              <div class="book-price">€25</div>
+              <div class="book-stock">In Stock</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>
+        <h3>Contact</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor.
+        </p>
+      </div>
+      <div>
+        <h3>Payment Methods</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis noste exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo.
+        </p>
+      </div>
+      <div>
+        <h3>About Us</h3>
+        <p>
+          Consequat duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.
+        </p>
+      </div>
+    </footer>
+
     <script src="./icons/svgxuse.js"></script>
     <script src="./src/js/sidebar.js"></script>
   </body>
