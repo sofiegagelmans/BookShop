@@ -10,6 +10,12 @@ body {
   font-size: $primary-font-size;
   color: $black;
 }
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 header {
   position: fixed;
@@ -79,7 +85,6 @@ header {
   position: sticky;
   top: 65px;
   width: 100%;
-  margin-bottom: 15px;
 
   aside {
     position: sticky;
@@ -117,7 +122,7 @@ header {
 
     .section-header {
       background-color: $white;
-      box-shadow: 5px 4px 5px rgba($color: gray, $alpha: 0.6);
+      box-shadow: 5px 4px 6px rgba($color: gray, $alpha: 0.3);
       position: sticky;
       top: 65px;
       display: flex;
