@@ -81,14 +81,14 @@ header {
 
 .main {
   display: flex;
-  margin-top: 160px;
+  margin-top: 220px;
   position: sticky;
   top: 65px;
   width: 100%;
 
   aside {
-    position: sticky;
-    top: 65px;
+    position: fixed;
+    top: 220px;
     width: 297px;
     padding: 10px;
     margin-left: 3px;
@@ -119,6 +119,7 @@ header {
 
   section {
     width: 100%;
+    margin-left: 300px;
 
     .section-header {
       background-color: $white;
