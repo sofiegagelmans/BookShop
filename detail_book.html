@@ -7,13 +7,13 @@
     <title>Bookshop</title>
   </head>
   <body>
-    <!-- SIDEBAR  -->
+    <!-- CART  -->
     <div id="mySidenav" class="sidenav">
       <div class="sidebar-content">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
           >&times;</a
         >
-        <h4 class="sidebar-h3">CART(1)</h4>
+        <h3>CART(1)</h3>
         <div class="order-body">
           <div class="order-body-book">
             <img src="images/21.jpg" alt="bookcover" />
@@ -21,29 +21,28 @@
           <div class="order-body-text">
             <div class="text-col-first">
               <p>Two or Three Things I know about Provo</p>
-              <p>€20</p>
+              <p>€25</p>
               <p>Quantity #1</p>
-              <div class="card-add-reset">
-                <a href="#">Remove </a>
-                <p>/</p>
-                <a href="#"> add</a>
+              <div class="remove-add">
+                <a href="#">Remove</a>
+                <p>&nbsp;/&nbsp;</p>
+                <a href="#">Add</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="sidebar-downstairs">
-          <input class="cart-button" type="button" value="SHOW SHOPING CART" />
-          <input class="cart-button" type="button" value="CHECK OUT" />
-          <input class="cart-button" type="button" value="CONTINUE SHOOPPING" />
+        <div class="sidebar-btn">
+          <input class="btn checkout" type="button" value="check out" />
+          <input class="btn shop" type="button" value="continue shopping" />
         </div>
       </div>
     </div>
-    <!-- HEADER -->
     <div class="wrapper">
+      <!-- HEADER -->
       <header>
         <div class="container">
           <nav class="nav">
-            <span class="brand-name">Bookshop</span>
+            <a class="brand-name" href="index.html">Bookshop</a>
             <form action="" class="form-search">
               <input
                 class="search-collection"
@@ -58,7 +57,9 @@
               </a>
             </form>
             <ul>
-              <li><a href="#">Account</a></li>
+              <li>
+                <a href="user_information.html">Account</a>
+              </li>
               <li><a href="#" onclick="openNav()">Cart(0)</a></li>
             </ul>
           </nav>
