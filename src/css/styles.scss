@@ -17,9 +17,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-// .contender {
-//   background-color: red;
-// }
 
 header {
   position: fixed;
@@ -28,7 +25,6 @@ header {
   height: 65px;
   padding: 12px;
   z-index: 1000;
-
   nav {
     display: flex;
     justify-content: space-between;
@@ -67,7 +63,6 @@ header {
         right: 15px;
       }
     }
-
     ul {
       display: flex;
       justify-content: space-between;
@@ -102,7 +97,6 @@ main {
           text-transform: uppercase;
           text-decoration: none;
           color: $black;
-
           &:hover {
             color: $grey;
           }
@@ -405,7 +399,7 @@ main {
         font-size: 14px;
         text-transform: uppercase;
         color: $grey;
-        margin-bottom: 28px;
+        margin-bottom: 15px;
       }
     }
     .btn {
@@ -418,8 +412,9 @@ main {
       border-radius: 30px;
       border: none;
       outline: none;
+      margin-top: 5px;
+      margin-left: 5px;
       padding: 10px 15px;
-      margin-top: 10px;
     }
     .reset {
       background-color: $white;
@@ -430,10 +425,13 @@ main {
       }
     }
     .submit {
-      background-color: $green;
-      margin-bottom: 48px;
+      background-color: $white;
       margin-right: 20px;
       cursor: pointer;
+      &:hover {
+        background-color: $green;
+        transition: background-color 0.8s ease;
+      }
     }
   }
 }
