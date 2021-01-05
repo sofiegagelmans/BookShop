@@ -10,7 +10,6 @@ body {
   font-size: $primary-font-size;
   color: $black;
 }
-
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -117,8 +116,10 @@ header {
   }
   section {
     width: 100%;
-    padding-top: 5px;
     .section-header {
+      background-color: $white;
+      position: sticky;
+      top: 65px;
       display: flex;
       position: sticky;
       justify-content: space-between;
@@ -178,7 +179,7 @@ header {
     }
     .section-body {
       @include make-col(2, 20px);
-      position: absolute;
+
       padding: 0 15px;
       .book-info {
         max-width: 400px;
