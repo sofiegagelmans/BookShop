@@ -122,7 +122,6 @@ header {
 
     .section-header {
       background-color: $white;
-      box-shadow: 5px 4px 6px rgba($color: gray, $alpha: 0.3);
       position: sticky;
       top: 65px;
       display: flex;
@@ -250,8 +249,9 @@ header {
   }
 }
 
-.main-buttom {
+.main-index {
   margin-bottom: 150px;
+  padding-top: 5px;
 }
 
 // ---- DETAIL BOOK ---- //
@@ -314,8 +314,8 @@ header {
         cursor: pointer;
       }
       a {
-        font-size: 14px;
         font-family: $primary-font;
+        font-size: 14px;
         text-transform: uppercase;
         text-decoration: none;
         color: $black;
@@ -329,6 +329,7 @@ header {
     color: $black;
     padding-top: 154px;
     padding-left: 468px;
+    padding-bottom: 15px;
   }
 }
 
@@ -336,15 +337,15 @@ header {
 
 .order-text {
   text-transform: uppercase;
-  margin-top: 10px;
   margin-left: 10px;
+  padding-top: 5px;
 }
 .order {
   width: 100%;
   display: flex;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 40px 10px;
+  margin: 36px 10px;
   @include make-col(2, 70px);
   .order-body {
     display: flex;
@@ -363,8 +364,8 @@ header {
         padding-left: 25px;
       }
       p {
-        padding-left: 25px;
         padding-bottom: 20px;
+        padding-left: 25px;
       }
       .text-col-first {
         margin-right: 25px;
@@ -375,35 +376,29 @@ header {
 
 // ---- USER INFORMATION ---- //
 
-.form-user {
+.form-title-user {
   text-transform: uppercase;
-  margin-top: 10px;
   margin-left: 10px;
+  padding-top: 5px;
 }
 .form-account {
-  margin: 22px 0px 25px;
+  margin: 31px 10px;
   .form {
     .form-empty {
       display: flex;
-      .form-col-first {
-        width: 100%;
-        max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-      }
+      .form-col-first,
       .form-col-second {
         width: 100%;
-        max-width: 400px;
+        max-width: 480px;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        margin-right: 20px;
       }
       .account-input {
         height: 33px;
         font-family: $primary-font;
-        font-weight: $primary-font-weight;
         font-size: $primary-font-size;
+        font-weight: $primary-font-weight;
         text-decoration: none;
         color: $black;
         outline: none;
@@ -429,9 +424,17 @@ header {
       border-radius: 30px;
       border: none;
       outline: none;
-      margin-top: 5px;
-      margin-left: 5px;
+      margin-top: 25px;
       padding: 10px 15px;
+    }
+    .submit {
+      background-color: $white;
+      margin-right: 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: $green;
+        transition: background-color 0.8s ease;
+      }
     }
     .reset {
       background-color: $white;
@@ -441,9 +444,94 @@ header {
         transition: background-color 0.8s ease;
       }
     }
-    .submit {
+  }
+}
+
+// ---- CREATE ACCOUNT ---- //
+
+.form-title-sign {
+  margin-right: 427px;
+}
+.form-title-sign,
+.form-title-create {
+  display: inline;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.form-user {
+  margin: 32px 10px;
+  .form-user-account {
+    .form-user-empty {
+      display: flex;
+      .form-user-col-first,
+      .form-user-col-second {
+        width: 100%;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+      }
+      .account-user-input {
+        height: 33px;
+        font-family: $primary-font;
+        font-weight: $primary-font-weight;
+        font-size: $primary-font-size;
+        text-decoration: none;
+        color: $black;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $grey;
+        padding-right: 5px;
+        margin-bottom: 5px;
+      }
+      .account-user-label {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $grey;
+        margin-bottom: 15px;
+      }
+    }
+    .btn {
+      width: 100%;
+      max-width: 100px;
+      font-family: $primary-font;
+      font-size: $primary-font-size;
+      text-transform: uppercase;
+      box-shadow: 0px 5px 20px 0px #c8c8c8;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      margin-top: 25px;
+      margin-bottom: 133px;
+      padding: 10px 15px;
+    }
+    .sign-in {
+      max-width: 100px;
       background-color: $white;
       margin-right: 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: $green;
+        transition: background-color 0.8s ease;
+      }
+    }
+    .sign-out {
+      max-width: 120px;
+      text-align: center;
+      background-color: $white;
+      margin-right: 252px;
+      cursor: pointer;
+      &:hover {
+        background-color: $green;
+        transition: background-color 0.8s ease;
+      }
+    }
+    .create-account {
+      max-width: 190px;
+      text-align: center;
+      background-color: $white;
+      margin-right: 200px;
       cursor: pointer;
       &:hover {
         background-color: $green;
@@ -458,9 +546,9 @@ header {
 footer {
   display: flex;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
+  padding-bottom: 10px;
   padding: 15px;
-
-  margin-top: 50px;
+  z-index: 1000;
   h3 {
     font-size: $primary-font-size;
     text-transform: uppercase;
@@ -519,7 +607,8 @@ footer {
       border-radius: 30px;
       border: none;
       outline: none;
-      margin-top: 15px;
+      cursor: pointer;
+      margin-top: 13px;
       padding: 10px;
       &:hover {
         background-color: $green;
@@ -528,7 +617,6 @@ footer {
     }
   }
 }
-
 .order-body {
   display: flex;
   margin-bottom: 30px;
