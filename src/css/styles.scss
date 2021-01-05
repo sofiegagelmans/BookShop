@@ -608,4 +608,12 @@ footer {
 .account-newcustumer {
   display: flex;
   flex-direction: column;
+  .sidenav .close-btn {
+    position: absolute;
+    font-size: 28px;
+    text-decoration: none;
+    color: $black;
+    top: 5px;
+    right: 12px;
+  }
 }
