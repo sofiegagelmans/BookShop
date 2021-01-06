@@ -117,19 +117,16 @@ header {
   }
   section {
     width: 100%;
+    margin-top: 5px;
     margin-left: 300px;
-
     .section-header {
       background-color: $white;
       position: sticky;
-      top: 65px;
       display: flex;
       position: sticky;
       justify-content: space-between;
       align-items: center;
       background-color: $white;
-      // box-shadow: 5px 4px 6px rgba($color: gray, $alpha: 0.3);
-      top: 65px;
       padding-bottom: 10px;
       z-index: 1;
       ul {
@@ -137,8 +134,7 @@ header {
         .sort-by {
           position: relative;
           text-transform: uppercase;
-          padding-top: 0;
-          padding: 5px;
+          padding-left: 5px;
           a {
             text-decoration: none;
             color: $black;
@@ -154,12 +150,12 @@ header {
             background-color: $white;
             top: 0;
             left: 120px;
-            padding-top: 0;
             padding-bottom: 15px;
             padding-left: 15px;
             z-index: 2;
             li {
               padding: 5px;
+              padding-top: 0px;
             }
           }
           &:hover {
@@ -173,7 +169,6 @@ header {
         text-transform: uppercase;
         text-decoration: none;
         color: $grey;
-        padding-top: 5px;
         padding-right: 15px;
         &:hover {
           color: $grey;
@@ -182,8 +177,8 @@ header {
     }
     .section-body {
       @include make-col(2, 20px);
-
       padding: 0 15px;
+      padding-top: 5px;
       .book-info {
         max-width: 400px;
         font-size: 14px;
@@ -301,7 +296,7 @@ header {
     display: flex;
     justify-content: space-between;
     .detail-cart {
-      width: 150px;
+      width: 130px;
       height: 33px;
       text-align: center;
       border-radius: 20px;
@@ -336,56 +331,15 @@ header {
   }
 }
 
-// ---- ORDER HISTORY ---- //
-
-.order-text {
-  text-transform: uppercase;
-  margin-left: 10px;
-  padding-top: 10px;
-}
-.order {
-  width: 100%;
-  display: flex;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 40px 10px;
-  @include make-col(2, 70px);
-  .order-body {
-    display: flex;
-    margin-bottom: 30px;
-    .order-body-book {
-      img {
-        width: 93px;
-        height: 130px;
-        box-shadow: 0px 5px 20px 0px #c8c8c8;
-      }
-    }
-    .order-body-text {
-      display: flex;
-      h5 {
-        line-height: 25px;
-        padding-left: 25px;
-      }
-      p {
-        padding-bottom: 20px;
-        padding-left: 25px;
-      }
-      .text-col-first {
-        margin-right: 25px;
-      }
-    }
-  }
-}
-
 // ---- USER INFORMATION ---- //
 
 .form-title-user {
   text-transform: uppercase;
-  margin-left: 10px;
-  padding-top: 10px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 .form-account {
-  margin: 32px 10px;
+  margin: 32px 15px;
   .form {
     .form-empty {
       display: flex;
@@ -450,20 +404,60 @@ header {
   }
 }
 
+// ---- ORDER HISTORY ---- //
+
+.order-text {
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.order {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 40px 15px;
+  @include make-col(2, 70px);
+  .order-body {
+    display: flex;
+    margin-bottom: 30px;
+    .order-body-book {
+      img {
+        width: 93px;
+        height: 130px;
+        box-shadow: 0px 5px 20px 0px #c8c8c8;
+      }
+    }
+    .order-body-text {
+      display: flex;
+      h5 {
+        line-height: 25px;
+        padding-left: 25px;
+      }
+      p {
+        padding-bottom: 20px;
+        padding-left: 25px;
+      }
+      .text-col-first {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
 // ---- CREATE ACCOUNT ---- //
 
 .form-title-sign {
-  margin-right: 427px;
+  margin-right: 422px;
 }
 .form-title-sign,
 .form-title-create {
   display: inline;
   text-transform: uppercase;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .form-user {
-  margin: 32px 10px;
+  margin: 32px 15px;
   .form-user-account {
     .form-user-empty {
       display: flex;
@@ -505,8 +499,7 @@ header {
       border-radius: 30px;
       border: none;
       outline: none;
-      margin-top: 25px;
-      margin-bottom: 133px;
+      margin-top: 15px;
       padding: 10px 15px;
     }
     .sign-in {
