@@ -3,3 +3,4 @@ src/
 package.json
 readme.md
 node_modules/
+.idea/

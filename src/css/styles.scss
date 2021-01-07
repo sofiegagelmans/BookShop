@@ -19,10 +19,10 @@ body {
 
 header {
   position: fixed;
-  top: 0;
   background-color: $white;
   width: 100%;
   height: 65px;
+  top: 0;
   padding: 12px;
   z-index: 1000;
   nav {
@@ -30,10 +30,10 @@ header {
     justify-content: space-between;
     text-transform: uppercase;
     .brand-name {
-      margin-right: 80px;
       list-style-type: none;
       text-decoration: none;
       color: $black;
+      margin-right: 80px;
     }
     .form-search {
       position: relative;
@@ -43,8 +43,8 @@ header {
         text-align: center;
         font-family: $primary-font;
         font-size: $primary-font-size;
-        text-decoration: none;
         text-transform: uppercase;
+        text-decoration: none;
         box-shadow: 0px 5px 20px 0px #c8c8c8;
         border-radius: 20px;
         border: none;
@@ -59,7 +59,7 @@ header {
         position: absolute;
         text-align: center;
         font-size: 18px;
-        top: 25%;
+        top: 22%;
         right: 15px;
       }
     }
@@ -80,20 +80,19 @@ header {
 }
 
 .main {
+  width: 100%;
   display: flex;
   margin-top: 220px;
   position: sticky;
   top: 65px;
-  width: 100%;
-
+  margin-top: 220px;
   aside {
     position: fixed;
     top: 220px;
     width: 297px;
     padding: 10px;
     margin-left: 3px;
-    height: 50vh;
-
+    padding: 10px;
     span {
       text-transform: uppercase;
     }
@@ -116,27 +115,26 @@ header {
       }
     }
   }
-
   section {
     width: 100%;
+    margin-top: 5px;
     margin-left: 300px;
-
     .section-header {
       background-color: $white;
-      position: sticky;
-      top: 65px;
       display: flex;
+      position: sticky;
       justify-content: space-between;
       align-items: center;
+      background-color: $white;
+      top: 65px;
       padding-bottom: 10px;
       z-index: 1;
       ul {
-        padding-top: 5px;
         padding-left: 10px;
         .sort-by {
           position: relative;
           text-transform: uppercase;
-          padding: 5px;
+          padding-left: 5px;
           a {
             text-decoration: none;
             color: $black;
@@ -152,12 +150,12 @@ header {
             background-color: $white;
             top: 0;
             left: 120px;
-            padding-top: 0;
-            padding-left: 15px;
             padding-bottom: 15px;
+            padding-left: 15px;
             z-index: 2;
             li {
               padding: 5px;
+              padding-top: 0px;
             }
           }
           &:hover {
@@ -171,7 +169,6 @@ header {
         text-transform: uppercase;
         text-decoration: none;
         color: $grey;
-        padding-top: 5px;
         padding-right: 15px;
         &:hover {
           color: $grey;
@@ -180,15 +177,15 @@ header {
     }
     .section-body {
       @include make-col(2, 20px);
-
       padding: 0 15px;
+      padding-top: 5px;
       .book-info {
         max-width: 400px;
         font-size: 14px;
         &-body {
           height: 380px;
-          position: relative;
           display: flex;
+          position: relative;
           justify-content: center;
           align-items: center;
           background-color: #f5f5f5;
@@ -210,8 +207,8 @@ header {
               .cart {
                 width: 100%;
                 height: 100%;
-                position: absolute;
                 display: flex;
+                position: absolute;
                 justify-content: center;
                 align-items: center;
                 top: 0;
@@ -241,8 +238,8 @@ header {
             margin-left: 50px;
           }
           .book-stock {
-            margin-left: auto;
             text-transform: uppercase;
+            margin-left: auto;
           }
         }
       }
@@ -299,7 +296,7 @@ header {
     display: flex;
     justify-content: space-between;
     .detail-cart {
-      width: 150px;
+      width: 130px;
       height: 33px;
       text-align: center;
       border-radius: 20px;
@@ -334,56 +331,15 @@ header {
   }
 }
 
-// ---- ORDER HISTORY ---- //
-
-.order-text {
-  text-transform: uppercase;
-  margin-left: 10px;
-  padding-top: 5px;
-}
-.order {
-  width: 100%;
-  display: flex;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 36px 10px;
-  @include make-col(2, 70px);
-  .order-body {
-    display: flex;
-    margin-bottom: 30px;
-    .order-body-book {
-      img {
-        width: 93px;
-        height: 130px;
-        box-shadow: 0px 5px 20px 0px #c8c8c8;
-      }
-    }
-    .order-body-text {
-      display: flex;
-      h5 {
-        line-height: 25px;
-        padding-left: 25px;
-      }
-      p {
-        padding-bottom: 20px;
-        padding-left: 25px;
-      }
-      .text-col-first {
-        margin-right: 25px;
-      }
-    }
-  }
-}
-
 // ---- USER INFORMATION ---- //
 
 .form-title-user {
   text-transform: uppercase;
-  margin-left: 10px;
-  padding-top: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 .form-account {
-  margin: 31px 10px;
+  margin: 32px 15px;
   .form {
     .form-empty {
       display: flex;
@@ -425,7 +381,7 @@ header {
       border-radius: 30px;
       border: none;
       outline: none;
-      margin-top: 25px;
+      margin-top: 15px;
       padding: 10px 15px;
     }
     .submit {
@@ -448,20 +404,60 @@ header {
   }
 }
 
+// ---- ORDER HISTORY ---- //
+
+.order-text {
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.order {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 40px 15px;
+  @include make-col(2, 70px);
+  .order-body {
+    display: flex;
+    margin-bottom: 30px;
+    .order-body-book {
+      img {
+        width: 93px;
+        height: 130px;
+        box-shadow: 0px 5px 20px 0px #c8c8c8;
+      }
+    }
+    .order-body-text {
+      display: flex;
+      h5 {
+        line-height: 25px;
+        padding-left: 25px;
+      }
+      p {
+        padding-bottom: 20px;
+        padding-left: 25px;
+      }
+      .text-col-first {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
 // ---- CREATE ACCOUNT ---- //
 
 .form-title-sign {
-  margin-right: 427px;
+  margin-right: 422px;
 }
 .form-title-sign,
 .form-title-create {
   display: inline;
   text-transform: uppercase;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .form-user {
-  margin: 32px 10px;
+  margin: 32px 15px;
   .form-user-account {
     .form-user-empty {
       display: flex;
@@ -503,8 +499,7 @@ header {
       border-radius: 30px;
       border: none;
       outline: none;
-      margin-top: 25px;
-      margin-bottom: 133px;
+      margin-top: 15px;
       padding: 10px 15px;
     }
     .sign-in {
@@ -549,7 +544,7 @@ footer {
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   padding-bottom: 10px;
   padding: 15px;
-
+  padding-bottom: 10px;
   h3 {
     font-size: $primary-font-size;
     text-transform: uppercase;
