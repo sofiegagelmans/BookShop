@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./dist/style.css">
     <title>Bookshop</title>
   </head>
+
   <body>
     <!-- CART  -->
     <div id="mySidenav" class="sidenav">
@@ -16,12 +17,12 @@
         <h3>CART(1)</h3>
         <div class="order-body">
           <div class="order-body-book">
-            <img src="images/21.jpg" alt="bookcover">
+            <img src="images/art/ART-1.jpg" alt="bookcover" />
           </div>
           <div class="order-body-text">
             <div class="text-col-first">
-              <p>Two or Three Things I know about Provo</p>
-              <p>€25</p>
+              <p>Accidents</p>
+              <p>€60</p>
               <p>Quantity #1</p>
               <div class="remove-add">
                 <a href="#">Remove</a>
@@ -37,85 +38,84 @@
         </div>
       </div>
     </div>
-    <div class="wrapper">
-      <!-- HEADER -->
-      <header>
-        <div class="container">
-          <nav class="nav">
-            <a class="brand-name" href="index.html">Bookshop</a>
-            <form action="" class="form-search">
-              <input
-                class="search-collection"
-                type="text"
-                name="search"
-                placeholder="search for books"
-              />
-              <a href="#" class="search-button">
-                <svg class="icon icon-test">
-                  <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
-                </svg>
-              </a>
-            </form>
-            <ul>
-              <li>
-                <a href="user_information.html">Account</a>
-              </li>
-              <li><a href="#" onclick="openNav()">Cart(0)</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <!-- CONTENT -->
-      <main class="main">
-        <div class="detail-book">
-          <div class="detail-book-cover">
-            <div class="detail-book-header">
-              <a class="#" href="">
-                <img src="images/21.jpg" alt="bookcover" />
-              </a>
-            </div>
-            <div class="detail-book-button">
-              <a href="#">Previous</a>
-              <a href="#">Next</a>
-            </div>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <a class="brand-name" href="index.html">Bookshop</a>
+          <form action="" class="form-search">
+            <input
+              class="search-collection"
+              type="text"
+              name="search"
+              placeholder="search for books"
+            />
+            <a href="#" class="search-button">
+              <svg class="icon icon-test">
+                <use xlink:href="./icons/symbol-defs.svg#icon-test"></use>
+              </svg>
+            </a>
+          </form>
+          <ul>
+            <li>
+              <a href="user_information.html">Account</a>
+            </li>
+            <li><a href="#" onclick="openNav()">Cart(0)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- CONTENT -->
+    <main class="main">
+      <div class="detail-book">
+        <div class="detail-book-cover">
+          <div class="detail-book-header">
+            <a class="#" href="">
+              <img src="images/art/ART-1.jpg" alt="bookcover" />
+            </a>
+          </div>
+          <div class="detail-book-button">
+            <a href="#">Previous</a>
+            <a href="#">Next</a>
           </div>
         </div>
-        <div class="detail-text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis noste exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo. Excepteur sint occaecat cupidatat non
-            proident, deserunt mollit anim id est laborum.
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis noste exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo. Excepteur sint occaecat cupidatat non
-            proident, deserunt mollit anim id est laborum.
-          </p>
-          <br />
-          <p>
-            Title <br />
-            Author <br />
-            Publisher <br />
-            Year of publication <br />
-            Number of pages <br />
-            Price <br />
-          </p>
-          <br />
-          <div class="detail-button">
-            <div class="detail-cart">
-              <a href="#">Add To Cart</a>
-            </div>
+      </div>
+      <div class="detail-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis noste exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo. Excepteur sint occaecat cupidatat non
+          proident, deserunt mollit anim id est laborum.
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis noste exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo. Excepteur sint occaecat cupidatat non
+          proident, deserunt mollit anim id est laborum.
+        </p>
+        <br />
+        <p>
+          Title <br />
+          Author <br />
+          Publisher <br />
+          Year of publication <br />
+          Number of pages <br />
+          Price <br />
+        </p>
+        <br />
+        <div class="detail-button">
+          <div class="detail-cart">
+            <a href="#">Add To Cart</a>
           </div>
-          <a class="detail-return" href="index.html"><--- Go Back</a>
         </div>
-      </main>
+        <a class="detail-return" href="index.html"><--- Go Back</a>
+      </div>
+    </main>  
     </div>
-    <script src="./icons/svgxuse.js"></script>
-    <script src="./src/js/sidebar.js"></script>
+      <script src="./icons/svgxuse.js"></script>
+      <script src="./src/js/sidebar.js"></script>
   </body>
 </html>
