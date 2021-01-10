@@ -61,6 +61,7 @@ header {
         font-size: 18px;
         top: 22%;
         right: 15px;
+        color: #c8c8c8;
       }
     }
     ul {
@@ -91,8 +92,10 @@ header {
     top: 220px;
     width: 297px;
     padding: 10px;
+    padding-top: 0;
     margin-left: 3px;
-    padding: 10px;
+
+    //padding: 10px;
     span {
       text-transform: uppercase;
     }
@@ -117,14 +120,15 @@ header {
   }
   section {
     width: 100%;
-    margin-top: 5px;
+
     margin-left: 300px;
+
     .section-header {
       background-color: $white;
       display: flex;
       position: sticky;
       justify-content: space-between;
-      align-items: center;
+      //align-items: center;
       background-color: $white;
       top: 65px;
       padding-bottom: 10px;
@@ -249,7 +253,7 @@ header {
 
 .main-index {
   margin-bottom: 150px;
-  padding-top: 5px;
+  //padding-top: 5px;
 }
 
 // ---- DETAIL BOOK ---- //
@@ -335,7 +339,7 @@ header {
 
 .form-title-user {
   text-transform: uppercase;
-  margin-top: 5px;
+
   margin-left: 15px;
 }
 .form-account {
@@ -408,7 +412,6 @@ header {
 
 .order-text {
   text-transform: uppercase;
-  margin-top: 5px;
   margin-left: 15px;
 }
 .order {
