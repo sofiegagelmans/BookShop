@@ -245,15 +245,13 @@ header {
             text-transform: uppercase;
             margin-left: auto;
           }
-          .book-more-info{
-
-             margin-left: 50px;
-             a{
-             text-transform: uppercase ;
-            text-decoration: none;
-            color: $black;
-             }
-
+          .book-more-info {
+            margin-left: 50px;
+            a {
+              text-transform: uppercase;
+              text-decoration: none;
+              color: $black;
+            }
           }
         }
       }
