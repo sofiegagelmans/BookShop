@@ -18,10 +18,10 @@ body {
 }
 
 header {
-  position: fixed;
-  background-color: $white;
   width: 100%;
   height: 65px;
+  position: fixed;
+  background-color: $white;
   top: 0;
   padding: 12px;
   z-index: 1000;
@@ -85,14 +85,12 @@ header {
     }
   }
 }
-
 .main {
   width: 100%;
   display: flex;
   margin-top: 220px;
   position: sticky;
   top: 65px;
-
   aside {
     position: fixed;
     top: 220px;
@@ -100,8 +98,6 @@ header {
     padding: 10px;
     padding-top: 0;
     margin-left: 3px;
-
-    //padding: 10px;
     span {
       text-transform: uppercase;
     }
@@ -126,15 +122,11 @@ header {
   }
   section {
     width: 100%;
-
     margin-left: 300px;
-
     .section-header {
-      background-color: $white;
       display: flex;
       position: sticky;
       justify-content: space-between;
-      //align-items: center;
       background-color: $white;
       top: 65px;
       padding-bottom: 10px;
@@ -257,7 +249,6 @@ header {
         &-footer {
           display: flex;
           margin-top: 15px;
-          margin-bottom: 5px;
           .book-price {
             margin-left: 40px;
           }
@@ -580,14 +571,13 @@ header {
 footer {
   display: flex;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
-  padding-bottom: 10px;
   padding: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   h3 {
     font-size: $primary-font-size;
     text-transform: uppercase;
     color: $black;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   p {
     font-size: 14px;
@@ -686,6 +676,7 @@ footer {
   }
 }
 // ---- HAMBURGER MENU ---- //
+
 .myHamburgerMenu {
   width: 0;
   height: 100%;
@@ -740,54 +731,30 @@ aside {
 }
 
 // ---- @MEDIA ---- //
-@media screen and (max-width: 1250px) {
-  .main section .section-body .book-info-footer {
-    .book-price,
-    .book-more-info {
-      margin-left: 20px;
-    }
-  }
-}
 
 @media screen and (max-width: 1200px) {
   header nav .form-search .search-collection {
     width: 420px;
   }
-  .main-index {
+  .main {
     aside {
-      width: 247px;
+      width: 237px;
     }
     section {
-      margin-left: 250px;
+      margin-left: 240px;
     }
   }
-  .book-info-footer {
+  .main section .section-body .book-info-footer {
     font-size: 12px;
-  }
-  .main section .section-body .book-info-footer {
-    .book-price,
-    .book-more-info {
-      margin-left: 10px;
-    }
-  }
-}
-@media screen and (max-width: 1080px) {
-  body {
-    font-size: 14px;
-  }
-  .main section .section-body .book-info-footer {
-    .book-price,
-    .book-more-info {
+    .book-price {
       margin-left: 20px;
     }
   }
-  .main-index {
-    aside {
-      width: 177px;
-    }
-    section {
-      margin-left: 180px;
-    }
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 14px;
   }
   header nav .form-search .search-collection {
     width: 380px;
@@ -795,19 +762,26 @@ aside {
   }
   .main {
     aside {
-      width: 207px;
+      width: 197px;
     }
     section {
-      margin-left: 210px;
+      margin-left: 200px;
     }
+  }
+  .main section .section-header ul .sort-by .sort-items {
+    width: 140px;
+    left: 108px;
+    line-height: 18px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .form-account .form .form-empty .account-label {
+    font-size: 14px;
   }
   .form-account .form .submit {
     font-size: 14px;
   }
   .form-account .form .reset {
-    font-size: 14px;
-  }
-  .form-account .form .form-empty .account-label {
     font-size: 14px;
   }
   footer {
@@ -816,24 +790,22 @@ aside {
     }
     p {
       font-size: 12px;
+      line-height: 18px;
     }
   }
 }
-@media screen and (max-width: 930px) {
+
+@media screen and (max-width: 900px) {
   body {
     font-size: 12px;
   }
   header nav .form-search .search-collection {
-    width: 380px;
+    width: 300px;
+    height: 30px;
     font-size: 12px;
   }
-  .main-index {
-    aside {
-      width: 157px;
-    }
-    section {
-      margin-left: 160px;
-    }
+  header nav .form-search .search-button {
+    font-size: 15px;
   }
   .main {
     aside {
@@ -843,21 +815,32 @@ aside {
       margin-left: 180px;
     }
   }
+  .main section .section-header ul .sort-by .sort-items {
+    width: 122px;
+    left: 92px;
+    line-height: 15px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+  }
+  .main section .section-body .book-info-body-text {
+    font-size: 12px;
+    // hier moer de knop more info nog aangepast worden
+  }
+  .form-account .form .form-empty .account-label {
+    font-size: 12px;
+  }
   .form-account .form .submit {
     font-size: 12px;
   }
   .form-account .form .reset {
     font-size: 12px;
   }
-  .form-account .form .form-empty .account-label {
-    font-size: 12px;
-  }
-  .order .order-body .order-body-text {
-    font-size: 12px;
-  }
   .order .order-body .order-body-book {
     display: flex;
     flex-direction: column;
+  }
+  .order .order-body .order-body-text {
+    font-size: 12px;
   }
   footer {
     h3 {
@@ -866,16 +849,16 @@ aside {
     }
     p {
       font-size: 12px;
-      line-height: 17px;
+      line-height: 16px;
     }
   }
 }
 
-@media screen and (max-width: 905px) {
+@media screen and (max-width: 800px) {
   header nav .form-search .search-collection {
     width: 300px;
   }
-  .main-index {
+  .main {
     aside {
       width: 137px;
     }
@@ -893,17 +876,23 @@ aside {
     margin-bottom: 180px;
   }
 }
-@media screen and (max-width: 704px) {
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
   header nav .form-search {
     position: fixed;
-    bottom: 35px;
+    bottom: 20px;
     right: 25px;
     .search-button {
       top: 25%;
       right: 25%;
+      font-size: 20px;
     }
     .search-collection {
-      width: 35px;
+      width: 40px;
+      height: 40px;
     }
   }
   header nav .form-search .search-collection::placeholder {
@@ -916,19 +905,33 @@ aside {
   header nav .shop-cart-icon {
     display: block;
     font-size: 25px;
+    padding: 4px;
   }
   header nav .brand-name {
+    font-size: 16px;
+    margin-top: 3px;
     margin-right: 0;
-    font-size: 20px;
   }
-  .main,
-  .main-index {
+  .main {
     aside {
       display: none;
     }
     section {
       margin-left: 0px;
     }
+  }
+  .main section .section-header ul .sort-by .sort-items {
+    width: 140px;
+    left: 108px;
+    line-height: 18px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .main section .section-body .book-info-footer {
+    font-size: 14px;
+  }
+  .main section .section-body .book-info-body-text {
+    font-size: 14px;
   }
   .form-account .form .form-empty {
     display: flex;
