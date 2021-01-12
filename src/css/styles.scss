@@ -374,7 +374,10 @@ header {
         max-width: 480px;
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
+        margin-right: 25px;
+      }
+      .form-col-second {
+        margin-right: 65px;
       }
       .account-input {
         height: 33px;
@@ -479,7 +482,7 @@ header {
 .form-title-create {
   display: inline;
   text-transform: uppercase;
-  margin-left: 15px;
+  margin-left: 17px;
 }
 .form-user {
   margin: 32px 15px;
@@ -492,7 +495,10 @@ header {
         max-width: 480px;
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
+        margin-right: 25px;
+      }
+      .form-user-col-second {
+        margin-right: 65px;
       }
       .account-user-input {
         height: 33px;
@@ -694,7 +700,6 @@ footer {
       margin-left: 250px;
     }
   }
-
   .book-info-footer {
     font-size: 12px;
   }
@@ -709,14 +714,12 @@ footer {
   body {
     font-size: 14px;
   }
-
   .main section .section-body .book-info-footer {
     .book-price,
     .book-more-info {
       margin-left: 20px;
     }
   }
-
   .main-index {
     aside {
       width: 177px;
@@ -727,6 +730,23 @@ footer {
   }
   header nav .form-search .search-collection {
     width: 380px;
+    font-size: 14px;
+  }
+  .main {
+    aside {
+      width: 207px;
+    }
+    section {
+      margin-left: 210px;
+    }
+  }
+  .form-account .form .submit {
+    font-size: 14px;
+  }
+  .form-account .form .reset {
+    font-size: 14px;
+  }
+  .form-account .form .form-empty .account-label {
     font-size: 14px;
   }
   footer {
@@ -753,6 +773,30 @@ footer {
     section {
       margin-left: 160px;
     }
+  }
+  .main {
+    aside {
+      width: 177px;
+    }
+    section {
+      margin-left: 180px;
+    }
+  }
+  .form-account .form .submit {
+    font-size: 12px;
+  }
+  .form-account .form .reset {
+    font-size: 12px;
+  }
+  .form-account .form .form-empty .account-label {
+    font-size: 12px;
+  }
+  .order .order-body .order-body-text {
+    font-size: 12px;
+  }
+  .order .order-body .order-body-book {
+    display: flex;
+    flex-direction: column;
   }
   footer {
     h3 {
@@ -789,4 +833,9 @@ footer {
   }
 }
 @media screen and (max-width: 700px) {
+  .form-account .form .form-empty {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
 }
