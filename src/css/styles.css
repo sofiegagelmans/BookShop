@@ -189,6 +189,7 @@ header nav .form-search .search-collection {
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
@@ -385,6 +386,14 @@ header nav ul li a {
 }
 .main section .section-body .book-info-body-text:hover .more-info {
   top: 160px;
+}
+.main section .section-body .book-info-body-text:hover .more-info a {
+  width: 135px;
+  text-align: center;
+}
+.main section .section-body .book-info-body-text:hover .more-info a:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
 }
 .main section .section-body .book-info-footer {
   display: flex;
@@ -744,6 +753,7 @@ footer p {
 .sidebar-content .sidebar-btn .shop {
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   background-color: #fff;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
