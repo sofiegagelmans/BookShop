@@ -49,7 +49,6 @@ header {
         border-radius: 20px;
         border: none;
         outline: none;
-        margin-left: 90px;
         padding: 5px;
         &::placeholder {
           color: $grey;
@@ -86,7 +85,7 @@ header {
   margin-top: 220px;
   position: sticky;
   top: 65px;
-  margin-top: 220px;
+
   aside {
     position: fixed;
     top: 220px;
@@ -199,6 +198,9 @@ header {
             .cart {
               display: none;
             }
+            .more-info {
+              display: none;
+            }
             a {
               transition: 0.5s linear;
               img {
@@ -208,14 +210,17 @@ header {
               }
             }
             &:hover {
-              .cart {
+              .cart,
+              .more-info {
+                // max-width: 400px;
+                // background-color: red;
                 width: 100%;
-                height: 100%;
+                // height: 10%;
                 display: flex;
                 position: absolute;
                 justify-content: center;
                 align-items: center;
-                top: 0;
+                top: 35%;
                 padding-top: 8px;
                 a {
                   text-decoration: none;
@@ -230,6 +235,9 @@ header {
                     transition: background-color 0.8s ease;
                   }
                 }
+              }
+              .more-info {
+                top: 160px;
               }
             }
           }
@@ -261,7 +269,6 @@ header {
 
 .main-index {
   margin-bottom: 150px;
-  //padding-top: 5px;
 }
 
 // ---- DETAIL BOOK ---- //
@@ -656,4 +663,121 @@ footer {
       }
     }
   }
+}
+@media screen and (max-width: 1250px) {
+  .main section .section-body .book-info-footer {
+    .book-price,
+    .book-more-info {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header nav .form-search .search-collection {
+    width: 420px;
+  }
+  .main-index {
+    aside {
+      width: 247px;
+    }
+    section {
+      margin-left: 250px;
+    }
+  }
+
+  .book-info-footer {
+    font-size: 12px;
+  }
+  .main section .section-body .book-info-footer {
+    .book-price,
+    .book-more-info {
+      margin-left: 10px;
+    }
+  }
+}
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main section .section-body .book-info-footer {
+    .book-price,
+    .book-more-info {
+      margin-left: 20px;
+    }
+  }
+
+  .main-index {
+    aside {
+      width: 177px;
+    }
+    section {
+      margin-left: 180px;
+    }
+  }
+  header nav .form-search .search-collection {
+    width: 380px;
+    font-size: 14px;
+  }
+  footer {
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 930px) {
+  body {
+    font-size: 12px;
+  }
+  header nav .form-search .search-collection {
+    width: 380px;
+    font-size: 12px;
+  }
+  .main-index {
+    aside {
+      width: 157px;
+    }
+    section {
+      margin-left: 160px;
+    }
+  }
+  footer {
+    h3 {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 905px) {
+  header nav .form-search .search-collection {
+    width: 300px;
+  }
+  .main-index {
+    aside {
+      width: 137px;
+    }
+    section {
+      margin-left: 140px;
+    }
+  }
+  .main section .section-body {
+    @include make-col(1, 0px);
+  }
+  .main section .section-body .book-info-footer {
+    margin-bottom: 25px;
+  }
+  .main-index {
+    margin-bottom: 180px;
+  }
+}
+@media screen and (max-width: 700px) {
 }
