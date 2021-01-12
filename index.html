@@ -7,7 +7,7 @@
     <title>Bookshop</title>
   </head>
 
-  <body>
+  <body id="body">
     <!-- CART  -->
     <div id="mySidenav" class="sidenav">
       <div class="sidebar-content">
@@ -38,29 +38,50 @@
         </div>
       </div>
     </div>
+    <!-- HAMBURGER MENU-->
+
+    <div id="myHamburgerMenu" class="myHamburgerMenu">
+      <div class="myHamburgerMenu-content">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()"
+          >&times;</a
+        >
+        <span>Categories</span>
+        <ul>
+          <li><a href="create_account.html">Art</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#" class="all-items">Show All</a></li>
+        </ul>
+        <a href="./user_information.html">SIGN IN</a>
+      </div>
+    </div>
     <!-- HEADER -->
     <header>
       <div class="container">
         <nav class="nav">
-          <a href="#" class="search-button">
-            <svg class="icon icon-search">
-              <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+          <a href="#" class="hamburger" onclick="openMenu()">
+            <svg class="icon icon-menu">
+              <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
             </svg>
           </a>
           <a class="brand-name" href="index.html">Bookshop</a>
-          <a href="#" class="search-button">
-            <svg class="icon icon-search">
-              <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+          <a href="#" class="shop-cart-icon" onclick="openNav()">
+            <svg class="icon icon-cart">
+              <use xlink:href="./icons/symbol-defs.svg#icon-cart"></use>
             </svg>
           </a>
           <form action="" class="form-search">
             <input
+              id="search-collection"
               class="search-collection"
               type="text"
               name="search"
               placeholder="search for books"
             />
-            <a href="#" class="search-button">
+            <a href="#" class="search-button" onclick="openSearch()">
               <svg class="icon icon-search">
                 <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
               </svg>

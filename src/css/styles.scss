@@ -29,11 +29,17 @@ header {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    .hamburger {
+      display: none;
+    }
     .brand-name {
       list-style-type: none;
       text-decoration: none;
       color: $black;
       margin-right: 80px;
+    }
+    .shop-cart-icon {
+      display: none;
     }
     .form-search {
       position: relative;
@@ -401,6 +407,7 @@ header {
       max-width: 100px;
       font-family: $primary-font;
       font-size: $primary-font-size;
+      font-weight: $primary-font-weight;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 30px;
@@ -518,6 +525,7 @@ header {
       max-width: 100px;
       font-family: $primary-font;
       font-size: $primary-font-size;
+      font-weight: $primary-font-weight;
       text-transform: uppercase;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 30px;
@@ -671,6 +679,61 @@ footer {
     }
   }
 }
+// ---- HAMBURGER MENU ---- //
+.myHamburgerMenu {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1001;
+  background-color: $white;
+  box-shadow: 0px 5px 10px 0px #c8c8c8;
+  overflow-x: hidden;
+  transition: 0.8s;
+  top: 0;
+  left: 0;
+  .myHamburgerMenu-content {
+    padding: 10px;
+    padding-top: 15px;
+    span {
+      text-transform: uppercase;
+    }
+    ul {
+      margin-top: 60px;
+
+      li {
+        margin: 20px 0;
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $black;
+          &:hover {
+            color: $grey;
+          }
+        }
+        .all-items {
+          display: block;
+          margin-top: 60px;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+.myHamburgerMenu .close-btn {
+  position: absolute;
+  font-size: 28px;
+  text-decoration: none;
+  color: $black;
+  top: 5px;
+  right: 12px;
+}
+aside {
+}
+
+// ---- @MEDIA ---- //
 @media screen and (max-width: 1250px) {
   .main section .section-body .book-info-footer {
     .book-price,
@@ -802,7 +865,25 @@ footer {
   header nav .form-search .search-collection::placeholder {
     color: transparent;
   }
-  header nav ul li a {
+  header nav ul {
     display: none;
+  }
+  header nav .hamburger,
+  header nav .shop-cart-icon {
+    display: block;
+    font-size: 25px;
+  }
+  header nav .brand-name {
+    margin-right: 0;
+    font-size: 20px;
+  }
+  .main,
+  .main-index {
+    aside {
+      display: none;
+    }
+    section {
+      margin-left: 0px;
+    }
   }
 }
