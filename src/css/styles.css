@@ -1,0 +1,908 @@
+@import url("https://rsms.me/inter/inter.css");
+@import "../icons/style.css";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  padding: 12px;
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+header nav .brand-name {
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  margin-right: 80px;
+}
+header nav .form-search {
+  position: relative;
+}
+header nav .form-search .search-collection {
+  width: 500px;
+  height: 35px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+header nav .form-search .search-collection::placeholder {
+  color: #ccc;
+}
+header nav .form-search .search-button {
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  top: 22%;
+  right: 15px;
+  color: #c8c8c8;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 60px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  margin-top: 220px;
+  position: sticky;
+  top: 65px;
+}
+.main aside {
+  position: fixed;
+  top: 220px;
+  width: 297px;
+  padding: 10px;
+  padding-top: 0;
+  margin-left: 3px;
+}
+.main aside span {
+  text-transform: uppercase;
+}
+.main aside ul {
+  margin-top: 40px;
+}
+.main aside ul li {
+  margin: 20px 0;
+}
+.main aside ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+.main aside ul li a:hover {
+  color: #ccc;
+}
+.main aside ul li .all-items {
+  display: block;
+  margin-top: 40px;
+}
+.main section {
+  width: 100%;
+  margin-left: 300px;
+}
+.main section .section-header {
+  background-color: #fff;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  background-color: #fff;
+  top: 65px;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+.main section .section-header ul {
+  padding-left: 10px;
+}
+.main section .section-header ul .sort-by {
+  position: relative;
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+.main section .section-header ul .sort-by a {
+  text-decoration: none;
+  color: #000;
+}
+.main section .section-header ul .sort-by a:hover {
+  color: #ccc;
+}
+.main section .section-header ul .sort-by .sort-items {
+  width: 165px;
+  display: none;
+  position: absolute;
+  line-height: 20px;
+  background-color: #fff;
+  top: 0;
+  left: 120px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  z-index: 2;
+}
+.main section .section-header ul .sort-by .sort-items li {
+  padding: 5px;
+  padding-top: 0px;
+}
+.main section .section-header ul .sort-by:hover .sort-items {
+  display: block;
+}
+.main section .section-header .amount-items {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ccc;
+  padding-right: 15px;
+}
+.main section .section-header .amount-items:hover {
+  color: #ccc;
+}
+.main section .section-body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  padding-top: 5px;
+}
+.main section .section-body > *:nth-child(1n+0) {
+  min-width: calc(calc(100% - 20px) / 2);
+  margin: 0 20px 20px 0;
+}
+.main section .section-body > *:nth-child(2n+0) {
+  margin-right: 0;
+}
+.main section .section-body .book-info {
+  max-width: 400px;
+  font-size: 14px;
+}
+.main section .section-body .book-info-body {
+  height: 380px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.main section .section-body .book-info-body-text {
+  position: relative;
+}
+.main section .section-body .book-info-body-text .cart {
+  display: none;
+}
+.main section .section-body .book-info-body-text .more-info {
+  display: none;
+}
+.main section .section-body .book-info-body-text a {
+  transition: 0.5s linear;
+}
+.main section .section-body .book-info-body-text a img {
+  width: 100%;
+  max-width: 220px;
+  box-shadow: 10px 10px 20px 0px #c8c8c8;
+}
+.main section .section-body .book-info-body-text:hover .cart,
+.main section .section-body .book-info-body-text:hover .more-info {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 35%;
+  padding-top: 8px;
+}
+.main section .section-body .book-info-body-text:hover .cart a,
+.main section .section-body .book-info-body-text:hover .more-info a {
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+}
+.main section .section-body .book-info-body-text:hover .cart a:hover,
+.main section .section-body .book-info-body-text:hover .more-info a:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+.main section .section-body .book-info-body-text:hover .more-info {
+  top: 160px;
+}
+.main section .section-body .book-info-footer {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.main section .section-body .book-info-footer .book-price {
+  margin-left: 40px;
+}
+.main section .section-body .book-info-footer .book-stock {
+  text-transform: uppercase;
+  margin-left: auto;
+}
+.main section .section-body .book-info-footer .book-more-info {
+  margin-left: 40px;
+}
+.main section .section-body .book-info-footer .book-more-info a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.main-index {
+  margin-bottom: 150px;
+}
+
+.main .detail-book .detail-book-cover {
+  padding-left: 15px;
+}
+.main .detail-book .detail-book-cover .detail-book-header {
+  width: 820px;
+  height: 505px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+.main .detail-book .detail-book-cover .detail-book-header a img {
+  width: 280px;
+  height: 400px;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+}
+.main .detail-book .detail-book-cover .detail-book-button {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+.main .detail-book .detail-book-cover .detail-book-button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+.main .detail-text p {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 15px;
+}
+.main .detail-button {
+  display: flex;
+  justify-content: space-between;
+}
+.main .detail-button .detail-cart {
+  width: 130px;
+  height: 33px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  margin-left: 15px;
+  padding-top: 8px;
+}
+.main .detail-button .detail-cart:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+  cursor: pointer;
+}
+.main .detail-button .detail-cart a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+.main .detail-return {
+  display: flex;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  padding-top: 154px;
+  padding-left: 468px;
+  padding-bottom: 15px;
+}
+
+.form-title-user {
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.form-account {
+  margin: 32px 15px;
+}
+.form-account .form .form-empty {
+  display: flex;
+}
+.form-account .form .form-empty .form-col-first,
+.form-account .form .form-empty .form-col-second {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.form-account .form .form-empty .account-input {
+  height: 33px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+.form-account .form .form-empty .account-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.form-account .form .btn {
+  width: 100%;
+  max-width: 100px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 10px 15px;
+}
+.form-account .form .submit {
+  background-color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.form-account .form .submit:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+.form-account .form .reset {
+  background-color: #fff;
+  cursor: pointer;
+}
+.form-account .form .reset:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+
+.order-text {
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.order {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 40px 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.order > *:nth-child(1n+0) {
+  min-width: calc(calc(100% - 70px) / 2);
+  margin: 0 70px 70px 0;
+}
+.order > *:nth-child(2n+0) {
+  margin-right: 0;
+}
+.order .order-body {
+  display: flex;
+  margin-bottom: 30px;
+}
+.order .order-body .order-body-book img {
+  width: 93px;
+  height: 130px;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+}
+.order .order-body .order-body-text {
+  display: flex;
+}
+.order .order-body .order-body-text h5 {
+  line-height: 25px;
+  padding-left: 25px;
+}
+.order .order-body .order-body-text p {
+  padding-bottom: 20px;
+  padding-left: 25px;
+}
+.order .order-body .order-body-text .text-col-first {
+  margin-right: 25px;
+}
+
+.form-title-sign {
+  margin-right: 422px;
+}
+
+.form-title-sign,
+.form-title-create {
+  display: inline;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.form-user {
+  margin: 32px 15px;
+}
+.form-user .form-user-account .form-user-empty {
+  display: flex;
+}
+.form-user .form-user-account .form-user-empty .form-user-col-first,
+.form-user .form-user-account .form-user-empty .form-user-col-second {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.form-user .form-user-account .form-user-empty .account-user-input {
+  height: 33px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+.form-user .form-user-account .form-user-empty .account-user-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.form-user .form-user-account .btn {
+  width: 100%;
+  max-width: 100px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 10px 15px;
+}
+.form-user .form-user-account .sign-in {
+  max-width: 100px;
+  background-color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.form-user .form-user-account .sign-in:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+.form-user .form-user-account .sign-out {
+  max-width: 120px;
+  text-align: center;
+  background-color: #fff;
+  margin-right: 252px;
+  cursor: pointer;
+}
+.form-user .form-user-account .sign-out:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+.form-user .form-user-account .create-account {
+  max-width: 190px;
+  text-align: center;
+  background-color: #fff;
+  margin-right: 200px;
+  cursor: pointer;
+}
+.form-user .form-user-account .create-account:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+
+footer {
+  display: flex;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  padding-bottom: 10px;
+  padding: 15px;
+  padding-bottom: 10px;
+}
+footer h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+}
+footer p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 20px;
+}
+
+.sidenav {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1001;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px 0px #c8c8c8;
+  overflow-x: hidden;
+  transition: 0.8s;
+  top: 0;
+  right: 0;
+}
+
+.sidenav .close-btn {
+  position: absolute;
+  font-size: 28px;
+  text-decoration: none;
+  color: #000;
+  top: 5px;
+  right: 12px;
+}
+
+.sidebar-content {
+  margin: 15px;
+}
+.sidebar-content h3 {
+  margin-bottom: 60px;
+}
+.sidebar-content .sidebar-btn {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-bottom: 15px;
+  bottom: 0;
+  left: 15;
+}
+.sidebar-content .sidebar-btn .checkout,
+.sidebar-content .sidebar-btn .shop {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #fff;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 13px;
+  padding: 10px;
+}
+.sidebar-content .sidebar-btn .checkout:hover,
+.sidebar-content .sidebar-btn .shop:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
+
+.order-body {
+  display: flex;
+  margin-bottom: 30px;
+}
+.order-body .order-body-book img {
+  width: 90px;
+  height: 125px;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  margin-left: 3px;
+}
+.order-body .order-body-text {
+  display: flex;
+  text-transform: uppercase;
+}
+.order-body .order-body-text p {
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+.order-body .order-body-text .text-col-first .remove-add {
+  display: flex;
+  padding-left: 25px;
+}
+.order-body .order-body-text .text-col-first .remove-add p {
+  padding: 0;
+}
+.order-body .order-body-text .text-col-first .remove-add a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 1250px) {
+  .main section .section-body .book-info-footer .book-price,
+.main section .section-body .book-info-footer .book-more-info {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header nav .form-search .search-collection {
+    width: 420px;
+  }
+
+  .main-index aside {
+    width: 247px;
+  }
+  .main-index section {
+    margin-left: 250px;
+  }
+
+  .book-info-footer {
+    font-size: 12px;
+  }
+
+  .main section .section-body .book-info-footer .book-price,
+.main section .section-body .book-info-footer .book-more-info {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main section .section-body .book-info-footer .book-price,
+.main section .section-body .book-info-footer .book-more-info {
+    margin-left: 20px;
+  }
+
+  .main-index aside {
+    width: 177px;
+  }
+  .main-index section {
+    margin-left: 180px;
+  }
+
+  header nav .form-search .search-collection {
+    width: 380px;
+    font-size: 14px;
+  }
+
+  footer h3 {
+    font-size: 14px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 930px) {
+  body {
+    font-size: 12px;
+  }
+
+  header nav .form-search .search-collection {
+    width: 380px;
+    font-size: 12px;
+  }
+
+  .main-index aside {
+    width: 157px;
+  }
+  .main-index section {
+    margin-left: 160px;
+  }
+
+  footer h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  footer p {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+@media screen and (max-width: 905px) {
+  header nav .form-search .search-collection {
+    width: 300px;
+  }
+
+  .main-index aside {
+    width: 137px;
+  }
+  .main-index section {
+    margin-left: 140px;
+  }
+
+  .main section .section-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main section .section-body > *:nth-child(1n+0) {
+    min-width: calc(calc(100% - 0px) / 1);
+    margin: 0 0px 0px 0;
+  }
+  .main section .section-body > *:nth-child(1n+0) {
+    margin-right: 0;
+  }
+
+  .main section .section-body .book-info-footer {
+    margin-bottom: 25px;
+  }
+
+  .main-index {
+    margin-bottom: 180px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
