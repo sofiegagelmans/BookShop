@@ -16,5 +16,13 @@ Single-colored icons can be modified like so:
 ========================================== */
 
 .icon-search {
-  width: 0.9814453125em;
+  width: 0.98046875em;
+}
+
+.icon-menu {
+  width: 1.01171875em;
+}
+
+.icon-cart {
+  width: 1.01171875em;
 }
