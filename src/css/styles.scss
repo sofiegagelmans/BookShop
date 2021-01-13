@@ -123,6 +123,7 @@ header {
   section {
     width: 100%;
     margin-left: 300px;
+    margin-bottom: 50px;
     .section-header {
       display: flex;
       position: sticky;
@@ -249,6 +250,7 @@ header {
         &-footer {
           display: flex;
           margin-top: 15px;
+
           .book-price {
             margin-left: 40px;
           }
@@ -569,6 +571,12 @@ header {
 // ---- FOOTER ---- //
 
 footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: #fff;
   display: flex;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   padding: 15px;
@@ -817,6 +825,15 @@ footer {
       line-height: 18px;
     }
   }
+  .main section {
+    .order {
+      @include make-col(1, 0px);
+
+      .order-body {
+        margin-bottom: 60px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -978,8 +995,14 @@ footer {
     margin-bottom: 360px;
   }
   footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    // margin-top: ;
     div {
       margin-top: 35px;
     }
