@@ -8,7 +8,7 @@
   </head>
 
   <body id="body">
-    <!-- CART -->
+    <!-- SIDE NAV SHOP -->
     <div id="side-nav" class="side-nav">
       <div class="sidebar-content">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
@@ -57,6 +57,26 @@
         <a href="./user_information.html">SIGN IN</a>
       </div>
     </div>
+    <!--  LITTLE SEARCH BUTTON-->
+    <form action="" class="little-form-search">
+      <input
+        id="little-search-collection"
+        class="little-search-collection"
+        type="text"
+        name="search"
+        placeholder="search for books"
+      />
+      <a
+        href="#little-search-button"
+        id="little-search-button"
+        class="little-search-button"
+        onclick="checkSearchOpen()"
+      >
+        <svg class="icon icon-search">
+          <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </a>
+    </form>
     <!-- HEADER -->
     <header>
       <div class="container">
@@ -296,25 +316,24 @@
       <div>
         <h3>Contact</h3>
         <p>
-          Lorem ipsum dolor sit amet 
-          consectetur adipiscing elit 
-          eiusmod tempor.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit eiusmod tempor.
         </p>
       </div>
       <div>
         <h3>Payment Methods</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis noste 
-          exercitation ullamco laboris nisi ut aliquip commodo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam quis noste exercitation ullamco laboris nisi ut aliquip
+          commodo.
         </p>
       </div>
       <div>
         <h3>About Us</h3>
         <p>
-          Consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident 
-          culpa qui officia deserunt mollit est laborum.
+          Consequat duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident culpa qui officia deserunt mollit est laborum.
         </p>
       </div>
     </footer>

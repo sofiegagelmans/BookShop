@@ -90,7 +90,7 @@ header {
   display: flex;
   position: sticky;
   top: 65px;
-  margin-top: 220px;
+  margin-top: 203px;
   aside {
     position: fixed;
     top: 220px;
@@ -123,6 +123,7 @@ header {
   section {
     width: 100%;
     margin-left: 300px;
+    margin-bottom: 50px;
     .section-header {
       display: flex;
       position: sticky;
@@ -249,6 +250,7 @@ header {
         &-footer {
           display: flex;
           margin-top: 15px;
+
           .book-price {
             margin-left: 40px;
           }
@@ -569,6 +571,12 @@ header {
 // ---- FOOTER ---- //
 
 footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: #fff;
   display: flex;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   padding: 15px;
@@ -733,7 +741,8 @@ footer {
 // ---- LITTLE SEARCH BUTTON ---- //
 
 .little-form-search {
-  box-shadow: 0px 5px 10px 0px #c8c8c8;
+  // box-shadow: 0px 5px 10px 0px #c8c8c8;
+  // border-radius: 50%;
   .little-search-collection {
     display: none;
     width: 0px;
@@ -744,7 +753,7 @@ footer {
     font-weight: $primary-font-weight;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0px 5px 10px 0px #c8c8c8;
+
     border-radius: 20px;
     border: none;
     outline: none;
@@ -808,6 +817,15 @@ footer {
       line-height: 16px;
     }
   }
+  .main section {
+    .order {
+      @include make-col(1, 0px);
+
+      .order-body {
+        margin-bottom: 60px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -850,7 +868,7 @@ footer {
 
 @media screen and (max-width: 800px) {
   header nav .form-search .search-collection {
-    width: 300px;
+    width: 280px;
   }
   .main section .section-body {
     @include make-col(1, 0px);
@@ -892,6 +910,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    .little-search-collection {
+      box-shadow: 0px 5px 20px 0px #c8c8c8;
+    }
 
     .little-search-button {
       font-size: 20px;
@@ -899,6 +920,7 @@ footer {
       right: 15px;
       color: #c8c8c8;
       background-color: #fff;
+      box-shadow: 0px 5px 20px 0px #c8c8c8;
       padding: 6px 6px;
       padding-bottom: 2px;
       padding-left: 7px;
@@ -947,8 +969,22 @@ footer {
     margin-right: 5px;
   }
   footer {
-    h3 {
-      font-size: 14px;
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      margin-top: 35px;
+    }
+    :first-child {
+      margin-top: 0px;
+      h3 {
+        font-size: 14px;
+      }
     }
   }
 }

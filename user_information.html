@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
     <title>Account</title>
   </head>
 
   <body>
     <!-- CART  -->
+    <!-- SIDE NAV SHOP -->
     <div id="side-nav" class="side-nav">
       <div class="sidebar-content">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
@@ -38,145 +39,190 @@
         </div>
       </div>
     </div>
-    <div class="wrapper">
-    <!-- HEADER -->
-    <header>
-      <div class="container">
-        <nav class="nav">
-          <a class="brand-name" href="index.html">Bookshop</a>
-          <form action="" class="form-search">
-            <input
-              class="search-collection"
-              type="text"
-              name="search"
-              placeholder="search for books"
-            />
-            <a href="#" class="search-button">
-              <svg class="icon icon-search">
-                <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
-              </svg>
-            </a>
-          </form>
-          <ul>
-            <li>
-              <a href="user_information.html">Account</a>
-            </li>
-            <li><a href="#" onclick="openNav()">Cart(0)</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- MAIN -->
-    <main class="main">
-      <aside>
+    <!-- SIDE MENU -->
+    <div id="side-menu" class="side-menu">
+      <div class="side-menu-content">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()"
+          >&times;</a
+        >
         <span>My Account</span>
         <ul>
           <li><a href="user_information.html">User Information</a></li>
           <li><a href="order_history.html">Order History</a></li>
         </ul>
-      </aside>
-      <!-- USER INFORMATION -->
-      <section>
-        <h2 class="form-title-user">User Information</h2>
-        <div class="form-account">
-          <form action="/change.php" class="form">
-            <div class="form-empty">
-              <div class="form-col-first">
-                <input
-                  class="account-input"
-                  type="text"
-                  id="first-name"
-                  name="first-name"
-                />
-                <label class="account-label" for="first-name"
-                  >First Name</label
-                >
-                <input
-                  class="account-input"
-                  type="text"
-                  id="last-name"
-                  name="last-name"
-                />
-                <label class="account-label" for="last-name">Last Name</label>
-                <input
-                  class="account-input"
-                  type="text"
-                  id="email"
-                  name="email"
-                />
-                <label class="account-label" for="email">Email</label>
-                <input
-                  class="account-input"
-                  type="password"
-                  id="password"
-                  name="password"
-                />
-                <label class="account-label" for="password">Password</label>
-              </div>
-              <div class="form-col-second">
-                <input
-                  class="account-input"
-                  type="text"
-                  id="address"
-                  name="address"
-                />
-                <label class="account-label" for="address">Address</label>
-                <input
-                  class="account-input"
-                  type="text"
-                  id="city"
-                  name="city"
-                />
-                <label class="account-label" for="city">City</label>
-                <input
-                  class="account-input"
-                  type="text"
-                  id="postal"
-                  name="postal"
-                />
-                <label class="account-label" for="postal">Postal Code</label>
-                <input
-                  class="account-input"
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                />
-                <label class="account-label" for="phone">Phone Number</label>
-              </div>
-            </div>
-            <input class="btn submit" type="submit" value="submit">
-            <input class="btn reset" type="reset" value="cancel">
-          </form>
+        <!-- <a href="./user_information.html">SIGN IN</a> -->
+      </div>
+    </div>
+    <!--  LITTLE SEARCH BUTTON-->
+    <form action="" class="little-form-search">
+      <input
+        id="little-search-collection"
+        class="little-search-collection"
+        type="text"
+        name="search"
+        placeholder="search for books"
+      />
+      <a
+        href="#little-search-button"
+        id="little-search-button"
+        class="little-search-button"
+        onclick="checkSearchOpen()"
+      >
+        <svg class="icon icon-search">
+          <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </a>
+    </form>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header>
+        <div class="container">
+          <nav class="nav">
+            <a href="#" class="hamburger" onclick="openMenu()">
+              <svg class="icon icon-menu">
+                <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
+              </svg>
+            </a>
+            <a class="brand-name" href="index.html">Bookshop</a>
+            <a href="#" class="shop-cart-icon" onclick="openNav()">
+              <svg class="icon icon-cart">
+                <use xlink:href="./icons/symbol-defs.svg#icon-cart"></use>
+              </svg>
+            </a>
+            <form action="" class="form-search">
+              <input
+                class="search-collection"
+                type="text"
+                name="search"
+                placeholder="search for books"
+              />
+              <a href="#" class="search-button">
+                <svg class="icon icon-search">
+                  <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </a>
+            </form>
+            <ul>
+              <li>
+                <a href="user_information.html">Account</a>
+              </li>
+              <li><a href="#" onclick="openNav()">Cart(0)</a></li>
+            </ul>
+          </nav>
         </div>
-      </section>
-    </main>
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div>
-        <h3>Contact</h3>
-        <p>
-          Lorem ipsum dolor sit amet 
-          consectetur adipiscing elit 
-          eiusmod tempor.
-        </p>
-      </div>
-      <div>
-        <h3>Payment Methods</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis noste 
-          exercitation ullamco laboris nisi ut aliquip commodo.
-        </p>
-      </div>
-      <div>
-        <h3>About Us</h3>
-        <p>
-          Consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident 
-          culpa qui officia deserunt mollit est laborum.
-        </p>
-      </div>
-    </footer> 
+      </header>
+      <!-- MAIN -->
+      <main class="main">
+        <aside>
+          <span>My Account</span>
+          <ul>
+            <li><a href="user_information.html">User Information</a></li>
+            <li><a href="order_history.html">Order History</a></li>
+          </ul>
+        </aside>
+        <!-- USER INFORMATION -->
+        <section>
+          <h2 class="form-title-user">User Information</h2>
+          <div class="form-account">
+            <form action="/change.php" class="form">
+              <div class="form-empty">
+                <div class="form-col-first">
+                  <input
+                    class="account-input"
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                  />
+                  <label class="account-label" for="first-name"
+                    >First Name</label
+                  >
+                  <input
+                    class="account-input"
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                  />
+                  <label class="account-label" for="last-name">Last Name</label>
+                  <input
+                    class="account-input"
+                    type="text"
+                    id="email"
+                    name="email"
+                  />
+                  <label class="account-label" for="email">Email</label>
+                  <input
+                    class="account-input"
+                    type="password"
+                    id="password"
+                    name="password"
+                  />
+                  <label class="account-label" for="password">Password</label>
+                </div>
+                <div class="form-col-second">
+                  <input
+                    class="account-input"
+                    type="text"
+                    id="address"
+                    name="address"
+                  />
+                  <label class="account-label" for="address">Address</label>
+                  <input
+                    class="account-input"
+                    type="text"
+                    id="city"
+                    name="city"
+                  />
+                  <label class="account-label" for="city">City</label>
+                  <input
+                    class="account-input"
+                    type="text"
+                    id="postal"
+                    name="postal"
+                  />
+                  <label class="account-label" for="postal">Postal Code</label>
+                  <input
+                    class="account-input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                  />
+                  <label class="account-label" for="phone">Phone Number</label>
+                </div>
+              </div>
+              <input class="btn submit" type="submit" value="submit" />
+              <input class="btn reset" type="reset" value="cancel" />
+            </form>
+          </div>
+        </section>
+      </main>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div>
+          <h3>Contact</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit eiusmod
+            tempor.
+          </p>
+        </div>
+        <div>
+          <h3>Payment Methods</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam quis noste exercitation ullamco laboris nisi ut
+            aliquip commodo.
+          </p>
+        </div>
+        <div>
+          <h3>About Us</h3>
+          <p>
+            Consequat duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident culpa qui officia deserunt mollit est
+            laborum.
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="./icons/svgxuse.js"></script>
     <script src="./src/js/sidebar.js"></script>
