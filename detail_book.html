@@ -8,8 +8,8 @@
   </head>
 
   <body>
-    <!-- CART  -->
-    <div id="mySidenav" class="sidenav">
+    <!-- SIDE NAV SHOP -->
+    <div id="side-nav" class="side-nav">
       <div class="sidebar-content">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
           >&times;</a
@@ -38,11 +38,61 @@
         </div>
       </div>
     </div>
+    <!-- SIDE MENU -->
+    <div id="side-menu" class="side-menu">
+      <div class="side-menu-content">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()"
+          >&times;</a
+        >
+        <span>Categories</span>
+        <ul>
+          <li><a href="create_account.html">Art</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#" class="all-items">Show All</a></li>
+        </ul>
+        <a href="./user_information.html">SIGN IN</a>
+      </div>
+    </div>
+    <!--  LITTLE SEARCH BUTTON-->
+    <form action="" class="little-form-search">
+      <input
+        id="little-search-collection"
+        class="little-search-collection"
+        type="text"
+        name="search"
+        placeholder="search for books"
+      />
+      <a
+        href="#little-search-button"
+        id="little-search-button"
+        class="little-search-button"
+        onclick="checkSearchOpen()"
+      >
+        <svg class="icon icon-search">
+          <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </a>
+    </form>
+
     <!-- HEADER -->
     <header>
       <div class="container">
         <nav class="nav">
+          <a href="#" class="hamburger" onclick="openMenu()">
+            <svg class="icon icon-menu">
+              <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </a>
           <a class="brand-name" href="index.html">Bookshop</a>
+          <a href="#" class="shop-cart-icon" onclick="openNav()">
+            <svg class="icon icon-cart">
+              <use xlink:href="./icons/symbol-defs.svg#icon-cart"></use>
+            </svg>
+          </a>
           <form action="" class="form-search">
             <input
               class="search-collection"
