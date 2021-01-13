@@ -736,7 +736,31 @@ footer {
   top: 5px;
   right: 12px;
 }
-aside {
+
+// ---- LITTLE SEARCH BUTTON ---- //
+.little-form-search {
+  .little-search-collection {
+    display: none;
+    width: 0px;
+    height: 30px;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 10px;
+    font-weight: $primary-font-weight;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0px 5px 20px 0px #c8c8c8;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-right: 10px;
+
+    &::placeholder {
+      color: $grey;
+      font-size: 10px;
+    }
+  }
 }
 
 // ---- @MEDIA ---- //
@@ -895,20 +919,31 @@ aside {
 }
 @media screen and (max-width: 704px) {
   header nav .form-search {
+    display: none;
+  }
+
+  .little-form-search {
     position: fixed;
     bottom: 35px;
     right: 25px;
-    .search-button {
-      top: 25%;
-      right: 25%;
-    }
-    .search-collection {
-      width: 35px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .little-search-button {
+      font-size: 20px;
+      top: 22%;
+      right: 15px;
+      color: #c8c8c8;
+      background-color: #fff;
+      padding: 6px 6px;
+      padding-bottom: 2px;
+      padding-left: 7px;
+      border-radius: 50%;
     }
   }
-  header nav .form-search .search-collection::placeholder {
-    color: transparent;
-  }
+
   header nav ul {
     display: none;
   }

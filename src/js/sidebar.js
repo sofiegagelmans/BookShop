@@ -20,25 +20,20 @@ function closeMenu() {
   document.getElementById("myHamburgerMenu").style.width = "0px";
 }
 
+let search = document.getElementById("little-search-collection");
 function openSearch() {
-  let search = document.getElementById("search-collection");
-  let body = document.getElementById("body");
-
-  if (body.width > "704px") {
-    search.style.width = "350px";
-  } else {
-    search.style.width = "35px";
-  }
-
-  // closeSearch();
+  search.style.width = "100%";
+  search.style.display = "block";
 }
 
 function closeSearch() {
-  let search = document.getElementById("search-collection");
+  search.style.display = "none";
 }
 
-// function myFunction() {
-//   setTimeout(function () {
-//     alert("Hello");
-//   }, 3000);
-// }
+function checkSearchOpen() {
+  if (search.style.display === "block") {
+    closeSearch();
+  } else {
+    openSearch();
+  }
+}
