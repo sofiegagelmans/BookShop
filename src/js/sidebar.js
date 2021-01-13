@@ -22,7 +22,7 @@ function closeMenu() {
 
 let search = document.getElementById("little-search-collection");
 function openSearch() {
-  search.style.width = "100%";
+  search.style.width = "300px";
   search.style.display = "block";
 }
 
