@@ -90,7 +90,7 @@ header {
   display: flex;
   position: sticky;
   top: 65px;
-  margin-top: 203px;
+  margin-top: 202px;
   aside {
     position: fixed;
     top: 220px;
@@ -217,6 +217,7 @@ header {
                 position: absolute;
                 justify-content: center;
                 align-items: center;
+                font-size: $primary-font-size;
                 top: 35%;
                 padding-top: 8px;
                 a {
@@ -233,10 +234,13 @@ header {
                   }
                 }
               }
+              .cart {
+                font-size: $primary-font-size;
+              }
               .more-info {
                 top: 160px;
                 a {
-                  width: 135px;
+                  width: 148px;
                   text-align: center;
                   &:hover {
                     background-color: $green;
@@ -741,8 +745,6 @@ footer {
 // ---- LITTLE SEARCH BUTTON ---- //
 
 .little-form-search {
-  // box-shadow: 0px 5px 10px 0px #c8c8c8;
-  // border-radius: 50%;
   .little-search-collection {
     display: none;
     width: 0px;
@@ -753,13 +755,11 @@ footer {
     font-weight: $primary-font-weight;
     text-transform: uppercase;
     text-decoration: none;
-
     border-radius: 20px;
     border: none;
     outline: none;
     padding: 10px;
     margin-right: 10px;
-
     &::placeholder {
       font-size: $primary-font-size;
       font-size: 14px;
@@ -796,15 +796,15 @@ footer {
     }
   }
   .main section .section-header ul .sort-by .sort-items {
-    width: 140px;
-    left: 108px;
+    width: 158px;
+    left: 120px;
     li {
       margin-bottom: 5px;
     }
   }
   .main section .section-body .book-info-footer {
     .book-price {
-      margin-left: 20px;
+      margin-left: 15px;
     }
   }
   footer {
@@ -822,38 +822,44 @@ footer {
       @include make-col(1, 0px);
 
       .order-body {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
+      }
+      .order-body:last-child {
+        margin-bottom: 120px;
       }
     }
   }
 }
 
 @media screen and (max-width: 900px) {
+  header nav .brand-name {
+    margin-right: 30px;
+  }
   header nav .form-search .search-collection {
     width: 300px;
-    height: 30px;
+    height: 33px;
   }
   header nav .form-search .search-button {
-    font-size: 15px;
+    font-size: 18px;
   }
   header nav ul li a {
-    margin-left: 40px;
+    margin-left: 30px;
   }
   .main {
     aside {
-      width: 177px;
+      width: 147px;
     }
     section {
-      margin-left: 180px;
+      margin-left: 150px;
     }
   }
   .main-index {
     margin-bottom: 215px;
   }
   .main section .section-header ul .sort-by .sort-items {
-    width: 122px;
-    left: 92px;
-    padding-bottom: 5px;
+    width: 150px;
+    left: 120px;
+    padding-bottom: 6px;
     padding-left: 10px;
   }
   footer {
@@ -861,14 +867,11 @@ footer {
     flex-direction: column;
     padding-bottom: 0;
   }
-  p {
-    margin-bottom: 15px;
-  }
 }
 
 @media screen and (max-width: 800px) {
   header nav .form-search .search-collection {
-    width: 280px;
+    width: 290px;
   }
   .main section .section-body {
     @include make-col(1, 0px);
@@ -888,17 +891,14 @@ footer {
   }
   // .sidebar-content .sidebar-btn .checkout,
   // .sidebar-content .sidebar-btn .shop {
-  //   width: 225px;
-  //   display: flex;
+  //   width: 100%;
+  //   display: inline;
   //   flex-direction: row;
   //   align-items: center;
   // }
 }
 
 @media screen and (max-width: 700px) {
-  body {
-    font-size: $primary-font-size;
-  }
   header nav .form-search {
     display: none;
   }
@@ -912,21 +912,22 @@ footer {
     align-items: center;
     .little-search-collection {
       box-shadow: 0px 5px 20px 0px #c8c8c8;
+      height: 38px;
+      width: 20px;
     }
-
     .little-search-button {
       font-size: 20px;
-      top: 22%;
       right: 15px;
       color: #c8c8c8;
       background-color: #fff;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
-      padding: 6px 6px;
-      padding-bottom: 2px;
-      padding-left: 7px;
+      padding: 8px 10px;
       border-radius: 50%;
       border: none;
       outline: none;
+    }
+    .icon-search {
+      padding-top: 1px;
     }
   }
   header nav ul {
@@ -960,6 +961,10 @@ footer {
   .main section .section-body .book-info-body-text {
     font-size: 14px;
   }
+  .form-account {
+    margin-top: 25px;
+    margin-bottom: 60px;
+  }
   .form-account .form .form-empty {
     display: flex;
     flex-direction: column;
@@ -976,15 +981,11 @@ footer {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-
-    div {
-      margin-top: 35px;
+    h3 {
+      font-size: 14px;
     }
-    :first-child {
-      margin-top: 0px;
-      h3 {
-        font-size: 14px;
-      }
+    p {
+      padding-bottom: 15px;
     }
   }
 }
