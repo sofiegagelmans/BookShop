@@ -1,23 +1,23 @@
 function openNav() {
   if (openMenu) {
     closeMenu();
-    document.getElementById("mySidenav").style.width = "310px";
+    document.getElementById("side-nav").style.width = "310px";
   }
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("side-nav").style.width = "0";
 }
 function openMenu() {
   if (openNav) {
     closeNav();
-    document.getElementById("myHamburgerMenu").style.width = "310px";
+    document.getElementById("side-menu").style.width = "310px";
   }
 }
 
 function closeMenu() {
-  document.getElementById("myHamburgerMenu").style.width = "0px";
+  document.getElementById("side-menu").style.width = "0px";
 }
 
 let search = document.getElementById("little-search-collection");

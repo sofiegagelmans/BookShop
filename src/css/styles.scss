@@ -88,16 +88,16 @@ header {
 .main {
   width: 100%;
   display: flex;
-  margin-top: 220px;
   position: sticky;
   top: 65px;
+  margin-top: 220px;
   aside {
     position: fixed;
     top: 220px;
     width: 297px;
+    margin-left: 3px;
     padding: 10px;
     padding-top: 0;
-    margin-left: 3px;
     span {
       text-transform: uppercase;
     }
@@ -145,17 +145,17 @@ header {
             }
           }
           .sort-items {
-            width: 165px;
+            width: 160px;
             display: none;
             position: absolute;
-            line-height: 20px;
             background-color: $white;
             top: 0;
             left: 120px;
-            padding-bottom: 15px;
-            padding-left: 15px;
+            padding-bottom: 8px;
+            padding-left: 13px;
             z-index: 2;
             li {
+              margin-bottom: 8px;
               padding: 5px;
               padding-top: 0px;
             }
@@ -588,7 +588,7 @@ footer {
 
 // ---- CART ---- //
 
-.sidenav {
+.side-nav {
   width: 0;
   height: 100%;
   position: fixed;
@@ -600,7 +600,7 @@ footer {
   top: 0;
   right: 0;
 }
-.sidenav .close-btn {
+.side-nav .close-btn {
   position: absolute;
   font-size: 28px;
   text-decoration: none;
@@ -612,6 +612,7 @@ footer {
   margin: 15px;
   h3 {
     margin-bottom: 60px;
+    font-size: $primary-font-size;
   }
   .sidebar-btn {
     width: 280px;
@@ -675,28 +676,28 @@ footer {
     }
   }
 }
-// ---- HAMBURGER MENU ---- //
+// ---- SIDE MENU ---- //
 
-.myHamburgerMenu {
+.side-menu {
   width: 0;
   height: 100%;
   position: fixed;
-  z-index: 1001;
   background-color: $white;
   box-shadow: 0px 5px 10px 0px #c8c8c8;
   overflow-x: hidden;
   transition: 0.8s;
   top: 0;
   left: 0;
-  .myHamburgerMenu-content {
-    padding: 10px;
-    padding-top: 15px;
+  z-index: 1001;
+  .side-menu-content {
+    font-size: $primary-font-size;
+    padding: 15px;
     span {
       text-transform: uppercase;
     }
     ul {
-      margin-top: 60px;
-
+      font-size: $primary-font-size;
+      margin-top: 40px;
       li {
         margin: 20px 0;
         a {
@@ -709,7 +710,8 @@ footer {
         }
         .all-items {
           display: block;
-          margin-top: 60px;
+          margin-top: 40px;
+          margin-bottom: 80px;
         }
       }
     }
@@ -719,7 +721,7 @@ footer {
     }
   }
 }
-.myHamburgerMenu .close-btn {
+.side-menu .close-btn {
   position: absolute;
   font-size: 28px;
   text-decoration: none;
@@ -729,18 +731,20 @@ footer {
 }
 
 // ---- LITTLE SEARCH BUTTON ---- //
+
 .little-form-search {
+  box-shadow: 0px 5px 10px 0px #c8c8c8;
   .little-search-collection {
     display: none;
     width: 0px;
     height: 30px;
     text-align: center;
     font-family: $primary-font;
-    font-size: 10px;
+    font-size: $primary-font-size;
     font-weight: $primary-font-weight;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 2px 2px 7px 0px #5e5e5e;
+    box-shadow: 0px 5px 10px 0px #c8c8c8;
     border-radius: 20px;
     border: none;
     outline: none;
@@ -748,13 +752,13 @@ footer {
     margin-right: 10px;
 
     &::placeholder {
-      color: $grey;
-      font-size: 10px;
+      font-size: $primary-font-size;
+      font-size: 14px;
     }
   }
 }
 
-// ---- @MEDIA ---- //
+// ---- MEDIA ---- //
 
 @media screen and (max-width: 1200px) {
   header nav .form-search .search-collection {
@@ -768,21 +772,11 @@ footer {
       margin-left: 240px;
     }
   }
-  .main section .section-body .book-info-footer {
-    font-size: 12px;
-    .book-price {
-      margin-left: 20px;
-    }
-  }
 }
 
 @media screen and (max-width: 1080px) {
-  body {
-    font-size: 14px;
-  }
   header nav .form-search .search-collection {
-    width: 380px;
-    font-size: 14px;
+    width: 360px;
   }
   .main {
     aside {
@@ -795,76 +789,14 @@ footer {
   .main section .section-header ul .sort-by .sort-items {
     width: 140px;
     left: 108px;
-    line-height: 18px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-  }
-  .form-account .form .form-empty .account-label {
-    font-size: 14px;
-  }
-  .form-account .form .submit {
-    font-size: 14px;
-  }
-  .form-account .form .reset {
-    font-size: 14px;
-  }
-  footer {
-    h3 {
-      font-size: 14px;
-    }
-    p {
-      font-size: 12px;
-      line-height: 18px;
+    li {
+      margin-bottom: 5px;
     }
   }
-}
-
-@media screen and (max-width: 900px) {
-  body {
-    font-size: 12px;
-  }
-  header nav .form-search .search-collection {
-    width: 300px;
-    height: 30px;
-    font-size: 12px;
-  }
-  header nav .form-search .search-button {
-    font-size: 15px;
-  }
-  .main {
-    aside {
-      width: 177px;
+  .main section .section-body .book-info-footer {
+    .book-price {
+      margin-left: 20px;
     }
-    section {
-      margin-left: 180px;
-    }
-  }
-  .main section .section-header ul .sort-by .sort-items {
-    width: 122px;
-    left: 92px;
-    line-height: 15px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-  }
-  .main section .section-body .book-info-body-text {
-    font-size: 12px;
-    // hier moer de knop more info nog aangepast worden
-  }
-  .form-account .form .form-empty .account-label {
-    font-size: 12px;
-  }
-  .form-account .form .submit {
-    font-size: 12px;
-  }
-  .form-account .form .reset {
-    font-size: 12px;
-  }
-  .order .order-body .order-body-book {
-    display: flex;
-    flex-direction: column;
-  }
-  .order .order-body .order-body-text {
-    font-size: 12px;
   }
   footer {
     h3 {
@@ -878,17 +810,47 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   header nav .form-search .search-collection {
     width: 300px;
+    height: 30px;
+  }
+  header nav .form-search .search-button {
+    font-size: 15px;
+  }
+  header nav ul li a {
+    margin-left: 40px;
   }
   .main {
     aside {
-      width: 137px;
+      width: 177px;
     }
     section {
-      margin-left: 140px;
+      margin-left: 180px;
     }
+  }
+  .main-index {
+    margin-bottom: 215px;
+  }
+  .main section .section-header ul .sort-by .sort-items {
+    width: 122px;
+    left: 92px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav .form-search .search-collection {
+    width: 300px;
   }
   .main section .section-body {
     @include make-col(1, 0px);
@@ -897,18 +859,31 @@ footer {
     margin-bottom: 25px;
   }
   .main-index {
-    margin-bottom: 180px;
+    margin-bottom: 210px;
   }
+  .form-account .form .form-empty .form-col-second {
+    margin-right: 5px;
+  }
+  .order-body .order-body-book img {
+    width: 180px;
+    height: 250px;
+  }
+  // .sidebar-content .sidebar-btn .checkout,
+  // .sidebar-content .sidebar-btn .shop {
+  //   width: 225px;
+  //   display: flex;
+  //   flex-direction: row;
+  //   align-items: center;
+  // }
 }
 
 @media screen and (max-width: 700px) {
   body {
-    font-size: 14px;
+    font-size: $primary-font-size;
   }
   header nav .form-search {
     display: none;
   }
-
   .little-form-search {
     position: fixed;
     bottom: 20px;
@@ -932,7 +907,6 @@ footer {
       outline: none;
     }
   }
-
   header nav ul {
     display: none;
   }
@@ -955,12 +929,8 @@ footer {
       margin-left: 0px;
     }
   }
-  .main section .section-header ul .sort-by .sort-items {
-    width: 140px;
-    left: 108px;
-    line-height: 18px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+  .main-index {
+    margin-bottom: 245px;
   }
   .main section .section-body .book-info-footer {
     font-size: 14px;
@@ -973,18 +943,12 @@ footer {
     flex-direction: column;
     margin-right: 40px;
   }
-
-  .main-index {
-    margin-bottom: 360px;
+  .form-account .form .form-empty {
+    margin-right: 5px;
   }
   footer {
-    display: flex;
-    flex-direction: column;
-    div {
-      margin-top: 35px;
-    }
-    :first-child {
-      margin-top: 0px;
+    h3 {
+      font-size: 14px;
     }
   }
 }
