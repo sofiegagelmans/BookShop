@@ -36,7 +36,7 @@ header {
       list-style-type: none;
       text-decoration: none;
       color: $black;
-      margin-right: 80px;
+      margin-right: 200px;
     }
     .shop-cart-icon {
       display: none;
@@ -364,11 +364,12 @@ header {
 
 .form-title-user {
   text-transform: uppercase;
-
   margin-left: 15px;
 }
 .form-account {
-  margin: 32px 15px;
+  margin-top: 32px;
+  margin-left: 15px;
+  margin-right: 15px;
   .form {
     .form-empty {
       display: flex;
@@ -444,12 +445,14 @@ header {
   margin-left: 15px;
 }
 .order {
+  @include make-col(2, 70px);
   width: 100%;
   display: flex;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 40px 15px;
-  @include make-col(2, 70px);
+  margin-top: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
   .order-body {
     display: flex;
     margin-bottom: 30px;
@@ -783,8 +786,11 @@ footer {
 }
 
 @media screen and (max-width: 1080px) {
+  header nav .brand-name {
+    margin-right: 150px;
+  }
   header nav .form-search .search-collection {
-    width: 360px;
+    width: 320px;
   }
   .main section .section-header ul .sort-by .sort-items {
     width: 158px;
@@ -824,7 +830,7 @@ footer {
 
 @media screen and (max-width: 900px) {
   header nav .brand-name {
-    margin-right: 30px;
+    margin-right: 60px;
   }
   header nav .form-search .search-collection {
     width: 300px;
@@ -838,10 +844,10 @@ footer {
   }
   .main {
     aside {
-      width: 187px;
+      width: 147px;
     }
     section {
-      margin-left: 190px;
+      margin-left: 150px;
     }
   }
   .main-index {
