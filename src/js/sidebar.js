@@ -5,10 +5,16 @@ function openNav() {
     body = doc.getElementsByTagName("body")[0],
     x = win.innerWidth || docElem.clientWidth || body.clientWidth,
     y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+
+  if (x > "700") {
+    showButton();
+  }
   if (x < "700") {
     if (openMenu) {
       closeMenu();
-      document.getElementById("side-nav").style.width = "100%";
+      let side = document.getElementById("side-nav");
+      side.style.width = "100%";
+      setTimeout(showButton, 0500);
     }
   } else {
     if (openMenu) {
@@ -18,8 +24,16 @@ function openNav() {
   }
 }
 
+// if (openNav)
+function showButton() {
+  document.getElementById("checkout").style.display = "block";
+  document.getElementById("shop").style.display = "block";
+}
+
 /* Set the width of the side navigation to 0 */
 function closeNav() {
+  document.getElementById("checkout").style.display = "none";
+  document.getElementById("shop").style.display = "none";
   document.getElementById("side-nav").style.width = "0";
 }
 function openMenu() {
@@ -35,7 +49,7 @@ function closeMenu() {
 
 let search = document.getElementById("little-search-collection");
 function openSearch() {
-  search.style.width = "300px";
+  search.style.width = "200px";
   search.style.display = "block";
 }
 
