@@ -24,12 +24,12 @@ header {
   background-color: $white;
   top: 0;
   padding: 12px;
-  z-index: 1000;
+  z-index: 2;
   nav {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    .hamburger {
+    .hamburger-menu {
       display: none;
     }
     .brand-name {
@@ -92,9 +92,9 @@ header {
   top: 65px;
   margin-top: 202px;
   aside {
+    width: 297px;
     position: fixed;
     top: 220px;
-    width: 297px;
     margin-left: 3px;
     padding: 10px;
     padding-top: 0;
@@ -123,7 +123,6 @@ header {
   section {
     width: 100%;
     margin-left: 300px;
-    margin-bottom: 50px;
     .section-header {
       display: flex;
       position: sticky;
@@ -217,7 +216,7 @@ header {
                 position: absolute;
                 justify-content: center;
                 align-items: center;
-                font-size: $primary-font-size;
+                font-size: 14px;
                 top: 35%;
                 padding-top: 8px;
                 a {
@@ -235,12 +234,12 @@ header {
                 }
               }
               .cart {
-                font-size: $primary-font-size;
+                font-size: 14px;
               }
               .more-info {
                 top: 160px;
                 a {
-                  width: 148px;
+                  width: 135px;
                   text-align: center;
                   &:hover {
                     background-color: $green;
@@ -275,7 +274,6 @@ header {
     }
   }
 }
-
 .main-index {
   margin-bottom: 150px;
 }
@@ -288,11 +286,9 @@ header {
     flex-wrap: nowrap;
     .detail-book {
       margin-left: 15px;
-
       .detail-book-cover {
         .detail-book-header {
-          // width: 820px;
-          height: 500px;
+          height: 505px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -317,13 +313,12 @@ header {
         }
       }
     }
-
     .detail-text {
       p {
         font-size: 14px;
         line-height: 20px;
-        padding: 0 15px;
         margin-right: 15px;
+        padding: 0 15px;
       }
     }
     .detail-button {
@@ -355,12 +350,12 @@ header {
       }
     }
     .detail-return {
+      position: fixed;
       text-transform: uppercase;
       text-decoration: none;
       color: $black;
-      position: fixed;
-      right: 15px;
       bottom: 10px;
+      right: 15px;
     }
   }
 }
@@ -398,8 +393,8 @@ header {
         outline: none;
         border: none;
         border-bottom: 1px solid $grey;
-        padding-right: 5px;
         margin-bottom: 5px;
+        padding-right: 5px;
       }
       .account-label {
         font-size: 14px;
@@ -500,17 +495,17 @@ header {
         flex-direction: column;
       }
       .form-user-col-first {
-        max-width: 450px;
         width: 100%;
+        max-width: 450px;
         margin-right: 25px;
         .form-user-buttons {
           display: flex;
         }
       }
       .form-user-col-second {
-        margin-right: 65px;
-        max-width: 450px;
         width: 100%;
+        max-width: 450px;
+        margin-right: 65px;
       }
       .account-user-input {
         height: 33px;
@@ -522,8 +517,8 @@ header {
         outline: none;
         border: none;
         border-bottom: 1px solid $grey;
-        padding-right: 5px;
         margin-bottom: 5px;
+        padding-right: 5px;
       }
       .account-user-label {
         font-size: 14px;
@@ -560,7 +555,6 @@ header {
       max-width: 120px;
       text-align: center;
       background-color: $white;
-
       cursor: pointer;
       &:hover {
         background-color: $green;
@@ -571,7 +565,6 @@ header {
       max-width: 190px;
       text-align: center;
       background-color: $white;
-
       cursor: pointer;
       &:hover {
         background-color: $green;
@@ -585,15 +578,14 @@ header {
 
 footer {
   position: static;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-
   background-color: #fff;
   display: flex;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
+  bottom: 0;
+  left: 0;
   padding: 15px;
   padding-bottom: 15px;
+  z-index: 1;
   h3 {
     font-size: $primary-font-size;
     text-transform: uppercase;
@@ -613,13 +605,13 @@ footer {
   width: 0;
   height: 100%;
   position: fixed;
-  z-index: 1001;
   background-color: $white;
   box-shadow: 0px 5px 10px 0px #c8c8c8;
   overflow-x: hidden;
   transition: 0.8s;
   top: 0;
   right: 0;
+  z-index: 3;
 }
 .side-nav .close-btn {
   position: absolute;
@@ -632,17 +624,17 @@ footer {
 .sidebar-content {
   margin: 15px;
   h3 {
-    margin-bottom: 60px;
     font-size: $primary-font-size;
+    margin-bottom: 60px;
   }
   .sidebar-btn {
     width: 280px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-bottom: 15px;
     bottom: 0;
     left: 15;
+    margin-bottom: 15px;
     .checkout,
     .shop {
       font-family: $primary-font;
@@ -654,9 +646,9 @@ footer {
       border-radius: 30px;
       border: none;
       outline: none;
-      cursor: pointer;
       margin-top: 13px;
       padding: 10px;
+      cursor: pointer;
       &:hover {
         background-color: $green;
         transition: background-color 0.8s ease;
@@ -697,6 +689,7 @@ footer {
     }
   }
 }
+
 // ---- SIDE MENU ---- //
 
 .side-menu {
@@ -709,7 +702,7 @@ footer {
   transition: 0.8s;
   top: 0;
   left: 0;
-  z-index: 1001;
+  z-index: 3;
   .side-menu-content {
     font-size: $primary-font-size;
     padding: 15px;
@@ -755,9 +748,8 @@ footer {
 
 .little-form-search {
   .little-search-collection {
-    display: none;
-    width: 0px;
     height: 30px;
+    display: none;
     text-align: center;
     font-family: $primary-font;
     font-size: $primary-font-size;
@@ -767,11 +759,9 @@ footer {
     border-radius: 20px;
     border: none;
     outline: none;
-    padding: 10px;
-    margin-right: 10px;
+    margin-right: 15px;
     &::placeholder {
-      font-size: $primary-font-size;
-      font-size: 14px;
+      color: #c8c8c8;
     }
   }
 }
@@ -796,14 +786,6 @@ footer {
   header nav .form-search .search-collection {
     width: 360px;
   }
-  .main {
-    aside {
-      width: 197px;
-    }
-    section {
-      margin-left: 200px;
-    }
-  }
   .main section .section-header ul .sort-by .sort-items {
     width: 158px;
     left: 120px;
@@ -818,12 +800,12 @@ footer {
   }
   footer {
     h3 {
-      font-size: 12px;
+      font-size: 14px;
       margin-bottom: 10px;
     }
     p {
-      font-size: 12px;
-      line-height: 16px;
+      font-size: 14px;
+      line-height: 18px;
     }
   }
   .main section {
@@ -856,10 +838,10 @@ footer {
   }
   .main {
     aside {
-      width: 147px;
+      width: 187px;
     }
     section {
-      margin-left: 150px;
+      margin-left: 190px;
     }
   }
   .main-index {
@@ -875,21 +857,24 @@ footer {
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      padding-bottom: 15px;
+    }
   }
 }
 
 @media screen and (max-width: 800px) {
-  header nav .form-search .search-collection {
-    width: 290px;
-  }
   .main section .section-body {
     @include make-col(1, 0px);
   }
   .main section .section-body .book-info-footer {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   .main-index {
-    margin-bottom: 210px;
+    margin-bottom: 215px;
   }
   .form-account .form .form-empty .form-col-second {
     margin-right: 5px;
@@ -898,13 +883,6 @@ footer {
     width: 180px;
     height: 250px;
   }
-  // .sidebar-content .sidebar-btn .checkout,
-  // .sidebar-content .sidebar-btn .shop {
-  //   width: 100%;
-  //   display: inline;
-  //   flex-direction: row;
-  //   align-items: center;
-  // }
 }
 
 @media screen and (max-width: 700px) {
@@ -912,28 +890,27 @@ footer {
     display: none;
   }
   .little-form-search {
-    position: fixed;
-    bottom: 20px;
-    right: 25px;
-    z-index: 10;
     display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1;
     .little-search-collection {
-      box-shadow: 0px 5px 20px 0px #c8c8c8;
-      height: 38px;
       width: 20px;
+      height: 38px;
+      box-shadow: 0px 5px 20px 0px #c8c8c8;
     }
     .little-search-button {
       font-size: 20px;
-      right: 15px;
-      color: #c8c8c8;
-      background-color: #fff;
+      color: $grey;
+      background-color: $white;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
-      padding: 8px 10px;
       border-radius: 50%;
       border: none;
       outline: none;
+      padding: 8px 10px;
     }
     .icon-search {
       padding-top: 1px;
@@ -942,15 +919,15 @@ footer {
   header nav ul {
     display: none;
   }
-  header nav .hamburger,
+  header nav .hamburger-menu,
   header nav .shop-cart-icon {
     display: block;
     font-size: 25px;
     padding: 4px;
   }
   header nav .brand-name {
-    font-size: 16px;
-    margin-top: 3px;
+    font-size: $primary-font-size;
+    margin-top: 5px;
     margin-right: 0;
   }
   .main {
@@ -958,43 +935,36 @@ footer {
       display: none;
     }
     section {
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
   .main-index {
-    margin-bottom: 245px;
+    margin-bottom: 250px;
   }
   .main section .section-body .book-info-footer {
     font-size: 14px;
   }
-  .main section .section-body .book-info-body-text {
-    font-size: 14px;
-  }
   .form-account {
-    margin-top: 25px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
   .form-account .form .form-empty {
     display: flex;
     flex-direction: column;
     margin-right: 5px;
   }
-
   .form-user .form-user-account .form-user-empty {
     @include make-col(1, 0px);
     .form-user-col-first {
-      margin-bottom: 70px;
+      margin-bottom: 80px;
     }
   }
-
   footer {
-    position: static;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
+    position: static;
+    background-color: $white;
+    z-index: 1;
     h3 {
       font-size: 14px;
     }

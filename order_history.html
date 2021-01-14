@@ -77,7 +77,7 @@
       <header>
         <div class="container">
           <nav class="nav">
-            <a href="#" class="hamburger" onclick="openMenu()">
+            <a href="#" class="hamburger-menu" onclick="openMenu()">
               <svg class="icon icon-menu">
                 <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
               </svg>
@@ -90,12 +90,13 @@
             </a>
             <form action="" class="form-search">
               <input
+                id="search-collection"
                 class="search-collection"
                 type="text"
                 name="search"
                 placeholder="search for books"
               />
-              <a href="#" class="search-button">
+              <a href="#" class="search-button" onclick="openSearch()">
                 <svg class="icon icon-search">
                   <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
                 </svg>
