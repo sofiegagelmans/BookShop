@@ -283,79 +283,85 @@ header {
 // ---- DETAIL BOOK ---- //
 
 .main {
-  .detail-book {
-    .detail-book-cover {
-      padding-left: 15px;
-      .detail-book-header {
-        width: 820px;
-        height: 505px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f5f5f5;
-        a {
-          img {
-            width: 280px;
-            height: 400px;
-            box-shadow: 0px 5px 20px 0px #c8c8c8;
+  .detail-page {
+    @include make-col(2, 0px);
+    flex-wrap: nowrap;
+    .detail-book {
+      margin-left: 15px;
+
+      .detail-book-cover {
+        .detail-book-header {
+          // width: 820px;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #f5f5f5;
+          a {
+            img {
+              width: 280px;
+              height: 400px;
+              box-shadow: 0px 5px 20px 0px #c8c8c8;
+            }
+          }
+        }
+        .detail-book-button {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 15px;
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
           }
         }
       }
-      .detail-book-button {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 15px;
+    }
+
+    .detail-text {
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 15px;
+        margin-right: 15px;
+      }
+    }
+    .detail-button {
+      display: flex;
+      justify-content: space-between;
+      .detail-cart {
+        width: 130px;
+        height: 33px;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0px 5px 20px 0px #c8c8c8;
+        border: none;
+        outline: none;
+        margin-top: 5px;
+        margin-left: 15px;
+        padding-top: 8px;
+        &:hover {
+          background-color: $green;
+          transition: background-color 0.8s ease;
+          cursor: pointer;
+        }
         a {
-          text-decoration: none;
+          font-family: $primary-font;
+          font-size: 14px;
           text-transform: uppercase;
-          color: black;
+          text-decoration: none;
+          color: $black;
         }
       }
     }
-  }
-  .detail-text {
-    p {
-      font-size: 14px;
-      line-height: 20px;
-      padding: 0 15px;
+    .detail-return {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $black;
+      position: fixed;
+      right: 15px;
+      bottom: 10px;
     }
-  }
-  .detail-button {
-    display: flex;
-    justify-content: space-between;
-    .detail-cart {
-      width: 130px;
-      height: 33px;
-      text-align: center;
-      border-radius: 20px;
-      box-shadow: 0px 5px 20px 0px #c8c8c8;
-      border: none;
-      outline: none;
-      margin-top: 5px;
-      margin-left: 15px;
-      padding-top: 8px;
-      &:hover {
-        background-color: $green;
-        transition: background-color 0.8s ease;
-        cursor: pointer;
-      }
-      a {
-        font-family: $primary-font;
-        font-size: 14px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $black;
-      }
-    }
-  }
-  .detail-return {
-    display: flex;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $black;
-    padding-top: 154px;
-    padding-left: 468px;
-    padding-bottom: 15px;
   }
 }
 
@@ -478,30 +484,33 @@ header {
 
 // ---- CREATE ACCOUNT ---- //
 
-.form-title-sign {
-  margin-right: 422px;
-}
 .form-title-sign,
 .form-title-create {
   display: inline;
   text-transform: uppercase;
-  margin-left: 17px;
 }
 .form-user {
-  margin: 32px 15px;
+  margin: 0px 15px 32px 15px;
   .form-user-account {
     .form-user-empty {
       display: flex;
       .form-user-col-first,
       .form-user-col-second {
-        width: 100%;
-        max-width: 480px;
         display: flex;
         flex-direction: column;
+      }
+      .form-user-col-first {
+        max-width: 450px;
+        width: 100%;
         margin-right: 25px;
+        .form-user-buttons {
+          display: flex;
+        }
       }
       .form-user-col-second {
         margin-right: 65px;
+        max-width: 450px;
+        width: 100%;
       }
       .account-user-input {
         height: 33px;
@@ -551,7 +560,7 @@ header {
       max-width: 120px;
       text-align: center;
       background-color: $white;
-      margin-right: 252px;
+
       cursor: pointer;
       &:hover {
         background-color: $green;
@@ -562,7 +571,7 @@ header {
       max-width: 190px;
       text-align: center;
       background-color: $white;
-      margin-right: 200px;
+
       cursor: pointer;
       &:hover {
         background-color: $green;
@@ -968,11 +977,16 @@ footer {
   .form-account .form .form-empty {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
-  }
-  .form-account .form .form-empty {
     margin-right: 5px;
   }
+
+  .form-user .form-user-account .form-user-empty {
+    @include make-col(1, 0px);
+    .form-user-col-first {
+      margin-bottom: 70px;
+    }
+  }
+
   footer {
     position: static;
     bottom: 0;

@@ -122,12 +122,11 @@
         </aside>
         <!-- CREATE ACCOUNT -->
         <section>
-          <h2 class="form-title-sign">Sign in</h2>
-          <h2 class="form-title-create">Create Account</h2>
           <div class="form-user">
             <form action="/change.php" class="form-user-account">
               <div class="form-user-empty">
                 <div class="form-user-col-first">
+                  <h2 class="form-title-sign">Sign in</h2>
                   <input
                     class="account-user-input"
                     type="text"
@@ -144,8 +143,14 @@
                   <label class="account-user-label" for="password"
                     >Password</label
                   >
+                  <div class="form-user-buttons">
+                    <input class="btn sign-in" type="submit" value="sign in" />
+                    <input class="btn sign-out" type="text" value="sign out" />
+                  </div>
                 </div>
+
                 <div class="form-user-col-second">
+                  <h2 class="form-title-create">Create Account</h2>
                   <input
                     class="account-user-input"
                     type="text"
@@ -162,15 +167,13 @@
                   <label class="account-user-label" for="password"
                     >Password</label
                   >
+                  <input
+                    class="btn create-account"
+                    type="text"
+                    value="create account"
+                  />
                 </div>
               </div>
-              <input class="btn sign-in" type="submit" value="sign in" />
-              <input class="btn sign-out" type="text" value="sign out" />
-              <input
-                class="btn create-account"
-                type="text"
-                value="create account"
-              />
             </form>
           </div>
         </section>
