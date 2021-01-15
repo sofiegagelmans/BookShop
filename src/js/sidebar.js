@@ -14,6 +14,7 @@ function openNav() {
       closeMenu();
       let side = document.getElementById("side-nav");
       side.style.width = "100%";
+      // opennav();
       setTimeout(showButton, 0500);
     }
   } else {

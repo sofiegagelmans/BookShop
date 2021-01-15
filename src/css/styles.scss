@@ -122,6 +122,7 @@ header {
   section {
     width: 100%;
     margin-left: 300px;
+    padding-top: 18px;
     .section-header {
       display: flex;
       position: sticky;
@@ -130,6 +131,7 @@ header {
       top: 65px;
       padding-bottom: 10px;
       z-index: 1;
+
       ul {
         padding-left: 10px;
         .sort-by {
@@ -287,7 +289,7 @@ header {
       margin-left: 15px;
       .detail-book-cover {
         .detail-book-header {
-          height: 450px;
+          height: 470px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -654,6 +656,9 @@ footer {
       outline: none;
       margin-top: 13px;
       padding: 10px;
+      width: 100%;
+      max-width: 200px;
+
       cursor: pointer;
       &:hover {
         background-color: $green;
@@ -753,6 +758,7 @@ footer {
 // ---- LITTLE SEARCH BUTTON ---- //
 
 .little-form-search {
+  display: none;
   .little-search-collection {
     height: 30px;
     display: none;
@@ -1011,8 +1017,6 @@ footer {
     }
   }
   .sidebar-content .sidebar-btn {
-    // flex-direction: row;
-    // justify-content: center;
     .checkout,
     .shop {
       display: none;
