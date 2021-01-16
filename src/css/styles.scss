@@ -891,11 +891,10 @@ footer {
     }
     .detail-button .detail-cart {
       margin-top: 0;
-      margin-bottom: 20px;
-      margin-left: 24px;
+      margin-bottom: 115px;
     }
   }
-  .detail-return {
+  .main .detail-page .detail-return {
     display: none;
   }
 }
@@ -991,6 +990,9 @@ footer {
     @include make-col(1, 0px);
     .form-user-col-first {
       margin-bottom: 80px;
+    }
+    .form-user-col-second {
+      margin-bottom: 70px;
     }
   }
   footer {
