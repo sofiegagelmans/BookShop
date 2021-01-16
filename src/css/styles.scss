@@ -894,7 +894,7 @@ footer {
       margin-bottom: 115px;
     }
   }
-  .main .detail-page .detail-return {
+  .main .detail-return {
     display: none;
   }
 }
@@ -915,6 +915,9 @@ footer {
   .order-body .order-body-book img {
     width: 160px;
     height: 230px;
+  }
+  .main .detail-return {
+    display: none;
   }
 }
 
@@ -995,6 +998,9 @@ footer {
       margin-bottom: 70px;
     }
   }
+  .main .detail-return {
+    display: none;
+  }
   footer {
     @include make-col(1, 0px);
     h3 {
@@ -1006,5 +1012,8 @@ footer {
 @media screen and (max-width: 555px) {
   .main-index {
     margin-bottom: 380px;
+  }
+  .main .detail-return {
+    display: none;
   }
 }
