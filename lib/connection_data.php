@@ -6,10 +6,7 @@ $password = "m141iiAJKHAwSv5I2Zup";
 $dbname = "sofie21";
 
 
-//$servername = "localhost";
-//$username = "root";
-//$password = "Chak1234";
-//$dbname = "sofie21";
+
 
 
 

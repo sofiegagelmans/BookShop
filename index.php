@@ -10,7 +10,7 @@ PrintHead();
 PrintCart();
 PrintSideMenu();
 PrintLittleSearchButton();
-
+PrintHeader();
 
 ?>
 
@@ -213,33 +213,7 @@ PrintLittleSearchButton();
         </div>
       </section>
     </main>
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div>
-        <h3>Contact</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit tempor 
-          et incididunt. Labore dolore magna aliqua sed do turpis nunc eget 
-          lorem dolor.
-        </p>
-      </div>
-      <div>
-        <h3>Payment Methods</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit tempor 
-          et incididunt. Labore dolore magna aliqua sed do turpis nunc eget 
-          lorem dolor.
-        </p>
-      </div>
-      <div>
-        <h3>About Us</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit tempor 
-          et incididunt. Labore dolore magna aliqua sed do turpis nunc eget 
-          lorem dolor.
-        </p>
-      </div>
-    </footer>
+
       <script src="./icons/svgxuse.js"></script>
       <script src="./src/js/sidebar.js"></script>
   </body>

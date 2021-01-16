@@ -21,5 +21,13 @@ function PrintLittleSearchButton()
     print $searchButton;
 }
 
+function PrintHeader()
+{
+    $header = file_get_contents("./templates/header.html");
+    print $header;
+}
+
+
+
 
 
