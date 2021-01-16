@@ -7,68 +7,14 @@ require_once "lib/autoload.php";
 
 
 PrintHead();
+PrintCart();
+PrintSideMenu();
+
 
 ?>
 
-    <!-- CART -->
-    <div id="side-nav" class="side-nav">
-      <div class="sidebar-content">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
-          >&times;</a
-        >
-        <h3>CART(1)</h3>
-        <div class="order-body">
-          <div class="order-body-book">
-            <img src="images/art/ART-1.jpg" alt="bookcover" />
-          </div>
-          <div class="order-body-text">
-            <div class="text-col-first">
-              <p>Accidents</p>
-              <p>€60</p>
-              <p>Quantity #1</p>
-              <div class="remove-add">
-                <a href="#">Remove</a>
-                <p>&nbsp;/&nbsp;</p>
-                <a href="#">Add</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="sidebar-btn">
-          <input
-            id="checkout"
-            class="btn checkout"
-            type="button"
-            value="check out"
-          />
-          <input
-            id="shop"
-            class="btn shop"
-            type="button"
-            value="continue shopping"
-          />
-        </div>
-      </div>
-    </div>
-    <!-- SIDE MENU -->
-    <div id="side-menu" class="side-menu">
-      <div class="side-menu-content">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()"
-          >&times;</a
-        >
-        <span>Categories</span>
-        <ul>
-          <li><a href="create_account.html">Art</a></li>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Architecture</a></li>
-          <li><a href="#">Fashion</a></li>
-          <li><a href="#">Lifestyle</a></li>
-          <li><a href="#" class="all-items">Show All</a></li>
-        </ul>
-        <a href="./user_information.html">SIGN IN</a>
-      </div>
-    </div>
+
+
     <!--  LITTLE SEARCH BUTTON-->
     <form action="" class="little-form-search">
       <input
