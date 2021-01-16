@@ -27,6 +27,11 @@ function PrintHeader()
     print $header;
 }
 
+function PrintFooter()
+{
+    $footer = file_get_contents("./templates/footer.html");
+    print $footer;
+}
 
 
 
