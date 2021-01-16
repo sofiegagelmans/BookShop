@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/style.css" />
-    <title>Bookshop</title>
-  </head>
+<?php
+error_reporting( E_ALL );
+ini_set( 'display_errors', 1 );
 
-  <body id="body">
+require_once "lib/autoload.php";
+
+
+
+PrintHead();
+
+?>
+
     <!-- CART -->
     <div id="side-nav" class="side-nav">
       <div class="sidebar-content">
@@ -96,7 +98,7 @@
               <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
             </svg>
           </a>
-          <a class="brand-name" href="index.html">Bookshop</a>
+          <a class="brand-name" href="index.php">Bookshop</a>
           <a href="#" class="shop-cart-icon" onclick="openNav()">
             <svg class="icon icon-cart">
               <use xlink:href="./icons/symbol-defs.svg#icon-cart"></use>

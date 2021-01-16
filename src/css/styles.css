@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://rsms.me/inter/inter.css");
 @import "../icons/style.css";
 html,
@@ -137,6 +138,16 @@ table {
   padding: 0;
 }
 
+input[type=text],
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=password],
+input[type=tel] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 html {
   font-family: "Inter", sans-serif;
 }
@@ -161,24 +172,30 @@ body {
 }
 
 header {
-  position: fixed;
-  background-color: #fff;
   width: 100%;
   height: 65px;
+  position: fixed;
+  background-color: #fff;
   top: 0;
   padding: 12px;
-  z-index: 1000;
+  z-index: 2;
 }
 header nav {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
+header nav .hamburger-menu {
+  display: none;
+}
 header nav .brand-name {
   list-style-type: none;
   text-decoration: none;
   color: #000;
-  margin-right: 80px;
+  margin-right: 168px;
+}
+header nav .shop-cart-icon {
+  display: none;
 }
 header nav .form-search {
   position: relative;
@@ -193,7 +210,7 @@ header nav .form-search .search-collection {
   text-transform: uppercase;
   text-decoration: none;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
-  border-radius: 20px;
+  border-radius: 30px;
   border: none;
   outline: none;
   padding: 5px;
@@ -226,17 +243,17 @@ header nav ul li a {
 .main {
   width: 100%;
   display: flex;
-  margin-top: 220px;
   position: sticky;
   top: 65px;
+  margin-top: 202px;
 }
 .main aside {
+  width: 297px;
   position: fixed;
   top: 220px;
-  width: 297px;
+  margin-left: 3px;
   padding: 10px;
   padding-top: 0;
-  margin-left: 3px;
 }
 .main aside span {
   text-transform: uppercase;
@@ -262,9 +279,9 @@ header nav ul li a {
 .main section {
   width: 100%;
   margin-left: 300px;
+  padding-top: 18px;
 }
 .main section .section-header {
-  background-color: #fff;
   display: flex;
   position: sticky;
   justify-content: space-between;
@@ -289,18 +306,18 @@ header nav ul li a {
   color: #ccc;
 }
 .main section .section-header ul .sort-by .sort-items {
-  width: 165px;
+  width: 160px;
   display: none;
   position: absolute;
-  line-height: 20px;
   background-color: #fff;
   top: 0;
   left: 120px;
-  padding-bottom: 15px;
-  padding-left: 15px;
+  padding-bottom: 8px;
+  padding-left: 13px;
   z-index: 2;
 }
 .main section .section-header ul .sort-by .sort-items li {
+  margin-bottom: 8px;
   padding: 5px;
   padding-top: 0px;
 }
@@ -366,6 +383,7 @@ header nav ul li a {
   position: absolute;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
   top: 35%;
   padding-top: 8px;
 }
@@ -373,16 +391,19 @@ header nav ul li a {
 .main section .section-body .book-info-body-text:hover .more-info a {
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: #fff;
   color: #000;
   margin-bottom: 10px;
-  padding: 12px 20px;
+  padding: 13px 20px;
 }
 .main section .section-body .book-info-body-text:hover .cart a:hover,
 .main section .section-body .book-info-body-text:hover .more-info a:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
+}
+.main section .section-body .book-info-body-text:hover .cart {
+  font-size: 14px;
 }
 .main section .section-body .book-info-body-text:hover .more-info {
   top: 160px;
@@ -398,7 +419,6 @@ header nav ul li a {
 .main section .section-body .book-info-footer {
   display: flex;
   margin-top: 15px;
-  margin-bottom: 5px;
 }
 .main section .section-body .book-info-footer .book-price {
   margin-left: 40px;
@@ -417,76 +437,89 @@ header nav ul li a {
 }
 
 .main-index {
-  margin-bottom: 150px;
+  margin-bottom: 165px;
 }
 
-.main .detail-book .detail-book-cover {
-  padding-left: 15px;
+.main .detail-page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
-.main .detail-book .detail-book-cover .detail-book-header {
-  width: 820px;
-  height: 505px;
+.main .detail-page > *:nth-child(1n+0) {
+  min-width: calc(calc(100% - 0px) / 2);
+  margin: 0 0px 0px 0;
+}
+.main .detail-page > *:nth-child(2n+0) {
+  margin-right: 0;
+}
+.main .detail-page .detail-book {
+  margin-left: 15px;
+}
+.main .detail-page .detail-book .detail-book-cover .detail-book-header {
+  height: 522px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f5f5f5;
 }
-.main .detail-book .detail-book-cover .detail-book-header a img {
-  width: 280px;
-  height: 400px;
+.main .detail-page .detail-book .detail-book-cover .detail-book-header a img {
+  width: 300px;
+  height: 420px;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
 }
-.main .detail-book .detail-book-cover .detail-book-button {
+.main .detail-page .detail-book .detail-book-cover .detail-book-button {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
+  margin-bottom: 15px;
 }
-.main .detail-book .detail-book-cover .detail-book-button a {
+.main .detail-page .detail-book .detail-book-cover .detail-book-button a {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
 }
-.main .detail-text p {
+.main .detail-page .detail-text p {
   font-size: 14px;
   line-height: 20px;
+  margin-right: 15px;
   padding: 0 15px;
 }
-.main .detail-button {
+.main .detail-page .detail-button {
   display: flex;
   justify-content: space-between;
 }
-.main .detail-button .detail-cart {
-  width: 130px;
-  height: 33px;
+.main .detail-page .detail-button .detail-cart {
+  width: 140px;
+  height: 38px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   border: none;
   outline: none;
   margin-top: 5px;
   margin-left: 15px;
-  padding-top: 8px;
+  padding-top: 10px;
 }
-.main .detail-button .detail-cart:hover {
+.main .detail-page .detail-button .detail-cart:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
   cursor: pointer;
 }
-.main .detail-button .detail-cart a {
+.main .detail-page .detail-button .detail-cart a {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
 }
-.main .detail-return {
-  display: flex;
+
+.detail-return {
+  position: fixed;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  padding-top: 154px;
-  padding-left: 468px;
-  padding-bottom: 15px;
+  bottom: 15px;
+  right: 15px;
 }
 
 .form-title-user {
@@ -495,7 +528,10 @@ header nav ul li a {
 }
 
 .form-account {
-  margin: 32px 15px;
+  margin-top: 32px;
+  margin-left: 15px;
+  margin-right: 12px;
+  margin-bottom: 25px;
 }
 .form-account .form .form-empty {
   display: flex;
@@ -506,7 +542,11 @@ header nav ul li a {
   max-width: 480px;
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 25px;
+  border-radius: 0;
+}
+.form-account .form .form-empty .form-col-second {
+  margin-right: 65px;
 }
 .form-account .form .form-empty .account-input {
   height: 33px;
@@ -518,8 +558,8 @@ header nav ul li a {
   outline: none;
   border: none;
   border-bottom: 1px solid #ccc;
-  padding-right: 5px;
   margin-bottom: 5px;
+  padding-right: 5px;
 }
 .form-account .form .form-empty .account-label {
   font-size: 14px;
@@ -532,12 +572,13 @@ header nav ul li a {
   max-width: 100px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   border-radius: 30px;
   border: none;
   outline: none;
-  margin-top: 15px;
+  margin-top: 25px;
   padding: 10px 15px;
 }
 .form-account .form .submit {
@@ -564,13 +605,15 @@ header nav ul li a {
 }
 
 .order {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   display: flex;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 40px 15px;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .order > *:nth-child(1n+0) {
   min-width: calc(calc(100% - 70px) / 2);
@@ -581,7 +624,6 @@ header nav ul li a {
 }
 .order .order-body {
   display: flex;
-  margin-bottom: 30px;
 }
 .order .order-body .order-body-book img {
   width: 93px;
@@ -603,30 +645,36 @@ header nav ul li a {
   margin-right: 25px;
 }
 
-.form-title-sign {
-  margin-right: 422px;
-}
-
 .form-title-sign,
 .form-title-create {
   display: inline;
   text-transform: uppercase;
-  margin-left: 15px;
 }
 
 .form-user {
-  margin: 32px 15px;
+  margin: 0px 15px 32px 15px;
 }
 .form-user .form-user-account .form-user-empty {
   display: flex;
 }
 .form-user .form-user-account .form-user-empty .form-user-col-first,
 .form-user .form-user-account .form-user-empty .form-user-col-second {
-  width: 100%;
-  max-width: 480px;
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  border-radius: 0;
+}
+.form-user .form-user-account .form-user-empty .form-user-col-first {
+  width: 100%;
+  max-width: 450px;
+  margin-right: 25px;
+}
+.form-user .form-user-account .form-user-empty .form-user-col-first .form-user-buttons {
+  display: flex;
+}
+.form-user .form-user-account .form-user-empty .form-user-col-second {
+  width: 100%;
+  max-width: 450px;
+  margin-right: 65px;
 }
 .form-user .form-user-account .form-user-empty .account-user-input {
   height: 33px;
@@ -638,8 +686,8 @@ header nav ul li a {
   outline: none;
   border: none;
   border-bottom: 1px solid #ccc;
-  padding-right: 5px;
   margin-bottom: 5px;
+  padding-right: 5px;
 }
 .form-user .form-user-account .form-user-empty .account-user-label {
   font-size: 14px;
@@ -652,12 +700,13 @@ header nav ul li a {
   max-width: 100px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   border-radius: 30px;
   border: none;
   outline: none;
-  margin-top: 15px;
+  margin-top: 25px;
   padding: 10px 15px;
 }
 .form-user .form-user-account .sign-in {
@@ -674,7 +723,6 @@ header nav ul li a {
   max-width: 120px;
   text-align: center;
   background-color: #fff;
-  margin-right: 252px;
   cursor: pointer;
 }
 .form-user .form-user-account .sign-out:hover {
@@ -685,7 +733,6 @@ header nav ul li a {
   max-width: 190px;
   text-align: center;
   background-color: #fff;
-  margin-right: 200px;
   cursor: pointer;
 }
 .form-user .form-user-account .create-account:hover {
@@ -694,17 +741,21 @@ header nav ul li a {
 }
 
 footer {
-  display: flex;
+  position: static;
+  column-count: 3;
+  column-gap: 20px;
+  background-color: #fff;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
-  padding-bottom: 10px;
+  top: 0;
+  left: 0;
   padding: 15px;
-  padding-bottom: 10px;
+  z-index: 1;
 }
 footer h3 {
   font-size: 16px;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 footer p {
   font-size: 14px;
@@ -712,42 +763,45 @@ footer p {
   margin-right: 20px;
 }
 
-.sidenav {
+.side-nav {
   width: 0;
   height: 100%;
   position: fixed;
-  z-index: 1001;
   background-color: #fff;
   box-shadow: 0px 5px 10px 0px #c8c8c8;
   overflow-x: hidden;
-  transition: 0.8s;
+  transition: 0.5s;
   top: 0;
   right: 0;
+  z-index: 3;
 }
 
-.sidenav .close-btn {
+.side-nav .close-btn {
   position: absolute;
   font-size: 28px;
   text-decoration: none;
   color: #000;
-  top: 5px;
-  right: 12px;
+  top: -5px;
+  right: 0;
 }
 
 .sidebar-content {
   margin: 15px;
+  position: relative;
+  height: 100vh;
 }
 .sidebar-content h3 {
+  font-size: 16px;
   margin-bottom: 60px;
 }
 .sidebar-content .sidebar-btn {
-  width: 280px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
-  margin-bottom: 15px;
   bottom: 0;
   left: 15;
+  margin-bottom: 40px;
 }
 .sidebar-content .sidebar-btn .checkout,
 .sidebar-content .sidebar-btn .shop {
@@ -755,14 +809,15 @@ footer p {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
   background-color: #fff;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   border-radius: 30px;
   border: none;
   outline: none;
-  cursor: pointer;
   margin-top: 13px;
   padding: 10px;
+  cursor: pointer;
 }
 .sidebar-content .sidebar-btn .checkout:hover,
 .sidebar-content .sidebar-btn .shop:hover {
@@ -800,100 +855,206 @@ footer p {
   color: #000;
 }
 
-@media screen and (max-width: 1250px) {
-  .main section .section-body .book-info-footer .book-price,
-.main section .section-body .book-info-footer .book-more-info {
-    margin-left: 20px;
-  }
+.side-menu {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px 0px #c8c8c8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
+.side-menu .side-menu-content {
+  font-size: 16px;
+  padding: 15px;
+}
+.side-menu .side-menu-content span {
+  text-transform: uppercase;
+}
+.side-menu .side-menu-content ul {
+  font-size: 16px;
+  margin-top: 40px;
+}
+.side-menu .side-menu-content ul li {
+  margin: 20px 0;
+}
+.side-menu .side-menu-content ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+.side-menu .side-menu-content ul li a:hover {
+  color: #ccc;
+}
+.side-menu .side-menu-content ul li .all-items {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.side-menu .side-menu-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  font-size: 28px;
+  text-decoration: none;
+  color: #000;
+  top: 5px;
+  right: 12px;
+}
+
+.little-form-search {
+  display: none;
+}
+.little-form-search .little-search-collection {
+  height: 30px;
+  display: none;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
+.little-form-search .little-search-collection::placeholder {
+  color: #c8c8c8;
+}
+
 @media screen and (max-width: 1200px) {
   header nav .form-search .search-collection {
-    width: 420px;
+    width: 400px;
   }
 
-  .main-index aside {
-    width: 247px;
+  .main aside {
+    width: 237px;
   }
-  .main-index section {
-    margin-left: 250px;
-  }
-
-  .book-info-footer {
-    font-size: 12px;
-  }
-
-  .main section .section-body .book-info-footer .book-price,
-.main section .section-body .book-info-footer .book-more-info {
-    margin-left: 10px;
+  .main section {
+    margin-left: 240px;
   }
 }
 @media screen and (max-width: 1080px) {
-  body {
-    font-size: 14px;
-  }
-
-  .main section .section-body .book-info-footer .book-price,
-.main section .section-body .book-info-footer .book-more-info {
-    margin-left: 20px;
-  }
-
-  .main-index aside {
-    width: 177px;
-  }
-  .main-index section {
-    margin-left: 180px;
+  header nav .brand-name {
+    margin-right: 168px;
   }
 
   header nav .form-search .search-collection {
-    width: 380px;
-    font-size: 14px;
+    width: 320px;
   }
 
-  footer h3 {
-    font-size: 14px;
+  .main-index {
+    margin-bottom: 175px;
   }
-  footer p {
-    font-size: 12px;
+
+  .main section .section-header ul .sort-by .sort-items {
+    width: 160px;
+    left: 120px;
+  }
+  .main section .section-header ul .sort-by .sort-items li {
+    margin-bottom: 5px;
+  }
+
+  .main section .section-body .book-info-footer .book-price {
+    margin-left: 10px;
+  }
+
+  .main section .order {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main section .order > *:nth-child(1n+0) {
+    min-width: calc(calc(100% - 0px) / 1);
+    margin: 0 0px 0px 0;
+  }
+  .main section .order > *:nth-child(1n+0) {
+    margin-right: 0;
+  }
+  .main section .order .order-body {
+    margin-bottom: 40px;
+  }
+  .main section .order .order-body:last-child {
+    margin-bottom: 100px;
+  }
+
+  footer p  {
+    margin-right: 0;
   }
 }
-@media screen and (max-width: 930px) {
-  body {
-    font-size: 12px;
+@media screen and (max-width: 900px) {
+  header nav .brand-name {
+    margin-right: 80px;
   }
 
   header nav .form-search .search-collection {
-    width: 380px;
-    font-size: 12px;
+    width: 280px;
+    height: 33px;
   }
 
-  .main-index aside {
-    width: 157px;
-  }
-  .main-index section {
-    margin-left: 160px;
+  header nav .form-search .search-button {
+    font-size: 18px;
   }
 
-  footer h3 {
-    font-size: 12px;
-    margin-bottom: 10px;
+  header nav ul li a {
+    margin-left: 30px;
   }
-  footer p {
-    font-size: 12px;
-    line-height: 17px;
+
+  .main {
+    margin-bottom: 15px;
+  }
+  .main aside {
+    width: 147px;
+  }
+  .main section {
+    margin-left: 150px;
+  }
+
+  .main-index {
+    margin-bottom: 200px;
+  }
+
+  .main section .section-header ul .sort-by .sort-items {
+    width: 155px;
+    left: 120px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+  }
+
+  .main .detail-page {
+    margin-bottom: -150px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main .detail-page > *:nth-child(1n+0) {
+    min-width: calc(calc(100% - 0px) / 1);
+    margin: 0 0px 0px 0;
+  }
+  .main .detail-page > *:nth-child(1n+0) {
+    margin-right: 0;
+  }
+  .main .detail-page .detail-book .detail-book-cover .detail-book-header {
+    margin: 0 15px;
+  }
+  .main .detail-page .detail-book .detail-book-cover .detail-book-button {
+    padding: 15px;
+  }
+  .main .detail-page .detail-button .detail-cart {
+    margin-top: 0;
+    margin-bottom: 115px;
+  }
+
+  .detail-return {
+    display: none;
   }
 }
-@media screen and (max-width: 905px) {
-  header nav .form-search .search-collection {
-    width: 300px;
-  }
-
-  .main-index aside {
-    width: 137px;
-  }
-  .main-index section {
-    margin-left: 140px;
-  }
-
+@media screen and (max-width: 800px) {
   .main section .section-body {
     display: flex;
     flex-wrap: wrap;
@@ -907,11 +1068,134 @@ footer p {
   }
 
   .main section .section-body .book-info-footer {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .main-index {
-    margin-bottom: 180px;
+    margin-bottom: 200px;
+  }
+
+  .form-account .form .form-empty .form-col-second {
+    margin-right: 5px;
+  }
+
+  .order-body .order-body-book img {
+    width: 160px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header nav .form-search {
+    display: none;
+  }
+
+  .little-form-search {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1;
+  }
+  .little-form-search .little-search-collection {
+    width: 20px;
+    height: 41px;
+    box-shadow: 0px 5px 20px 0px #c8c8c8;
+  }
+  .little-form-search .little-search-button {
+    font-size: 20px;
+    color: #ccc;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px 0px #c8c8c8;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 9px 11px;
+  }
+  .little-form-search .icon-search {
+    padding-top: 1px;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  header nav .hamburger-menu,
+header nav .shop-cart-icon {
+    display: block;
+    font-size: 25px;
+    padding: 4px;
+  }
+
+  header nav .brand-name {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+
+  .main aside {
+    display: none;
+  }
+  .main section {
+    margin-left: 0;
+  }
+
+  .main-index {
+    margin-bottom: 340px;
+  }
+
+  .main section .section-body .book-info-footer {
+    font-size: 14px;
+  }
+
+  .form-account {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+
+  .form-account .form .form-empty {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+  }
+
+  .form-user .form-user-account .form-user-empty {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-user .form-user-account .form-user-empty > *:nth-child(1n+0) {
+    min-width: calc(calc(100% - 0px) / 1);
+    margin: 0 0px 0px 0;
+  }
+  .form-user .form-user-account .form-user-empty > *:nth-child(1n+0) {
+    margin-right: 0;
+  }
+  .form-user .form-user-account .form-user-empty .form-user-col-first {
+    margin-bottom: 80px;
+  }
+  .form-user .form-user-account .form-user-empty .form-user-col-second {
+    margin-bottom: 70px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer > *:nth-child(1n+0) {
+    min-width: calc(calc(100% - 0px) / 1);
+    margin: 0 0px 0px 0;
+  }
+  footer > *:nth-child(1n+0) {
+    margin-right: 0;
+  }
+  footer h3 {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 555px) {
+  .main-index {
+    margin-bottom: 400px;
   }
 }
 
