@@ -7,34 +7,16 @@ function openNav() {
     y = win.innerHeight || docElem.clientHeight || body.clientHeight;
 
   if (x > "700") {
-    showButton();
+    document.getElementById("side-nav").style.width = "310px";
   }
   if (x < "700") {
-    if (openMenu) {
-      closeMenu();
-      let side = document.getElementById("side-nav");
-      side.style.width = "100%";
-      // opennav();
-      setTimeout(showButton, 0500);
-    }
-  } else {
-    if (openMenu) {
-      closeMenu();
-      document.getElementById("side-nav").style.width = "310px";
-    }
+    let side = document.getElementById("side-nav");
+    side.style.width = "100%";
   }
-}
-
-// if (openNav)
-function showButton() {
-  document.getElementById("checkout").style.display = "block";
-  document.getElementById("shop").style.display = "block";
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("checkout").style.display = "none";
-  document.getElementById("shop").style.display = "none";
   document.getElementById("side-nav").style.width = "0";
 }
 function openMenu() {

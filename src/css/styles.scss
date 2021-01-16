@@ -10,6 +10,7 @@ body {
   font-size: $primary-font-size;
   color: $black;
 }
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -254,8 +255,7 @@ header {
         &-footer {
           display: flex;
           margin-top: 15px;
-
-          .book-price {
+          f .book-price {
             margin-left: 40px;
           }
           .book-stock {
@@ -589,11 +589,13 @@ footer {
   background-color: #fff;
   display: flex;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
-  bottom: 0;
+  // bottom: -100;
+  top: 0;
   left: 0;
   padding: 15px;
   padding-bottom: 70px;
   z-index: 1;
+
   h3 {
     font-size: $primary-font-size;
     text-transform: uppercase;
@@ -613,6 +615,7 @@ footer {
   width: 0;
   height: 100%;
   position: fixed;
+
   background-color: $white;
   box-shadow: 0px 5px 10px 0px #c8c8c8;
   overflow-x: hidden;
@@ -631,24 +634,30 @@ footer {
 }
 .sidebar-content {
   margin: 15px;
+  position: relative;
+  height: 100vh;
   h3 {
     font-size: $primary-font-size;
     margin-bottom: 60px;
   }
   .sidebar-btn {
-    width: 280px;
+    // width: 280px;
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 0;
     left: 15;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+    // margin-left: 10px;
+    // background-color: black;
+    width: 100%;
     .checkout,
     .shop {
       font-family: $primary-font;
       font-size: $primary-font-size;
       font-weight: $primary-font-weight;
       text-transform: uppercase;
+      text-align: center;
       background-color: $white;
       box-shadow: 0px 5px 20px 0px #c8c8c8;
       border-radius: 30px;
@@ -656,8 +665,8 @@ footer {
       outline: none;
       margin-top: 13px;
       padding: 10px;
-      width: 100%;
-      max-width: 200px;
+      // width: 100%;
+      // max-width: 600px;
 
       cursor: pointer;
       &:hover {
@@ -1014,20 +1023,6 @@ footer {
     }
     p {
       padding-bottom: 15px;
-    }
-  }
-  .sidebar-content .sidebar-btn {
-    .checkout,
-    .shop {
-      display: none;
-      position: fixed;
-      bottom: 15px;
-    }
-    .checkout {
-      left: 15px;
-    }
-    .shop {
-      right: 15px;
     }
   }
 }
