@@ -9,70 +9,15 @@ require_once "lib/autoload.php";
 PrintHead();
 PrintCart();
 PrintSideMenu();
+PrintLittleSearchButton();
 
 
 ?>
 
 
 
-    <!--  LITTLE SEARCH BUTTON-->
-    <form action="" class="little-form-search">
-      <input
-        id="little-search-collection"
-        class="little-search-collection"
-        type="text"
-        name="search"
-        placeholder="search for books"
-      />
-      <a
-        href="#little-search-button"
-        id="little-search-button"
-        class="little-search-button"
-        onclick="checkSearchOpen()"
-      >
-        <svg class="icon icon-search">
-          <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
-        </svg>
-      </a>
-    </form>
-    <!-- HEADER -->
-    <header>
-      <div class="container">
-        <nav class="nav">
-          <a href="#" class="hamburger-menu" onclick="openMenu()">
-            <svg class="icon icon-menu">
-              <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
-            </svg>
-          </a>
-          <a class="brand-name" href="index.php">Bookshop</a>
-          <a href="#" class="shop-cart-icon" onclick="openNav()">
-            <svg class="icon icon-cart">
-              <use xlink:href="./icons/symbol-defs.svg#icon-cart"></use>
-            </svg>
-          </a>
-          <form action="" class="form-search">
-            <input
-              id="search-collection"
-              class="search-collection"
-              type="text"
-              name="search"
-              placeholder="search for books"
-            />
-            <a href="#" class="search-button" onclick="openSearch()">
-              <svg class="icon icon-search">
-                <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
-              </svg>
-            </a>
-          </form>
-          <ul>
-            <li>
-              <a href="user_information.html">Account</a>
-            </li>
-            <li><a href="#" onclick="openNav()">Cart(0)</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+
+
     <!-- MENU -->
     <main class="main main-index">
       <aside>

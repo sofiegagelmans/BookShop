@@ -15,5 +15,11 @@ function PrintSideMenu()
     $sideMenu = file_get_contents("./templates/side_menu.html");
     print $sideMenu;
 }
+function PrintLittleSearchButton()
+{
+    $searchButton = file_get_contents("./templates/little_search_button.html");
+    print $searchButton;
+}
+
 
 
