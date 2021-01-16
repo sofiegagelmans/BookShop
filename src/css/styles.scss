@@ -353,15 +353,15 @@ header {
         }
       }
     }
-    .detail-return {
-      position: fixed;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $black;
-      bottom: 15px;
-      right: 15px;
-    }
   }
+}
+.detail-return {
+  position: fixed;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  bottom: 15px;
+  right: 15px;
 }
 
 // ---- USER INFORMATION ---- //
