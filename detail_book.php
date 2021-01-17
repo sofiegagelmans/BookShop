@@ -3,30 +3,25 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 require_once "lib/autoload.php";
-
-
-
 PrintHead();
 PrintCart();
 PrintSideMenu();
 PrintLittleSearchButton();
-PrintHeader();
-
-
-
 ?>
-<main class="main main-index">
-    <?php
-    PrintMain();
-    ?>
-</main>
-
-
-
-
+<div class="wrapper">
 <?php
-PrintFooter();
+PrintHeader();
+PrintDetailMain();
+?>
+
+
+</div>
+
+<a class="detail-return" href="index.php"><--- Go Back</a>
+<?php
 PrintJavaScript();
 ?>
+
+
   </body>
 </html>

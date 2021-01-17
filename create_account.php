@@ -15,18 +15,24 @@ PrintHeader();
 
 
 ?>
-<main class="main main-index">
-    <?php
-    PrintMain();
-    ?>
-</main>
 
 
+    <!-- HEADER -->
+    <div class="wrapper">
 
 
+  <?php
+    PrintHeader();
+    PrintCrAMain();
+   ?>
+
+
+    </div>
+    <a class="detail-return" href="index.php"><--- Go Back</a>
 <?php
-PrintFooter();
+
 PrintJavaScript();
 ?>
-  </body>
+
+</body>
 </html>

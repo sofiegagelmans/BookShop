@@ -8,25 +8,27 @@ require_once "lib/autoload.php";
 
 PrintHead();
 PrintCart();
-PrintSideMenu();
+PrintSideMainUI();
 PrintLittleSearchButton();
 PrintHeader();
 
 
 
 ?>
-<main class="main main-index">
+<div class="wrapper">
+
     <?php
-    PrintMain();
+    PrintHeader();
+    PrintUserInfoMain();
     ?>
-</main>
 
 
-
-
+</div>
+<a class="detail-return" href="index.php"><--- Go Back</a>
 <?php
-PrintFooter();
+
 PrintJavaScript();
+
 ?>
   </body>
 </html>
