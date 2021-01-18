@@ -58,6 +58,8 @@ header {
         border: none;
         outline: none;
         padding: 5px;
+        padding-left: 15px;
+        padding-right: 45px;
         &::placeholder {
           color: $grey;
         }
@@ -779,6 +781,7 @@ footer {
     border: none;
     outline: none;
     margin-right: 10px;
+    padding: 0 15px
     &::placeholder {
       color: #c8c8c8;
     }
