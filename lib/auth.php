@@ -7,11 +7,12 @@ $pwd = filter_var(trim( $_POST['cus_password']), FILTER_SANITIZE_STRING);
 
 
 
-$pwd = md5($pwd."asdfghjkl123");
+//$pwd = md5($pwd."asdfghjkl123");
 
-$result = GetData("SELECT * FROM `Customer` WHERE 'cus_email' = '$email'AND 'cus_password' = '$pwd'");
+$user= GetData("SELECT * FROM `Customer` WHERE 'cus_email' = $email");
+//passworver
 
-$user = $result->fetch_assoc();
+//$user = $result->fetch_assoc();
 
 if(count($user) == 0){
     echo "User not found";
@@ -23,6 +24,6 @@ print_r($user);
 //setcookie('customer', $email['name'], time() + 3600, "/");
 
 
-header('Location: ../user_information.php');
+header('Location: ../index.php');
 
 
