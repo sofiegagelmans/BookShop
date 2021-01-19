@@ -1,0 +1,84 @@
+<!-- MAIN -->
+<main class="main">
+    <aside>
+        <span>My Account</span>
+        <ul>
+            <li><a href="user_information.php">User Information</a></li>
+            <li><a href="order_history.php">Order History</a></li>
+        </ul>
+    </aside>
+    <!-- USER INFORMATION -->
+    <section>
+        <h2 class="form-title-user">User Information</h2>
+        <div class="form-account">
+            <form action="/change.php" class="form">
+                <div class="form-empty">
+                    <div class="form-col-first">
+                        <input
+                                class="account-input"
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                        />
+                        <label class="account-label" for="first-name"
+                        >First Name</label
+                        >
+                        <input
+                                class="account-input"
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                        />
+                        <label class="account-label" for="last-name">Last Name</label>
+                        <input
+                                class="account-input"
+                                type="text"
+                                id="email"
+                                name="email"
+                        />
+                        <label class="account-label" for="email">Email</label>
+                        <input
+                                class="account-input"
+                                type="password"
+                                id="password"
+                                name="password"
+                        />
+                        <label class="account-label" for="password">Password</label>
+                    </div>
+                    <div class="form-col-second">
+                        <input
+                                class="account-input"
+                                type="text"
+                                id="address"
+                                name="address"
+                        />
+                        <label class="account-label" for="address">Address</label>
+                        <input
+                                class="account-input"
+                                type="text"
+                                id="city"
+                                name="city"
+                        />
+                        <label class="account-label" for="city">City</label>
+                        <input
+                                class="account-input"
+                                type="text"
+                                id="postal"
+                                name="postal"
+                        />
+                        <label class="account-label" for="postal">Postal Code</label>
+                        <input
+                                class="account-input"
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                        />
+                        <label class="account-label" for="phone">Phone Number</label>
+                    </div>
+                </div>
+                <input class="btn submit" type="submit" value="submit" />
+                <input class="btn reset" type="reset" value="reset" />
+            </form>
+        </div>
+    </section>
+</main>
