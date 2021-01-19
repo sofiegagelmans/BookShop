@@ -1,6 +1,5 @@
 <?php
 require_once "autoload.php";
-
 function CreateConnection()
 {
     global $conn;

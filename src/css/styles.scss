@@ -492,53 +492,42 @@ header {
 
 .form-title-sign,
 .form-title-create {
-  display: inline;
+  //display: inline;
   text-transform: uppercase;
 }
 
 .form-user {
   margin: 0px 15px 32px 15px;
-  .form-user-account {
     .form-user-empty {
       display: flex;
-      .form-user-col-first,
+      width: 100%;
+      .form-user-account {
+        //width: 100%;
+        margin-right: 15px;
+        .form-user-col-first {
+          display: flex;
+          flex-direction: column;
+          border-radius: 0;
+          width: 100%;
+          max-width: 450px;
+          margin-right: 25px;
+
+          .form-user-buttons {
+            display: flex;
+          }
+        }
+      }
+      .form-user-account-two{
+        //width: 100%;
       .form-user-col-second {
         display: flex;
         flex-direction: column;
         border-radius: 0;
-      }
-      .form-user-col-first {
-        width: 100%;
-        max-width: 450px;
-        margin-right: 25px;
-        .form-user-buttons {
-          display: flex;
-        }
-      }
-      .form-user-col-second {
         width: 100%;
         max-width: 450px;
         margin-right: 65px;
       }
-      .account-user-input {
-        height: 33px;
-        font-family: $primary-font;
-        font-weight: $primary-font-weight;
-        font-size: $primary-font-size;
-        text-decoration: none;
-        color: $black;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid $grey;
-        margin-bottom: 5px;
-        padding-right: 5px;
-      }
-      .account-user-label {
-        font-size: 14px;
-        text-transform: uppercase;
-        color: $grey;
-        margin-bottom: 15px;
-      }
+
     }
     .btn {
       width: 100%;
@@ -585,6 +574,28 @@ header {
       }
     }
   }
+}
+
+
+
+.account-user-input {
+  height: 33px;
+  font-family: $primary-font;
+  font-weight: $primary-font-weight;
+  font-size: $primary-font-size;
+  text-decoration: none;
+  color: $black;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $grey;
+  margin-bottom: 5px;
+  padding-right: 5px;
+}
+.account-user-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $grey;
+  margin-bottom: 15px;
 }
 
 // ---- FOOTER ---- //
@@ -650,7 +661,7 @@ footer {
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    left: 15;
+    left: 15px;
     margin-bottom: 40px;
     .checkout,
     .shop {

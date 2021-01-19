@@ -6,9 +6,9 @@
     <!-- CREATE ACCOUNT -->
     <section>
         <div class="form-user">
-            <form action="" class="form-user-account" method="post">
-<!--                lib/login.php-->
-                <div class="form-user-empty">
+            <div class="form-user-empty">
+                <form action="" class="form-user-account" method="post">
+                        <!--lib/login.php-->
                     <div class="form-user-col-first">
                         <h2 class="form-title-sign">Sign in</h2>
                         <input
@@ -45,11 +45,9 @@
                             />
                         </div>
                     </div>
-
-
-<!--            </form>-->
-<!--            <form action="lib/registration.php" method="post">-->
-                <div class="form-user-col-second">
+                </form>
+                <form action="lib/registration.php" class="form-user-account-two" method="post">
+                    <div class="form-user-col-second">
                     <h2 class="form-title-create">Create Account</h2>
                     <input
                             class="account-user-input"
@@ -82,8 +80,8 @@
                             value="create account"
                     />
                 </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 </main>

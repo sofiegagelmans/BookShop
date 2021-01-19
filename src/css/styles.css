@@ -649,55 +649,39 @@ header nav ul li a {
 
 .form-title-sign,
 .form-title-create {
-  display: inline;
   text-transform: uppercase;
 }
 
 .form-user {
   margin: 0px 15px 32px 15px;
 }
-.form-user .form-user-account .form-user-empty {
+.form-user .form-user-empty {
   display: flex;
+  width: 100%;
 }
-.form-user .form-user-account .form-user-empty .form-user-col-first,
-.form-user .form-user-account .form-user-empty .form-user-col-second {
+.form-user .form-user-empty .form-user-account {
+  margin-right: 15px;
+}
+.form-user .form-user-empty .form-user-account .form-user-col-first {
   display: flex;
   flex-direction: column;
   border-radius: 0;
-}
-.form-user .form-user-account .form-user-empty .form-user-col-first {
   width: 100%;
   max-width: 450px;
   margin-right: 25px;
 }
-.form-user .form-user-account .form-user-empty .form-user-col-first .form-user-buttons {
+.form-user .form-user-empty .form-user-account .form-user-col-first .form-user-buttons {
   display: flex;
 }
-.form-user .form-user-account .form-user-empty .form-user-col-second {
+.form-user .form-user-empty .form-user-account-two .form-user-col-second {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
   width: 100%;
   max-width: 450px;
   margin-right: 65px;
 }
-.form-user .form-user-account .form-user-empty .account-user-input {
-  height: 33px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  color: #000;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 5px;
-  padding-right: 5px;
-}
-.form-user .form-user-account .form-user-empty .account-user-label {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-.form-user .form-user-account .btn {
+.form-user .form-user-empty .btn {
   width: 100%;
   max-width: 100px;
   font-family: "Inter", sans-serif;
@@ -711,35 +695,56 @@ header nav ul li a {
   margin-top: 25px;
   padding: 10px 15px;
 }
-.form-user .form-user-account .sign-in {
+.form-user .form-user-empty .sign-in {
   max-width: 100px;
   background-color: #fff;
   margin-right: 20px;
   cursor: pointer;
 }
-.form-user .form-user-account .sign-in:hover {
+.form-user .form-user-empty .sign-in:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
 }
-.form-user .form-user-account .sign-out {
+.form-user .form-user-empty .sign-out {
   max-width: 120px;
   text-align: center;
   background-color: #fff;
   cursor: pointer;
 }
-.form-user .form-user-account .sign-out:hover {
+.form-user .form-user-empty .sign-out:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
 }
-.form-user .form-user-account .create-account {
+.form-user .form-user-empty .create-account {
   max-width: 190px;
   text-align: center;
   background-color: #fff;
   cursor: pointer;
 }
-.form-user .form-user-account .create-account:hover {
+.form-user .form-user-empty .create-account:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
+}
+
+.account-user-input {
+  height: 33px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-right: 5px;
+}
+
+.account-user-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -802,7 +807,7 @@ footer p {
   flex-direction: column;
   position: absolute;
   bottom: 0;
-  left: 15;
+  left: 15px;
   margin-bottom: 40px;
 }
 .sidebar-content .sidebar-btn .checkout,
