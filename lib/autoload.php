@@ -7,8 +7,8 @@ require_once "html_functions.php";
 //require_once "form_elements.php";
 //require_once "sanitize.php";
 require_once "validate.php";
-//require_once "reg.php";
-//require_once "auth.php";
+//require_once "registration.php";
+//require_once "login.php";
 //require_once "security.php";
 
 //$errors = [];
