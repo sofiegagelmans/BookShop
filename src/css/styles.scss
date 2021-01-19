@@ -2,7 +2,7 @@
 @import "./base/fonts";
 @import "./base/mixins";
 @import "./base/variables";
-@import "../icons/style.css";
+@import "./icons/style.css";
 
 body {
   font-family: $primary-font;
@@ -781,7 +781,7 @@ footer {
     border: none;
     outline: none;
     margin-right: 10px;
-    padding: 0 15px
+    padding: 0 15px;
     &::placeholder {
       color: #c8c8c8;
     }
