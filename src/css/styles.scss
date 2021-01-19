@@ -502,8 +502,9 @@ header {
       display: flex;
       width: 100%;
       .form-user-account {
-        //width: 100%;
-        margin-right: 15px;
+        width: 100%;
+        margin-right: 25px;
+
         .form-user-col-first {
           display: flex;
           flex-direction: column;
@@ -517,8 +518,9 @@ header {
           }
         }
       }
-      .form-user-account-two{
-        //width: 100%;
+      .form-user-account-second{
+        width: 100%;
+        margin-right: 65px;
       .form-user-col-second {
         display: flex;
         flex-direction: column;
@@ -527,7 +529,6 @@ header {
         max-width: 450px;
         margin-right: 65px;
       }
-
     }
     .btn {
       width: 100%;

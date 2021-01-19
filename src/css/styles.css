@@ -660,7 +660,8 @@ header nav ul li a {
   width: 100%;
 }
 .form-user .form-user-empty .form-user-account {
-  margin-right: 15px;
+  width: 100%;
+  margin-right: 25px;
 }
 .form-user .form-user-empty .form-user-account .form-user-col-first {
   display: flex;
@@ -673,7 +674,11 @@ header nav ul li a {
 .form-user .form-user-empty .form-user-account .form-user-col-first .form-user-buttons {
   display: flex;
 }
-.form-user .form-user-empty .form-user-account-two .form-user-col-second {
+.form-user .form-user-empty .form-user-account-second {
+  width: 100%;
+  margin-right: 65px;
+}
+.form-user .form-user-empty .form-user-account-second .form-user-col-second {
   display: flex;
   flex-direction: column;
   border-radius: 0;
