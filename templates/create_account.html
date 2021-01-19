@@ -6,7 +6,8 @@
     <!-- CREATE ACCOUNT -->
     <section>
         <div class="form-user">
-            <form action="lib/auth.php" class="form-user-account" method="post">
+            <form action="" class="form-user-account" method="post">
+<!--                lib/login.php-->
                 <div class="form-user-empty">
                     <div class="form-user-col-first">
                         <h2 class="form-title-sign">Sign in</h2>
@@ -26,15 +27,15 @@
                         <label class="account-user-label" for="password"
                         >Password</label
                         >
-<!--                        <input-->
-<!--                                class="account-user-input"-->
-<!--                                type="password"-->
-<!--                                id="repeat_password"-->
-<!--                                name="r_pwd"-->
-<!--                        />-->
-<!--                        <label class="account-user-label" for="password"-->
-<!--                        >Repeat Password</label-->
-<!--                        >-->
+                        <input
+                                class="account-user-input"
+                                type="password"
+                                id="repeat_password"
+                                name="r_pwd"
+                        />
+                        <label class="account-user-label" for="password"
+                        >Repeat Password</label
+                        >
                         <div class="form-user-buttons">
                             <input class="btn sign-in" type="submit" value="sign in" />
                             <input
@@ -45,9 +46,9 @@
                         </div>
                     </div>
 
-                </div>
-            </form>
-            <form action="lib/reg.php" method="post">
+
+<!--            </form>-->
+<!--            <form action="lib/registration.php" method="post">-->
                 <div class="form-user-col-second">
                     <h2 class="form-title-create">Create Account</h2>
                     <input
@@ -66,20 +67,21 @@
                     <label class="account-user-label" for="password"
                     >Password</label
                     >
-                    <!--                        <input-->
-                    <!--                                class="account-user-input"-->
-                    <!--                                type="password"-->
-                    <!--                                id="repeat_password_create"-->
-                    <!--                                name="password"-->
-                    <!--                        />-->
-                    <!--                        <label class="account-user-label" for="password"-->
-                    <!--                        >Repeat Password</label-->
-                    <!--                        >-->
+                                            <input
+                                                    class="account-user-input"
+                                                    type="password"
+                                                    id="repeat_password_create"
+                                                    name="password"
+                                            />
+                                            <label class="account-user-label" for="password"
+                                            >Repeat Password</label
+                                            >
                     <input
                             class="btn create-account"
                             type="submit"
                             value="create account"
                     />
+                </div>
                 </div>
             </form>
         </div>

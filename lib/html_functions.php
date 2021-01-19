@@ -1,7 +1,7 @@
 <?php 
 function PrintHead()
 {
-    $head = file_get_contents("./templates/head.html");
+    $head = file_get_contents("./templates/doctype.html");
     print $head;
 }
 
@@ -12,7 +12,7 @@ function PrintCart()
 }
 function PrintSideMenu()
 {
-    $sideMenu = file_get_contents("./templates/side_menu.html");
+    $sideMenu = file_get_contents("./templates/aside_mobile.html");
     print $sideMenu;
 }
 function PrintLittleSearchButton()
@@ -34,38 +34,38 @@ function PrintFooter()
 }
 
 function PrintMain(){
-    $main = file_get_contents("./templates/main.html");
+    $main = file_get_contents("./templates/index.html");
     print  $main;
 }
 
 function PrintJavaScript()
 {
-    $js = file_get_contents("./templates/java_script.html");
+    $js = file_get_contents("./templates/js.html");
     print $js;
 }
 
 function PrintDetailMain(){
-    $dMain = file_get_contents("./templates/detail_main.html");
+    $dMain = file_get_contents("./templates/detail_book.html");
     print $dMain;
 }
 
 function PrintCrAMain(){
-    $main = file_get_contents("./templates/create_a_main.html");
+    $main = file_get_contents("./templates/create_account.html");
     print $main;
 }
 
 function PrintOHMain(){
-    $main = file_get_contents("./templates/order_h_main.html");
+    $main = file_get_contents("./templates/order_history.html");
     print $main;
 }
 
 function PrintUserInfoMain(){
-    $main = file_get_contents("./templates/user_info_menu.html");
+    $main = file_get_contents("./templates/user_information.html");
     print $main;
 }
 
 function PrintSideMainUI(){
-    $main = file_get_contents("./templates/side_menu_ui.html");
+    $main = file_get_contents("./templates/aside_mobile_user.html");
     print $main;
 }
 
