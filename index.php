@@ -18,11 +18,13 @@ PrintHeader();
     <?php
 
     PrintMain();
+    $rows = GetData("select * from Product");
+    $count = 0;
+    print '<span href="#" class="amount-items">('.count($rows).' items)'.'</span>';
+
+    print ' </div>';
     print '<div class="section-body">';
 
-//
-
-    $rows = GetData("select * from Product");
 
 //    //loop over de afbeeldingen
     foreach ($rows as $row) {
