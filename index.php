@@ -18,13 +18,20 @@ PrintHeader();
     <?php
 
     PrintMain();
+    $rows = GetData("select pro_image,pro_name,pro_price, pro_id from Product");
+    $count = 0;
+    print '<span href="#" class="amount-items">('.count($rows).' items)'.'</span>';
+
+    print ' </div>';
+
+
     print '<div class="section-body">';
 
-//
 
-    $rows = GetData("select * from Product");
 
-//    //loop over de afbeeldingen
+
+
+   //loop over de afbeeldingen
     foreach ($rows as $row) {
         $link_image = "images/" . $row['pro_image'];
 
@@ -38,7 +45,7 @@ PrintHeader();
         print '<img src="'.$link_image.'" alt="bookcover"/>';
         print '</a>';
         print '<div class="cart">';
-        print '<a href="#">Add To Cart</a>';
+        print '<a href="#">Add to Cart</a>';
         print '</div>';
         print '<div class="more-info">';
 
@@ -57,12 +64,15 @@ PrintHeader();
         print '</div>';
 
 
+        $count = $count + 1;
+
+
 
 
     }
 
-    print '</div>';
 
+    print '</div>';
 
     ?>
 

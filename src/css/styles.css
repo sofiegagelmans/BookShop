@@ -663,7 +663,6 @@ header nav ul li a {
   flex-direction: column;
   border-radius: 0;
   width: 100%;
-  max-width: 450px;
   margin-right: 25px;
 }
 .form-user .form-user-empty .form-user-account .form-user-col-first .form-title-sign {
@@ -682,7 +681,6 @@ header nav ul li a {
   flex-direction: column;
   border-radius: 0;
   width: 100%;
-  max-width: 450px;
   margin-right: 65px;
 }
 .form-user .form-user-empty .form-user-account-second .form-user-col-second .form-title-create {
