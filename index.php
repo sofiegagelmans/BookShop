@@ -41,13 +41,17 @@ PrintHeader();
         print '<a href="#">Add To Cart</a>';
         print '</div>';
         print '<div class="more-info">';
-        print '<a href="./detail_book.php">More Info</a>';
+
+        //hyperlink
+//        print '<a href=stad.php?img_id=' . $row['img_id'] . '>Meer info</a>';
+
+        print '<a href="detail_book.php?pro_id='. $row['pro_id'] .'">More Info</a>';
         print '</div>';
         print '</div>';
         print '</div>';
         print '<div class="book-info-footer">';
         print '<div class="book-title">' . $row['pro_name'] . '</div>';
-        print '<div class="book-price">' . $row['pro_price'] . '</div>';
+        print '<div class="book-price">'."€" . $row['pro_price'] . '</div>';
         print '<div class="book-stock">In Stock</div>';
         print '</div>';
         print '</div>';
