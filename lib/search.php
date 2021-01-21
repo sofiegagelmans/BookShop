@@ -1,23 +1,15 @@
 <?php
 require_once "autoload.php";
 
-function Search(){
+function Search() {
 
-
-//    $searchq = $_POST["search"];
-//    $searchq = preg_replace("#[ˆ0-9a-z]#i","",$searchq);
-    $s = GetData("SELECT * FROM Product WHERE pro_name LIKE '%".$_POST['search']."%' ");
-//    $sth = $conn->prepare("SELECT * FROM `search` WHERE Name = '$str'");
-//
-//    $sth->setFetchMode(PDO:: FETCH_OBJ);
-//    $sth -> execute();
-//    $search_data();
+    $s = GetData("SELECT * FROM Product JOIN Author ON Product.pro_aut_id = Author.aut_id 
+                      WHERE aut_firstname LIKE '%".$_POST['search']."%' 
+                      OR aut_lastname LIKE '%".$_POST['search']."%'  
+                      OR pro_name LIKE '%".$_POST['search']."%'");
 
     foreach ($s as $row) {
         $link_image = "images/" . $row['pro_image'];
-//
-//print '<img src="' . $link_image . '" alt="bookcover"/>';
-
 
         print '<div class="book-info">';
         print '<div class="book-info-body">';
@@ -30,10 +22,8 @@ function Search(){
         print '</div>';
         print '<div class="more-info">';
 
-        //hyperlink
-//        print '<a href=stad.php?img_id=' . $row['img_id'] . '>Meer info</a>';
-
         print '<a href="detail_book.php?pro_id='. $row['pro_id'] .'">More Info</a>';
+
         print '</div>';
         print '</div>';
         print '</div>';
