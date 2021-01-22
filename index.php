@@ -4,6 +4,8 @@ ini_set( 'display_errors', 1 );
 
 require_once "lib/autoload.php";
 
+
+//addproductifneded();
 PrintHead();
 PrintCart();
 PrintSideMenu();
@@ -14,10 +16,76 @@ PrintHeader();
 
 ?>
 <main class="main main-index">
-
+    <aside>
+        <span>Categories</span>
+        <ul>
     <?php
+$g = $_GET['cat_name'];
 
+
+
+
+    if (isset($g)) {
+        $sql = "SELECT * FROM Product 
+                      JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id 
+                      JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
+                      WHERE cat_name LIKE '%$g%' 
+                      ";
+        print $sql;
+        $querySide = GetData($sql);
+
+        print "count:" . count($querySide);
+
+
+
+//        $sideData = GetData($querySide);
+
+//echo "$querySide";
+
+//    echo "$sideData";
+    foreach ($querySide as $row) {
+print 'hello';
+
+
+
+
+//        print '<li><a href="index.php?category=' . $row['cat_name'] .'"  name="' . $row['cat_name'] .'"  >Art</a></li>';
+//        print '<li><a href="index.php?category=' . $row['pro_id'] . '">Design</a></li>';
+//        print '<li><a href="index.php?category=' . $row['pro_id'] . '">Photography</a></li>';
+//        print '<li><a href="index.php?category=' . $row['pro_id'] . '">Architecture</a></li>';
+//        print '<li><a href="index.php?category=' . $row['pro_id'] . '">Fashion</a></li>';
+//        print '<li><a href="index.php?category=' . $row['pro_id'] . '">Lifestyle</a></li>';
+//        print '<li><a href="index.php" class="all-items">Show All</a></li>';
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+    }
+
+  ?>
+        </ul>
+    </aside>
+    
+    
+    
+    
+    <?php
+    
     PrintMain();
+
+//    $htmlSide = mergeDataTemplate($sideData,$sideTemp);
+//    var_dump($htmlSide);
+
 
 
     $rows = GetData("select * from Product");

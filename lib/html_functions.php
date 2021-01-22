@@ -70,6 +70,19 @@ function PrintSideMainUI(){
 }
 
 
+function mergeDataTemplate($data, $template) {
+    $returnValue = "";
+
+    foreach ($data as $row) {
+        $output = $template;
+        foreach (array_keys($row) as $field) {
+            $output = str_replace("%$field%", $row["$field"], $output);
+        }
+        $returnValue .= $output;
+    }
+    return $returnValue;
+}
+
 
 
 
