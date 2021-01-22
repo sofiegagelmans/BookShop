@@ -10,6 +10,7 @@ require_once "validate.php";
 //require_once "registration.php";
 //require_once "login.php";
 //require_once "security.php";
+require_once "search.php";
 
 //$errors = [];
 //

@@ -1,6 +1,5 @@
-@charset "UTF-8";
 @import url("https://rsms.me/inter/inter.css");
-@import "./icons/style.css";
+@import "../icons/style.css";
 html,
 body,
 div,
@@ -209,7 +208,7 @@ header nav .form-search .search-collection {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  box-shadow: 0 5px 20px 0 #c8c8c8;
   border-radius: 30px;
   border: none;
   outline: none;
@@ -647,39 +646,45 @@ header nav ul li a {
   margin-right: 25px;
 }
 
-.form-title-sign,
-.form-title-create {
-  text-transform: uppercase;
-}
-
 .form-user {
   margin: 0px 15px 32px 15px;
 }
 .form-user .form-user-empty {
-  display: flex;
   width: 100%;
+  display: flex;
 }
 .form-user .form-user-empty .form-user-account {
-  margin-right: 15px;
+  width: 100%;
+  margin-right: 25px;
 }
 .form-user .form-user-empty .form-user-account .form-user-col-first {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 0;
-  width: 100%;
-  max-width: 450px;
   margin-right: 25px;
+}
+.form-user .form-user-empty .form-user-account .form-user-col-first .form-title-sign {
+  text-transform: uppercase;
+  margin-bottom: 32px;
 }
 .form-user .form-user-empty .form-user-account .form-user-col-first .form-user-buttons {
   display: flex;
 }
-.form-user .form-user-empty .form-user-account-two .form-user-col-second {
+.form-user .form-user-empty .form-user-account-second {
+  width: 100%;
+  margin-right: 65px;
+}
+.form-user .form-user-empty .form-user-account-second .form-user-col-second {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 0;
-  width: 100%;
-  max-width: 450px;
   margin-right: 65px;
+}
+.form-user .form-user-empty .form-user-account-second .form-user-col-second .form-title-create {
+  text-transform: uppercase;
+  margin-bottom: 32px;
 }
 .form-user .form-user-empty .btn {
   width: 100%;
@@ -788,7 +793,7 @@ footer p {
   font-size: 28px;
   text-decoration: none;
   color: #000;
-  top: -5px;
+  top: -8px;
   right: 0;
 }
 
@@ -807,7 +812,6 @@ footer p {
   flex-direction: column;
   position: absolute;
   bottom: 0;
-  left: 15px;
   margin-bottom: 40px;
 }
 .sidebar-content .sidebar-btn .checkout,
@@ -992,7 +996,7 @@ footer p {
     margin-bottom: 100px;
   }
 
-  footer p  {
+  footer p {
     margin-right: 0;
   }
 }

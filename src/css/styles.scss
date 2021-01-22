@@ -2,7 +2,7 @@
 @import "./base/fonts";
 @import "./base/mixins";
 @import "./base/variables";
-@import "./icons/style.css";
+@import "../icons/style.css";
 
 body {
   font-family: $primary-font;
@@ -53,7 +53,7 @@ header {
         font-weight: $primary-font-weight;
         text-transform: uppercase;
         text-decoration: none;
-        box-shadow: 0px 5px 20px 0px #c8c8c8;
+        box-shadow: 0 5px 20px 0 #c8c8c8;
         border-radius: 30px;
         border: none;
         outline: none;
@@ -357,6 +357,7 @@ header {
     }
   }
 }
+
 .detail-return {
   position: fixed;
   text-transform: uppercase;
@@ -372,6 +373,7 @@ header {
   text-transform: uppercase;
   margin-left: 15px;
 }
+
 .form-account {
   margin-top: 32px;
   margin-left: 15px;
@@ -490,44 +492,43 @@ header {
 
 // ---- CREATE ACCOUNT ---- //
 
-.form-title-sign,
-.form-title-create {
-  //display: inline;
-  text-transform: uppercase;
-}
-
 .form-user {
   margin: 0px 15px 32px 15px;
-    .form-user-empty {
-      display: flex;
+  .form-user-empty {
+    width: 100%;
+    display: flex;
+    .form-user-account {
       width: 100%;
-      .form-user-account {
-        //width: 100%;
-        margin-right: 15px;
-        .form-user-col-first {
-          display: flex;
-          flex-direction: column;
-          border-radius: 0;
-          width: 100%;
-          max-width: 450px;
-          margin-right: 25px;
-
-          .form-user-buttons {
-            display: flex;
-          }
-        }
-      }
-      .form-user-account-two{
-        //width: 100%;
-      .form-user-col-second {
+      margin-right: 25px;
+      .form-user-col-first {
+        width: 100%;
         display: flex;
         flex-direction: column;
         border-radius: 0;
-        width: 100%;
-        max-width: 450px;
-        margin-right: 65px;
+        margin-right: 25px;
+        .form-title-sign {
+          text-transform: uppercase;
+          margin-bottom: 32px;
+        }
+        .form-user-buttons {
+          display: flex;
+        }
       }
-
+    }
+    .form-user-account-second {
+      width: 100%;
+      margin-right: 65px;
+      .form-user-col-second {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        margin-right: 65px;
+        .form-title-create {
+          text-transform: uppercase;
+          margin-bottom: 32px;
+        }
+      }
     }
     .btn {
       width: 100%;
@@ -576,8 +577,6 @@ header {
   }
 }
 
-
-
 .account-user-input {
   height: 33px;
   font-family: $primary-font;
@@ -591,6 +590,7 @@ header {
   margin-bottom: 5px;
   padding-right: 5px;
 }
+
 .account-user-label {
   font-size: 14px;
   text-transform: uppercase;
@@ -643,7 +643,7 @@ footer {
   font-size: 28px;
   text-decoration: none;
   color: $black;
-  top: -5px;
+  top: -8px;
   right: 0;
 }
 
@@ -661,7 +661,6 @@ footer {
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    left: 15px;
     margin-bottom: 40px;
     .checkout,
     .shop {
@@ -798,6 +797,7 @@ footer {
     }
   }
 }
+
 // ---- MEDIA ---- //
 
 @media screen and (max-width: 1200px) {
@@ -847,10 +847,11 @@ footer {
       }
     }
   }
-  footer p  {
+  footer p {
     margin-right: 0;
   }
 }
+
 @media screen and (max-width: 900px) {
   header nav .brand-name {
     margin-right: 80px;
@@ -1005,6 +1006,7 @@ footer {
     }
   }
 }
+
 @media screen and (max-width: 555px) {
   .main-index {
     margin-bottom: 400px;
