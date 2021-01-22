@@ -58,8 +58,6 @@ header {
         border: none;
         outline: none;
         padding: 5px;
-        padding-left: 15px;
-        padding-right: 45px;
         &::placeholder {
           color: $grey;
         }
@@ -897,6 +895,12 @@ footer {
       margin-top: 0;
       margin-bottom: 115px;
     }
+  }
+  .form-user .form-user-empty {
+    flex-direction: column;
+  }
+  .form-user .form-user-empty .form-user-account-second {
+    margin-top: 20px;
   }
   .detail-return {
     display: none;
