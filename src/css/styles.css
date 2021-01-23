@@ -213,8 +213,7 @@ header nav .form-search .search-collection {
   border: none;
   outline: none;
   padding: 5px;
-  padding-left: 15px;
-  padding-right: 45px;
+  padding-left: 10px;
 }
 header nav .form-search .search-collection::placeholder {
   color: #ccc;
@@ -793,8 +792,8 @@ footer p {
   font-size: 28px;
   text-decoration: none;
   color: #000;
-  top: -8px;
-  right: 0;
+  top: -10px;
+  right: -3px;
 }
 
 .sidebar-content {
@@ -915,8 +914,8 @@ footer p {
   font-size: 28px;
   text-decoration: none;
   color: #000;
-  top: 5px;
-  right: 12px;
+  top: 7px;
+  right: 14px;
 }
 
 .little-form-search {
@@ -1062,6 +1061,14 @@ footer p {
     margin-bottom: 115px;
   }
 
+  .form-user .form-user-empty {
+    flex-direction: column;
+  }
+
+  .form-user .form-user-empty .form-user-account-second {
+    margin-top: 20px;
+  }
+
   .detail-return {
     display: none;
   }
@@ -1137,12 +1144,11 @@ footer p {
 header nav .shop-cart-icon {
     display: block;
     font-size: 25px;
-    padding: 4px;
+    padding: 0 4px;
   }
 
   header nav .brand-name {
     font-size: 16px;
-    margin-top: 5px;
     margin-right: 0;
   }
 

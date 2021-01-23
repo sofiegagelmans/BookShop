@@ -19,22 +19,22 @@ PrintHeader();
     <aside>
         <span>Categories</span>
         <ul>
-    <?php
-$g = $_GET['cat_name'];
+            <?php
+            $g = $_GET['cat_name'];
 
 
 
 
-    if (isset($g)) {
-        $sql = "SELECT * FROM Product 
-                      JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id 
+            if (isset($g)) {
+                $sql = "SELECT * FROM Product
+                      JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
                       JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
-                      WHERE cat_name LIKE '%$g%' 
+                      WHERE cat_name LIKE '%$g%'
                       ";
-        print $sql;
-        $querySide = GetData($sql);
+                print $sql;
+                $querySide = GetData($sql);
 
-        print "count:" . count($querySide);
+                print "count:" . count($querySide);
 
 
 
@@ -43,8 +43,8 @@ $g = $_GET['cat_name'];
 //echo "$querySide";
 
 //    echo "$sideData";
-    foreach ($querySide as $row) {
-print 'hello';
+                foreach ($querySide as $row) {
+                    print 'hello';
 
 
 
@@ -61,7 +61,7 @@ print 'hello';
 
 
 
-    }
+                }
 
 
 
@@ -70,21 +70,21 @@ print 'hello';
 
 
 
-    }
+            }
 
-  ?>
+            ?>
         </ul>
     </aside>
-    
-    
-    
-    
+
+
+
+
     <?php
-    
+
     PrintMain();
 
-//    $htmlSide = mergeDataTemplate($sideData,$sideTemp);
-//    var_dump($htmlSide);
+    //    $htmlSide = mergeDataTemplate($sideData,$sideTemp);
+    //    var_dump($htmlSide);
 
 
 
