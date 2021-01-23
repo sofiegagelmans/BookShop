@@ -191,7 +191,7 @@ header nav .brand-name {
   list-style-type: none;
   text-decoration: none;
   color: #000;
-  margin-right: 168px;
+  margin-right: 163px;
 }
 header nav .shop-cart-icon {
   display: none;
@@ -306,20 +306,19 @@ header nav ul li a {
   color: #ccc;
 }
 .main section .section-header ul .sort-by .sort-items {
-  width: 160px;
+  width: 155px;
   display: none;
   position: absolute;
   background-color: #fff;
   top: 0;
   left: 120px;
-  padding-bottom: 8px;
-  padding-left: 13px;
+  padding-bottom: 4px;
   z-index: 2;
 }
 .main section .section-header ul .sort-by .sort-items li {
   margin-bottom: 8px;
   padding: 5px;
-  padding-top: 0px;
+  padding-top: 0;
 }
 .main section .section-header ul .sort-by:hover .sort-items {
   display: block;
@@ -811,7 +810,7 @@ footer p {
   flex-direction: column;
   position: absolute;
   bottom: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .sidebar-content .sidebar-btn .checkout,
 .sidebar-content .sidebar-btn .shop {
@@ -914,8 +913,8 @@ footer p {
   font-size: 28px;
   text-decoration: none;
   color: #000;
-  top: 7px;
-  right: 14px;
+  top: 5px;
+  right: 12px;
 }
 
 .little-form-search {
@@ -968,9 +967,6 @@ footer p {
   .main section .section-header ul .sort-by .sort-items {
     width: 160px;
     left: 120px;
-  }
-  .main section .section-header ul .sort-by .sort-items li {
-    margin-bottom: 5px;
   }
 
   .main section .section-body .book-info-footer .book-price {
@@ -1066,7 +1062,7 @@ footer p {
   }
 
   .form-user .form-user-empty .form-user-account-second {
-    margin-top: 20px;
+    margin-top: 60px;
   }
 
   .detail-return {

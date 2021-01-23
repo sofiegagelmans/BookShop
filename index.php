@@ -22,9 +22,6 @@ PrintHeader();
             <?php
             $g = $_GET['cat_name'];
 
-
-
-
             if (isset($g)) {
                 $sql = "SELECT * FROM Product
                       JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
@@ -35,6 +32,7 @@ PrintHeader();
                 $querySide = GetData($sql);
 
                 print "count:" . count($querySide);
+
 
 
 
@@ -142,7 +140,22 @@ PrintHeader();
 
     //loop over de afbeeldingen
 
+/*
+    // Fetch images
+    $image = $_GET['pro_image'];
 
+    $fetch_images = GetData("SELECT * FROM Publisher WHERE pro_image LIKE '%$image%' ORDER BY sort ASC");
+
+    while ($row = fetch_assoc($fetch_images)) {
+        $id = $row['id'];
+        $name = $row['name'];
+        $location = $row['location'];
+
+        echo '<li class="sort-by">' . $id . '" >
+          <img src="' . $location . '" title="' . $name . '" >
+        </li>';
+    }
+*/
 
     print '</div>';
 
