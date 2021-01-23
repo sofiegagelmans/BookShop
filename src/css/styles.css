@@ -306,13 +306,13 @@ header nav ul li a {
   color: #ccc;
 }
 .main section .section-header ul .sort-by .sort-items {
-  width: 155px;
+  width: 152px;
   display: none;
   position: absolute;
   background-color: #fff;
   top: 0;
   left: 120px;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
   z-index: 2;
 }
 .main section .section-header ul .sort-by .sort-items li {
