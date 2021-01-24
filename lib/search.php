@@ -14,24 +14,15 @@ function Search() {
                       WHERE aut_firstname LIKE '%$text%' 
                       OR aut_lastname LIKE '%$text%'  
                       OR pro_name LIKE '%$text%'");
-<<<<<<< HEAD
-        foreach ($data as $row) {
-
-            $resultList[$row['pro_id']] = $row;
-        }
-    }
-    $arrayUniek = array_unique($resultList);
-=======
 
         if ($data ==  null){
             echo "<div class='noresult'>The result cant be found your book '<span class='searchtext'>$searchText</span>'</div>";
         }
         foreach ($data as $row) {
-                $resultList[$row['pro_id']] = $row;
+            $resultList[$row['pro_id']] = $row;
         }
     }
-    $arrayUniek = array_unique($resultList);//??????? klopt toch niet
->>>>>>> d79e563f3037811f576ae45aa18b0dd6658dc1e7
+    $arrayUniek = array_unique($resultList);
     $template = file_get_contents("templates/bookBlock.html");
     $html = MergeViewWithData($template, $arrayUniek);
     print $html;

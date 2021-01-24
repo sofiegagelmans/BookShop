@@ -11,12 +11,9 @@ body {
   color: $black;
 }
 div.noresult {
-  color: red;
-  font-size: 30px;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  padding-left: 250px;
-  text-align: center;
+  font-size: $primary-font-size;
+  padding-top: 25px;
+  padding-bottom: 180px;
 }
 
 .wrapper {
