@@ -16,7 +16,7 @@ function Search() {
                       OR pro_name LIKE '%$text%'");
 
         if ($data ==  null){
-            echo "<div class='noresult'>The result cant be found your book '<span class='searchtext'>$searchText</span>'</div>";
+            echo "<div class='noresult'>Oops! There appear to be no results for '<span class='searchtext'>$searchText</span>'</div>";
         }
         foreach ($data as $row) {
             $resultList[$row['pro_id']] = $row;
