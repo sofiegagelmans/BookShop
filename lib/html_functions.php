@@ -1,4 +1,5 @@
-<?php 
+<?php
+global $stock;
 function PrintHead()
 {
     $head = file_get_contents("./templates/doctype.html");
@@ -70,19 +71,31 @@ function PrintSideMainUI(){
 }
 
 
-function mergeDataTemplate($data, $template) {
-    $returnValue = "";
+function MergeViewWithData( $template, $data )
+{
+    $returnvalue = "";
 
-    foreach ($data as $row) {
+    foreach ( $data as $row )
+    {
         $output = $template;
-        foreach (array_keys($row) as $field) {
-            $output = str_replace("%$field%", $row["$field"], $output);
+
+        foreach( array_keys($row) as $field )  //eerst "img_id", dan "img_title", ...
+        {
+            $output = str_replace( "@$field@", $row["$field"], $output );
         }
-        $returnValue .= $output;
+
+        $returnvalue .= $output;
     }
-    return $returnValue;
+
+    return $returnvalue;
 }
 
+function CountStock($sql){
 
-
+    $count = $sql;
+    $cdata = GetData($count);
+    $row = $cdata[0];
+    $stock = (int)$row["COUNT(pro_id)"];
+    return $stock;
+}
 
