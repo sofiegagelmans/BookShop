@@ -163,6 +163,15 @@ body {
   color: #000;
 }
 
+div.noresult {
+  color: red;
+  font-size: 30px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  padding-left: 250px;
+  text-align: center;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -213,8 +222,6 @@ header nav .form-search .search-collection {
   border: none;
   outline: none;
   padding: 5px;
-  padding-left: 15px;
-  padding-right: 45px;
 }
 header nav .form-search .search-collection::placeholder {
   color: #ccc;
@@ -1060,6 +1067,14 @@ footer p {
   .main .detail-page .detail-button .detail-cart {
     margin-top: 0;
     margin-bottom: 115px;
+  }
+
+  .form-user .form-user-empty {
+    flex-direction: column;
+  }
+
+  .form-user .form-user-empty .form-user-account-second {
+    margin-top: 20px;
   }
 
   .detail-return {

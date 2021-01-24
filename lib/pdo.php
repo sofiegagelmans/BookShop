@@ -1,7 +1,9 @@
 <?php
 require_once "autoload.php";
 function CreateConnection()
+
 {
+    global $items;
     global $conn;
     global $servername, $dbname, $username, $password;
 
