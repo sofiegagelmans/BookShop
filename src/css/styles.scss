@@ -37,7 +37,7 @@ header {
       list-style-type: none;
       text-decoration: none;
       color: $black;
-      margin-right: 163px;
+      margin-right: 168px;
     }
     .shop-cart-icon {
       display: none;
@@ -58,7 +58,6 @@ header {
         border: none;
         outline: none;
         padding: 5px;
-        padding-left: 10px;
         &::placeholder {
           color: $grey;
         }
@@ -149,18 +148,19 @@ header {
             }
           }
           .sort-items {
-            width: 152px;
+            width: 160px;
             display: none;
             position: absolute;
             background-color: $white;
             top: 0;
             left: 120px;
-            padding-bottom: 2px;
+            padding-bottom: 8px;
+            padding-left: 13px;
             z-index: 2;
             li {
               margin-bottom: 8px;
               padding: 5px;
-              padding-top: 0;
+              padding-top: 0px;
             }
           }
           &:hover {
@@ -641,8 +641,8 @@ footer {
   font-size: 28px;
   text-decoration: none;
   color: $black;
-  top: -10px;
-  right: -3px;
+  top: -8px;
+  right: 0;
 }
 
 .sidebar-content {
@@ -659,7 +659,7 @@ footer {
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     .checkout,
     .shop {
       font-family: $primary-font;
@@ -822,6 +822,13 @@ footer {
   .main-index {
     margin-bottom: 175px;
   }
+  .main section .section-header ul .sort-by .sort-items {
+    width: 160px;
+    left: 120px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
   .main section .section-body .book-info-footer {
     .book-price {
       margin-left: 10px;
@@ -893,7 +900,7 @@ footer {
     flex-direction: column;
   }
   .form-user .form-user-empty .form-user-account-second {
-    margin-top: 60px;
+    margin-top: 20px;
   }
   .detail-return {
     display: none;
@@ -957,10 +964,11 @@ footer {
   header nav .shop-cart-icon {
     display: block;
     font-size: 25px;
-    padding: 0 4px;
+    padding: 4px;
   }
   header nav .brand-name {
     font-size: $primary-font-size;
+    margin-top: 5px;
     margin-right: 0;
   }
   .main {
