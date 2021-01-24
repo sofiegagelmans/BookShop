@@ -10,6 +10,14 @@ body {
   font-size: $primary-font-size;
   color: $black;
 }
+div.noresult {
+  color: red;
+  font-size: 30px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  padding-left: 250px;
+  text-align: center;
+}
 
 .wrapper {
   min-height: 100vh;

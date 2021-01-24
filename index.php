@@ -52,6 +52,7 @@ PrintHeader();
             <li><a href="index.php" class="all-items">Show All</a></li>
         </ul>
     </aside>
+<<<<<<< HEAD
 
 <?php
     PrintMain();
@@ -63,8 +64,45 @@ PrintHeader();
    <div class="section-body">
 
        <?php
+=======
+
+<?php
+    PrintMain();
 
 
+if (isset($_POST["search"])) {
+    Search();
+}elseif (isset($varGet)){
+
+    $catBookQuery = "SELECT * FROM Product
+                          JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
+                          JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
+                          WHERE cat_name LIKE '%$varGet%'
+                         ";
+    $catFiltred = GetData($catBookQuery);
+    $arrrr = [];
+
+    foreach ($catFiltred as $row) {
+        $arrrr[$row['pro_id']] = $row;
+    }
+    $items = count($arrrr);
+
+    print $span = "<span href='#' class='amount-items'> $items Item </span>";
+
+}
+else{
+
+}
+?>
+
+
+           </div>
+   <div class="section-body">
+>>>>>>> d79e563f3037811f576ae45aa18b0dd6658dc1e7
+
+       <?php
+
+<<<<<<< HEAD
     $catBookQuery = "SELECT * FROM Product
                           JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
                           JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
@@ -74,11 +112,36 @@ PrintHeader();
 
        $rows = GetData("select * from Product");
     $template = file_get_contents("templates/bookBlock.html");
+=======
 
+    $catBookQuery = "SELECT * FROM Product
+                          JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
+                          JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
+                          WHERE cat_name LIKE '%$varGet%'
+                         ";
+
+>>>>>>> d79e563f3037811f576ae45aa18b0dd6658dc1e7
+
+    $rows = GetData("select * from Product");
+    $template = file_get_contents("templates/bookBlock.html");
+
+<<<<<<< HEAD
+    $html = MergeViewWithData($template, $rows);
+=======
+>>>>>>> d79e563f3037811f576ae45aa18b0dd6658dc1e7
 
     $html = MergeViewWithData($template, $rows);
 
+    if (isset($_POST["search"])) {
+            Search();
+    }elseif (isset($varGet)){
 
+<<<<<<< HEAD
+            $catFiltred = GetData($catBookQuery);
+            $catTemplate = file_get_contents('templates/bookBlock.html');
+            $catHtml = MergeViewWithData($catTemplate, $catFiltred);
+
+=======
     if (isset($_POST["search"])) {
             Search();
     }elseif (isset($varGet)){
@@ -86,7 +149,7 @@ PrintHeader();
             $catFiltred = GetData($catBookQuery);
             $catTemplate = file_get_contents('templates/bookBlock.html');
             $catHtml = MergeViewWithData($catTemplate, $catFiltred);
-
+>>>>>>> d79e563f3037811f576ae45aa18b0dd6658dc1e7
             print $catHtml;
     }
     elseif (isset($highest)){
