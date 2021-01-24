@@ -70,19 +70,24 @@ function PrintSideMainUI(){
 }
 
 
-function mergeDataTemplate($data, $template) {
-    $returnValue = "";
+function MergeViewWithData( $template, $data )
+{
+    $returnvalue = "";
 
-    foreach ($data as $row) {
+    foreach ( $data as $row )
+    {
         $output = $template;
-        foreach (array_keys($row) as $field) {
-            $output = str_replace("%$field%", $row["$field"], $output);
-        }
-        $returnValue .= $output;
-    }
-    return $returnValue;
-}
 
+        foreach( array_keys($row) as $field )  //eerst "img_id", dan "img_title", ...
+        {
+            $output = str_replace( "@$field@", $row["$field"], $output );
+        }
+
+        $returnvalue .= $output;
+    }
+
+    return $returnvalue;
+}
 
 
 
