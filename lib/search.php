@@ -2,6 +2,9 @@
 require_once "autoload.php";
 
 function Search() {
+
+
+
     $resultList = [];
     $w = $_POST['search'];
     $list = explode(" ", $w);
