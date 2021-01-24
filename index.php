@@ -91,7 +91,22 @@ if (isset($_POST["search"])) {
 
 }
 else{
+    $catBookQuery = "SELECT * FROM Product
+                          JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
+                          JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
+                          WHERE cat_name LIKE '%$varGet%'
+                         ";
 
+
+    $rows = GetData("select * from Product");
+    $arrrr = [];
+
+    foreach ($rows as $row) {
+        $arrrr[$row['pro_id']] = $row;
+    }
+    $items = count($arrrr);
+
+    print $span = "<span href='#' class='amount-items'> $items Item </span>";
 }
 ?>
 
@@ -175,7 +190,8 @@ else{
     }
     else{
 
-    print $html;}
+    print $html;
+    }
     ?>
 
       </div>
