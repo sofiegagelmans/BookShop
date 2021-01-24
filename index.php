@@ -56,8 +56,6 @@ PrintHeader();
 <?php
     PrintMain();
 
-
-
      print '<span href="#" class="amount-items">(40 items)'.'</span>';
     ?>
 
