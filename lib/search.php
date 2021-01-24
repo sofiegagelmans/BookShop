@@ -8,6 +8,9 @@ function Search() {
     $trimText = trim($searchText);
     $list = explode(" ", $trimText);
 
+
+
+
     foreach ($list as $text){
 
         $data = GetData("SELECT * FROM Product JOIN Author ON Product.pro_aut_id = Author.aut_id 
@@ -15,6 +18,7 @@ function Search() {
                       OR aut_lastname LIKE '%$text%'  
                       OR pro_name LIKE '%$text%'");
         foreach ($data as $row) {
+
 
             $resultList[$row['pro_id']] = $row;
         }
@@ -24,3 +28,7 @@ function Search() {
     $html = MergeViewWithData($template, $arrayUniek);
     print $html;
 }
+
+
+
+
