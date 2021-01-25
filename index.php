@@ -45,6 +45,7 @@ PrintHeader();
             $catSql = "SELECT * FROM Category";
             $asideTemp = '<li><a href="index.php?category=@cat_name@">@cat_name@</a>';
             $asideData = GetData($catSql);
+
             $mergeCatData = MergeViewWithData($asideTemp,$asideData);
             print $mergeCatData;
 
@@ -89,9 +90,35 @@ PrintHeader();
     <div class="section-body">
 
         <?php
-        $rows = GetData("select * from Product");
+
+        /*
+        $rows = GetData("select * from Product order by pro_name asc");
         $template = file_get_contents("templates/bookBlock.html");
         $html = MergeViewWithData($template, $rows);
+
+
+        $stock = "SELECT * FROM Product
+                  JOIN Stock ON Stock.sto_id = Product.pro_stock_id";
+        $data = GetData($sql);
+        $html = MergeViewWithData($template, $data);
+        print $html;
+
+        // get the product and stock level
+        if($stock > 5) {
+            echo $html; //in stock
+        } elseif ($stock <= 5) {
+            echo $html; //low in stock
+        } elseif ($stock == 0) {
+            echo  $html; //out of stock
+        }
+
+*/
+
+        $rows = GetData("select * from Product order by pro_name asc");
+        $template = file_get_contents("templates/bookBlock.html");
+        $html = MergeViewWithData($template, $rows);
+
+
         if (isset($_POST["search"])) {
             Search();
         }elseif (isset($varGet)){

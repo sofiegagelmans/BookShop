@@ -296,7 +296,7 @@ header {
       margin-left: 15px;
       .detail-book-cover {
         .detail-book-header {
-          height: 522px;
+          height: 552px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -307,17 +307,6 @@ header {
               height: 420px;
               box-shadow: 0px 5px 20px 0px #c8c8c8;
             }
-          }
-        }
-        .detail-book-button {
-          display: flex;
-          justify-content: space-between;
-          padding-top: 15px;
-          margin-bottom: 15px;
-          a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: black;
           }
         }
       }
@@ -892,9 +881,6 @@ footer {
     @include make-col(1, 0px);
     .detail-book .detail-book-cover .detail-book-header {
       margin: 0 15px;
-    }
-    .detail-book .detail-book-cover .detail-book-button {
-      padding: 15px;
     }
     .detail-button .detail-cart {
       margin-top: 0;

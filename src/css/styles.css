@@ -461,7 +461,7 @@ header nav ul li a {
   margin-left: 15px;
 }
 .main .detail-page .detail-book .detail-book-cover .detail-book-header {
-  height: 522px;
+  height: 552px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,17 +471,6 @@ header nav ul li a {
   width: 300px;
   height: 420px;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
-}
-.main .detail-page .detail-book .detail-book-cover .detail-book-button {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
-  margin-bottom: 15px;
-}
-.main .detail-page .detail-book .detail-book-cover .detail-book-button a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
 }
 .main .detail-page .detail-text p {
   font-size: 14px;
@@ -1057,9 +1046,6 @@ footer p {
   }
   .main .detail-page .detail-book .detail-book-cover .detail-book-header {
     margin: 0 15px;
-  }
-  .main .detail-page .detail-book .detail-book-cover .detail-book-button {
-    padding: 15px;
   }
   .main .detail-page .detail-button .detail-cart {
     margin-top: 0;
