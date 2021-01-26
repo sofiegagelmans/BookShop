@@ -3,7 +3,7 @@ require_once "autoload.php";
 function CreateConnection()
 
 {
-    global $items;
+//    global $items;
     global $conn;
     global $servername, $dbname, $username, $password;
 
@@ -32,9 +32,7 @@ function GetData( $sql )
         $rows = $result->fetchAll(PDO::FETCH_ASSOC); //geeft array zoals ['lan_id'] => 1, ...
 //        $rows = $result->fetchAll(PDO::FETCH_NUM); //geeft array zoals [0] => 1, ...
 //        $rows = $result->fetchAll(PDO::FETCH_BOTH); //geeft array zoals [0] => 1, ['lan_id'] => 1, ...
-//        $rows = $result->fetchAll(PDO::FETCH_COLUMN);
-//        var_dump($rows);
-//        print_r($rows);
+
 
 
         return $rows;

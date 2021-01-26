@@ -90,12 +90,39 @@ function MergeViewWithData( $template, $data )
     return $returnvalue;
 }
 
-function CountStock($sql){
 
-    $count = $sql;
-    $cdata = GetData($count);
-    $row = $cdata[0];
-    $stock = (int)$row["COUNT(pro_id)"];
-    return $stock;
+function MergeViewWithExtraElements( $template, $elements )
+{
+    foreach ( $elements as $key => $element )
+    {
+        $template = str_replace( "@$key@", $element, $template );
+    }
+    return $template;
 }
+
+function MergeViewWithErrors( $template, $errors )
+{
+    foreach ( $errors as $key => $error )
+    {
+        $template = str_replace( "@$key@", "<p style='color:red'>$error</p>", $template );
+    }
+    return $template;
+}
+
+function RemoveEmptyErrorTags( $template, $data )
+{
+    foreach ( $data as $row )
+    {
+        foreach( array_keys($row) as $field )  //eerst "img_id", dan "img_title", ...
+        {
+            $template = str_replace( "@$field" . "_error@", "", $template );
+        }
+    }
+
+    return $template;
+}
+
+
+
+
 

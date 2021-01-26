@@ -55,17 +55,12 @@ PrintHeader();
 
 <?php
     PrintMain();
-
-
-if (isset($_POST["search"])) {
-    Search();
-}elseif (isset($varGet)){
-
-    $catBookQuery = "SELECT * FROM Product
+$catBookQuery = "SELECT * FROM Product
                           JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
                           JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
-                          WHERE cat_name LIKE '%$varGet%'
-                         ";
+                          where pro_publish = 1 and cat_name LIKE '%$varGet%'";
+
+if (isset($varGet)){
     $catFiltred = GetData($catBookQuery);
     $arrrr = [];
 
@@ -74,48 +69,31 @@ if (isset($_POST["search"])) {
     }
     $items = count($arrrr);
 
-    print $span = "<span href='#' class='amount-items'> $items Item </span>";
+    print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
 
 }
 else{
-    $catBookQuery = "SELECT * FROM Product
-                          JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
-                          JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
-                          WHERE cat_name LIKE '%$varGet%'
-                         ";
-
-
-    $rows = GetData("select * from Product");
+    $rows = GetData("select * from Product where pro_publish = 1 ");
     $arrrr = [];
-
     foreach ($rows as $row) {
         $arrrr[$row['pro_id']] = $row;
     }
     $items = count($arrrr);
-
-    print $span = "<span href='#' class='amount-items'> $items Item </span>";
+    print $span = "<span href='#' class='amount-items'> ($items Items)</span>";
 }
 ?>
-
 
            </div>
    <div class="section-body">
 
+
        <?php
 
 
-    $catBookQuery = "SELECT * FROM Product
-                          JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
-                          JOIN Category ON Category.cat_id = Product_Category.pro_cat_cat_id
-                          WHERE cat_name LIKE '%$varGet%'
-                         ";
-
-
-    $rows = GetData("select * from Product");
+    $rows = GetData("select * from Product where pro_publish = 1 ");
     $template = file_get_contents("templates/bookBlock.html");
-
-
     $html = MergeViewWithData($template, $rows);
+
 
 
     if (isset($_POST["search"])) {
@@ -128,24 +106,22 @@ else{
             print $catHtml;
     }
     elseif (isset($highest)){
-        $sortHighestQuery = "SELECT * FROM Product order by pro_price desc";
+        $sortHighestQuery = "SELECT * FROM Product where pro_publish = 1 order by pro_price desc";
         $sortHighestFiltred = GetData($sortHighestQuery);
         $sortTemplate = file_get_contents('templates/bookBlock.html');
         $sortHtml = MergeViewWithData($sortTemplate, $sortHighestFiltred);
         print $sortHtml;
     }
     elseif (isset($lowest)){
-        $sql = "SELECT * FROM Product order by pro_price asc";
+        $sql = "SELECT * FROM Product where pro_publish = 1 order by pro_price asc";
         $data = GetData($sql);
         $html = MergeViewWithData($template, $data);
         print $html;
     }
     elseif (isset($alphabet)){
-        $sql = "SELECT * FROM Product order by pro_name asc";
-
+        $sql = "SELECT * FROM Product where pro_publish = 1 order by pro_name asc";
         $data = GetData($sql);
         $html = MergeViewWithData($template, $data);
-
         print $html;
     }
     else{

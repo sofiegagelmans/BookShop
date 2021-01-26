@@ -22,7 +22,7 @@ function Search() {
                 $resultList[$row['pro_id']] = $row;
         }
     }
-    $arrayUniek = array_unique($resultList);//??????? klopt toch niet
+    $arrayUniek = array_unique($resultList);
     $template = file_get_contents("templates/bookBlock.html");
     $html = MergeViewWithData($template, $arrayUniek);
     print $html;
