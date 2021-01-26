@@ -515,6 +515,27 @@ header nav ul li a {
   display: flex;
   justify-content: space-between;
 }
+.main .detail-page .detail-button input[type=number] {
+  width: 135px;
+  height: 35px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  border: none;
+  outline: none;
+}
+.main .detail-page .detail-button input::-webkit-outer-spin-button,
+.main .detail-page .detail-button input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .main .detail-page .detail-button .detail-cart a {
   width: 140px;
   height: 38px;
@@ -539,27 +560,6 @@ header nav ul li a {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
   cursor: pointer;
-}
-.main .detail-page .detail-button .detail-cart a input[type=number] {
-  width: 135px;
-  height: 35px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 30px;
-  background-color: #fff;
-  box-shadow: 0px 5px 20px 0px #c8c8c8;
-  margin-left: 15px;
-  margin-bottom: 25px;
-  border: none;
-  outline: none;
-}
-.main .detail-page .detail-button .detail-cart a input::-webkit-outer-spin-button,
-.main .detail-page .detail-button .detail-cart a input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .detail-return {
@@ -852,6 +852,7 @@ footer p {
 }
 .sidebar-content h3 {
   font-size: 16px;
+  text-transform: uppercase;
   margin-bottom: 60px;
 }
 .sidebar-content .sidebar-btn {

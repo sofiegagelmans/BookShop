@@ -148,7 +148,9 @@ $catBookQuery = "SELECT * FROM Product
 
         $rows = GetData("select * from Product where pro_publish = 1 ");
         $template = file_get_contents("templates/bookBlock.html");
+        $extra_elements['csrf_token'] = GenerateCSRF("index.php");
         $html = MergeViewWithData($template, $rows);
+        $html = MergeViewWithExtraElements($html, $extra_elements);
 
 
 

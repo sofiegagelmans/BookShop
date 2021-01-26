@@ -357,6 +357,27 @@ header {
     .detail-button {
       display: flex;
       justify-content: space-between;
+      input[type=number] {
+        width: 135px;
+        height: 35px;
+        font-family: $primary-font;
+        font-weight: $primary-font-weight;
+        font-size: 14px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 30px;
+        background-color: $white;
+        box-shadow: 0px 5px 20px 0px #c8c8c8;
+        margin-left: 15px;
+        margin-bottom: 25px;
+        border: none;
+        outline: none;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
       .detail-cart {
         a {
           width: 140px;
@@ -381,27 +402,6 @@ header {
             background-color: $green;
             transition: background-color 0.8s ease;
             cursor: pointer;
-          }
-          input[type=number] {
-            width: 135px;
-            height: 35px;
-            font-family: $primary-font;
-            font-weight: $primary-font-weight;
-            font-size: 14px;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 30px;
-            background-color: $white;
-            box-shadow: 0px 5px 20px 0px #c8c8c8;
-            margin-left: 15px;
-            margin-bottom: 25px;
-            border: none;
-            outline: none;
-          }
-          input::-webkit-outer-spin-button,
-          input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
           }
         }
       }
@@ -704,6 +704,7 @@ footer {
   height: 100vh;
   h3 {
     font-size: $primary-font-size;
+    text-transform: uppercase;
     margin-bottom: 60px;
   }
   .sidebar-btn {

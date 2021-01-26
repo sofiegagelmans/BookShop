@@ -8,9 +8,15 @@ function PrintHead()
 
 function PrintCartTop()
 {
-    $cart = file_get_contents("./templates/cartTop.html");
-    print $cart;
+    $cartTop = file_get_contents("./templates/cartTop.html");
+    if(isset($_SESSION['cart']) && count($_SESSION['cart'])!=0){
+        $cartTop = str_replace('@shopcartnum@',count($_SESSION['cart']),$cartTop);
+    }else {
+        $cartTop = str_replace('@shopcartnum@','0',$cartTop);
+    }
+    print $cartTop;
 }
+
 function PrintCartRow($price,$image,$name,$quantity,$id)
 {
     $cart = file_get_contents("./templates/cartRow.html");
@@ -40,6 +46,11 @@ function PrintLittleSearchButton()
 function PrintHeader()
 {
     $header = file_get_contents("./templates/header.html");
+    if(isset($_SESSION['cart']) && count($_SESSION['cart'])!=0){
+        $header = str_replace('@shopcartnum@',count($_SESSION['cart']),$header);
+    }else {
+        $header = str_replace('@shopcartnum@','0',$header);
+    }
     print $header;
 }
 
@@ -104,7 +115,6 @@ function MergeViewWithData( $template, $data )
 
     return $returnvalue;
 }
-
 
 function MergeViewWithExtraElements( $template, $elements )
 {
