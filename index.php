@@ -82,19 +82,24 @@ $catBookQuery = "SELECT * FROM Product
         $catFiltred = GetData($catBookQuery);
         $arrrr = [];
 
-    print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
+        foreach ($catFiltred as $row) {
+            $arrrr[$row['pro_id']] = $row;
+        }
+        $items = count($arrrr);
 
-}
-else{
-    $rows = GetData("select * from Product where pro_publish = 1 ");
-    $arrrr = [];
-    foreach ($rows as $row) {
-        $arrrr[$row['pro_id']] = $row;
+        print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
+
     }
-    $items = count($arrrr);
-    print $span = "<span href='#' class='amount-items'> ($items Items)</span>";
-}
-?>
+    else{
+        $rows = GetData("select * from Product where pro_publish = 1");
+        $arrrr = [];
+        foreach ($rows as $row) {
+            $arrrr[$row['pro_id']] = $row;
+        }
+        $items = count($arrrr);
+        print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
+    }
+    ?>
 
     </div>
     <div class="section-body">
