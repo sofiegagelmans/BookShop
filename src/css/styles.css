@@ -175,6 +175,13 @@ cart-button {
   border: none;
 }
 
+div .msgs {
+  position: fixed;
+  top: 130px;
+  left: 43%;
+  color: Black;
+}
+
 div.noresult {
   font-size: 16px;
   padding-top: 25px;

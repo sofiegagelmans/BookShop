@@ -9,34 +9,51 @@
     </aside>
     <!-- USER INFORMATION -->
     <section>
-        <h2 class="form-title-user">User Information</h2>
+
+    <h2 class="form-title-user">User Information</h2>
         <div class="form-account">
-            <form action="/change.php" class="form">
+            <form action="lib/registration.php" name="user_info" class="form" method="post">
+
+                <!-- meta info -->
+                <input type="hidden" id="table" name="table" value="Customer">
+                <input type="hidden" id="pkey" name="pkey" value="cus_id">
+                <input type="hidden" id="afterinsert" name="afterinsert" value="user_information.php">
+                <input type="hidden" id="afterupdate" name="afterupdate" value="">
+                <!-- end meta info -->
+
+                <!--security-->
+                <input type="hidden" name="csrf" value="@csrf_token@">
+                <!--                    <p><small>@csrf_token@</small></p>-->
+                <!--end security-->
+
                 <div class="form-empty">
                     <div class="form-col-first">
                         <input
                                 class="account-input"
                                 type="text"
-                                id="first-name"
-                                name="first-name"
+                                name="cus_firstname"
+                                id="cus_firstname"
+                                value="@cus_firstname@"
                         />
-                        <label class="account-label" for="first-name"
+                        <label class="account-label" for="cus_firstname"
                         >First Name</label
                         >
                         <input
                                 class="account-input"
                                 type="text"
-                                id="last-name"
-                                name="last-name"
+                                name="cus_lastname"
+                                id="cus_lastname"
+                                value="@cus_lastname@"
                         />
-                        <label class="account-label" for="last-name">Last Name</label>
+                        <label class="account-label" for="cus_lastname">Last Name</label>
                         <input
                                 class="account-input"
                                 type="text"
-                                id="email"
-                                name="email"
+                                id="cus_email"
+                                name="cus_email"
+                                value="@cus_email@"
                         />
-                        <label class="account-label" for="email">Email</label>
+                        <label class="account-label" for="cus_email">Email</label>
                         <input
                                 class="account-input"
                                 type="password"
@@ -76,8 +93,8 @@
                         <label class="account-label" for="phone">Phone Number</label>
                     </div>
                 </div>
-                <input class="btn submit" type="submit" value="submit" />
-                <input class="btn reset" type="reset" value="reset" />
+                <input class="btn submit" name="submit" type="submit" value="submit" />
+                <input class="btn reset" name="reset" type="reset" value="reset" />
             </form>
         </div>
     </section>

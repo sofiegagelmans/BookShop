@@ -7,79 +7,88 @@
     <section>
         <div class="form-user">
             <div class="form-user-empty">
-                <form action="" class="form-user-account" method="post">
-                        <!--lib/login.php-->
-                    <div class="form-user-col-first">
-                        <h2 class="form-title-sign">Sign in</h2>
-                        <input
-                                class="account-user-input"
-                                type="email"
-                                id="email"
-                                name="cus_email"
-                        />
-                        <label class="account-user-label" for="email">Email</label>
-                        <input
-                                class="account-user-input"
-                                type="password"
-                                id="password"
-                                name="cus_password"
-                        />
-                        <label class="account-user-label" for="password"
-                        >Password</label
-                        >
-                        <input
-                                class="account-user-input"
-                                type="password"
-                                id="repeat_password"
-                                name="r_pwd"
-                        />
-                        <label class="account-user-label" for="password"
-                        >Repeat Password</label
-                        >
-                        <div class="form-user-buttons">
-                            <input class="btn sign-in" type="submit" value="sign in" />
-                            <input
-                                    class="btn sign-out"
-                                    type="submit"
-                                    value="sign out"
-                            />
-                        </div>
-                    </div>
-                </form>
-                <form action="lib/registration.php" class="form-user-account-second" method="post">
+
+                <form action="lib/registration.php" name="mainform" class="form-user-account-second" method="post">
+                    <!-- meta info -->
+                    <input type="hidden" id="table" name="table" value="Customer">
+                    <input type="hidden" id="pkey" name="pkey" value="cus_id">
+                    <input type="hidden" id="afterinsert" name="afterinsert" value="user_information.php">
+                    <input type="hidden" id="afterupdate" name="afterupdate" value="user_information.php">
+                    <!-- end meta info -->
+
+                    <!--security-->
+                    <input type="hidden" name="csrf" value="@csrf_token@">
+<!--                    <p><small>@csrf_token@</small></p>-->
+                    <!--end security-->
+
+
+
+
                     <div class="form-user-col-second">
-                    <h2 class="form-title-create">Create Account</h2>
-                    <input
-                            class="account-user-input"
-                            type="email"
-                            id="email_create_acc"
-                            name="cus_email"
-                    />
-                    <label class="account-user-label" for="email">Email</label>
-                    <input
-                            class="account-user-input"
-                            type="password"
-                            id="password_create"
-                            name="cus_password"
-                    />
-                    <label class="account-user-label" for="password"
-                    >Password</label
-                    >
-                                            <input
-                                                    class="account-user-input"
-                                                    type="password"
-                                                    id="repeat_password_create"
-                                                    name="password"
-                                            />
-                                            <label class="account-user-label" for="password"
-                                            >Repeat Password</label
-                                            >
-                    <input
-                            class="btn create-account"
-                            type="submit"
-                            value="create account"
-                    />
-                </div>
+                        <h2 class="form-title-create">Create Account</h2>
+                        <input
+                                class="account-user-input"
+                                type="text"
+                                name="cus_firstname"
+                                id="cus_firstname"
+                                value="@cus_firstname@"
+
+                        />
+
+                        @cus_firstname_error@
+                        <label class="account-user-label" for="cus_firstname">First Name</label>
+                        <input
+                                class="account-user-input"
+                                type="text"
+                                name="cus_lastname"
+                                id="cus_lastname"
+                                value="@cus_lastname@"
+                        />
+
+                        @cus_lastname_error@
+                        <label class="account-user-label" for="cus_lastname">Last Name</label>
+                        <input
+                                class="account-user-input"
+                                type="text"
+                                id="cus_email"
+                                name="cus_email"
+                                value="@cus_email@"
+                        />
+
+                        @cus_email_error@
+                        <label class="account-user-label" for="cus_email">Email</label>
+                        <input
+                                class="account-user-input"
+                                type="password"
+                                id="cus_password"
+                                name="cus_password"
+                                value="@cus_password@"
+                        />
+<!--                        -->
+                        @cus_password_error@
+                        <label class="account-user-label" for="cus_password"
+                        >Password</label>
+<!--                        <input-->
+<!--                                class="account-user-input"-->
+<!--                                type="password"-->
+<!--                                id="cus_confirm_password"-->
+<!--                                name="cus_confirm_password"-->
+<!--                        />-->
+<!--                        value="@cus_confirm_password_error@"-->
+
+<!--                        @cus_confirm_password_error@-->
+<!--                        <label class="account-user-label" for="cus_confirm_password"-->
+<!--                        >Confirm Password</label>-->
+
+                        <button
+                                class="btn create-account"
+                                type="submit"
+                                value="Save"
+                        >create account</button>
+
+                    </div>
+
+
                 </form>
             </div>
         </div>
