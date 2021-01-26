@@ -94,7 +94,7 @@ $catBookQuery = "SELECT * FROM Product
 
     }
     else{
-        $rows = GetData("select * from Product");
+        $rows = GetData("select * from Product where pro_publish = 1");
         $arrrr = [];
         foreach ($rows as $row) {
             $arrrr[$row['pro_id']] = $row;
@@ -140,19 +140,19 @@ $catBookQuery = "SELECT * FROM Product
             }
          */
 
-//        $stock = "SELECT * FROM Product
-//                  JOIN Stock ON Stock.sto_id = Product.pro_stock_id";
-//        $data = GetData($stock);
-////        $html = MergeViewWithData($template, $data);
-////        print $html;
+        //        $stock = "SELECT * FROM Product
+        //                  JOIN Stock ON Stock.sto_id = Product.pro_stock_id";
+        //        $data = GetData($stock);
+        ////        $html = MergeViewWithData($template, $data);
+        ////        print $html;
 
-    $rows = GetData("select * from Product where pro_publish = 1 ");
-    $template = file_get_contents("templates/bookBlock.html");
-    $html = MergeViewWithData($template, $rows);
+        $rows = GetData("select * from Product where pro_publish = 1 ");
+        $template = file_get_contents("templates/bookBlock.html");
+        $html = MergeViewWithData($template, $rows);
 
 
 
-    if (isset($_POST["search"])) {
+        if (isset($_POST["search"])) {
             Search();
         }elseif (isset($varGet)){
 
@@ -160,33 +160,33 @@ $catBookQuery = "SELECT * FROM Product
             $catTemplate = file_get_contents('templates/bookBlock.html');
             $catHtml = MergeViewWithData($catTemplate, $catFiltred);
             print $catHtml;
-    }
-    elseif (isset($highest)){
-        $sortHighestQuery = "SELECT * FROM Product where pro_publish = 1 order by pro_price desc";
-        $sortHighestFiltred = GetData($sortHighestQuery);
-        $sortTemplate = file_get_contents('templates/bookBlock.html');
-        $sortHtml = MergeViewWithData($sortTemplate, $sortHighestFiltred);
-        print $sortHtml;
-    }
-    elseif (isset($lowest)){
-        $sql = "SELECT * FROM Product where pro_publish = 1 order by pro_price asc";
-        $data = GetData($sql);
-        $html = MergeViewWithData($template, $data);
-        print $html;
-    }
-    elseif (isset($alphabet)){
-        $sql = "SELECT * FROM Product where pro_publish = 1 order by pro_name asc";
-        $data = GetData($sql);
-        $html = MergeViewWithData($template, $data);
-        print $html;
-    }
-    else{
+        }
+        elseif (isset($highest)){
+            $sortHighestQuery = "SELECT * FROM Product where pro_publish = 1 order by pro_price desc";
+            $sortHighestFiltred = GetData($sortHighestQuery);
+            $sortTemplate = file_get_contents('templates/bookBlock.html');
+            $sortHtml = MergeViewWithData($sortTemplate, $sortHighestFiltred);
+            print $sortHtml;
+        }
+        elseif (isset($lowest)){
+            $sql = "SELECT * FROM Product where pro_publish = 1 order by pro_price asc";
+            $data = GetData($sql);
+            $html = MergeViewWithData($template, $data);
+            print $html;
+        }
+        elseif (isset($alphabet)){
+            $sql = "SELECT * FROM Product where pro_publish = 1 order by pro_name asc";
+            $data = GetData($sql);
+            $html = MergeViewWithData($template, $data);
+            print $html;
+        }
+        else{
 
-    print $html;
-    }
-    ?>
+            print $html;
+        }
+        ?>
 
-      </div>
+    </div>
     </section>
 </main>
 
