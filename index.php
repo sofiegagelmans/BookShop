@@ -17,43 +17,44 @@ PrintHeader();
 
         <span>Categories</span>
         <ul>
-    <?php
+            <?php
 
-    global $varGet;
-    global $highest;
-    global $lowest;
-    global $alphabet;
+            global $varGet;
+            global $highest;
+            global $lowest;
+            global $alphabet;
 
 
-    if (key_exists("category",$_GET) && $_GET['category'] != NULL) {
-        $varGet = $_GET['category'];
+            if (key_exists("category",$_GET) && $_GET['category'] != NULL) {
+                $varGet = $_GET['category'];
 
-    }
-    if (key_exists("highest",$_GET) && $_GET['highest'] != NULL) {
-        $highest = $_GET['highest'];
+            }
+            if (key_exists("highest",$_GET) && $_GET['highest'] != NULL) {
+                $highest = $_GET['highest'];
 
-    }
-    if (key_exists("lowest",$_GET) && $_GET['lowest'] != NULL) {
-        $lowest = $_GET['lowest'];
+            }
+            if (key_exists("lowest",$_GET) && $_GET['lowest'] != NULL) {
+                $lowest = $_GET['lowest'];
 
-    }
-    if (key_exists("alphabet",$_GET) && $_GET['alphabet'] != NULL) {
-        $alphabet = $_GET['alphabet'];
+            }
+            if (key_exists("alphabet",$_GET) && $_GET['alphabet'] != NULL) {
+                $alphabet = $_GET['alphabet'];
 
-    }
+            }
 
-    $catSql = "SELECT * FROM Category";
-    $asideTemp = '<li><a href="index.php?category=@cat_name@">@cat_name@</a>';
-    $asideData = GetData($catSql);
-    $mergeCatData = MergeViewWithData($asideTemp,$asideData);
-    print $mergeCatData;
+            $catSql = "SELECT * FROM Category";
+            $asideTemp = '<li><a href="index.php?category=@cat_name@">@cat_name@</a>';
+            $asideData = GetData($catSql);
 
-    ?>
+            $mergeCatData = MergeViewWithData($asideTemp,$asideData);
+            print $mergeCatData;
+
+            ?>
             <li><a href="index.php" class="all-items">Show All</a></li>
         </ul>
     </aside>
 
-<?php
+    <?php
     PrintMain();
 $catBookQuery = "SELECT * FROM Product
                           JOIN Product_Category ON Product.pro_id = Product_Category.pro_cat_pro_id
@@ -64,10 +65,9 @@ if (isset($varGet)){
     $catFiltred = GetData($catBookQuery);
     $arrrr = [];
 
-    foreach ($catFiltred as $row) {
-        $arrrr[$row['pro_id']] = $row;
-    }
-    $items = count($arrrr);
+    if (isset($varGet)){
+        $catFiltred = GetData($catBookQuery);
+        $arrrr = [];
 
     print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
 
@@ -89,6 +89,11 @@ else{
 
        <?php
 
+        $stock = "SELECT * FROM Product
+                  JOIN Stock ON Stock.sto_id = Product.pro_stock_id";
+        $data = GetData($sql);
+        $html = MergeViewWithData($template, $data);
+        print $html;
 
     $rows = GetData("select * from Product where pro_publish = 1 ");
     $template = file_get_contents("templates/bookBlock.html");
@@ -98,7 +103,7 @@ else{
 
     if (isset($_POST["search"])) {
             Search();
-    }elseif (isset($varGet)){
+        }elseif (isset($varGet)){
 
             $catFiltred = GetData($catBookQuery);
             $catTemplate = file_get_contents('templates/bookBlock.html');
