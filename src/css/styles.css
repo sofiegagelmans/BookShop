@@ -163,6 +163,18 @@ body {
   color: #000;
 }
 
+cart-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 10px;
+  padding: 13px 20px;
+  outline: none;
+  border: none;
+}
+
 div.noresult {
   font-size: 16px;
   padding-top: 25px;
@@ -381,7 +393,34 @@ header nav ul li a {
   max-width: 220px;
   box-shadow: 10px 10px 20px 0px #c8c8c8;
 }
-.main section .section-body .book-info-body-text:hover .cart,
+.main section .section-body .book-info-body-text:hover .cart {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  top: 35%;
+  padding-top: 8px;
+}
+.main section .section-body .book-info-body-text:hover .cart button {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 10px;
+  padding: 13px 20px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+}
+.main section .section-body .book-info-body-text:hover .cart button:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+}
 .main section .section-body .book-info-body-text:hover .more-info {
   width: 100%;
   display: flex;
@@ -392,7 +431,6 @@ header nav ul li a {
   top: 35%;
   padding-top: 8px;
 }
-.main section .section-body .book-info-body-text:hover .cart a,
 .main section .section-body .book-info-body-text:hover .more-info a {
   text-decoration: none;
   text-transform: uppercase;
@@ -402,7 +440,6 @@ header nav ul li a {
   margin-bottom: 10px;
   padding: 13px 20px;
 }
-.main section .section-body .book-info-body-text:hover .cart a:hover,
 .main section .section-body .book-info-body-text:hover .more-info a:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
@@ -482,29 +519,28 @@ header nav ul li a {
   display: flex;
   justify-content: space-between;
 }
-.main .detail-page .detail-button .detail-cart {
+.main .detail-page .detail-button .detail-cart-button {
   width: 140px;
   height: 38px;
   text-align: center;
   border-radius: 30px;
+  background-color: #fff;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
   border: none;
   outline: none;
   margin-top: 5px;
   margin-left: 15px;
-  padding-top: 10px;
-}
-.main .detail-page .detail-button .detail-cart:hover {
-  background-color: #00ff00;
-  transition: background-color 0.8s ease;
-  cursor: pointer;
-}
-.main .detail-page .detail-button .detail-cart a {
   font-family: "Inter", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+}
+.main .detail-page .detail-button .detail-cart-button:hover {
+  background-color: #00ff00;
+  transition: background-color 0.8s ease;
+  cursor: pointer;
 }
 
 .detail-return {
@@ -854,7 +890,7 @@ footer p {
 .order-body .order-body-text .text-col-first .remove-add p {
   padding: 0;
 }
-.order-body .order-body-text .text-col-first .remove-add a {
+.order-body .order-body-text .text-col-first .remove-add remove-button {
   text-decoration: none;
   color: #000;
 }
@@ -948,7 +984,7 @@ footer p {
 }
 @media screen and (max-width: 1080px) {
   header nav .brand-name {
-    margin-right: 168px;
+    margin-right: 145px;
   }
 
   header nav .form-search .search-collection {

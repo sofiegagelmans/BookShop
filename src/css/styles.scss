@@ -10,6 +10,19 @@ body {
   font-size: $primary-font-size;
   color: $black;
 }
+
+cart-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: $white;
+  color: $black;
+  margin-bottom: 10px;
+  padding: 13px 20px;
+  outline: none;
+  border: none;
+}
+
 div.noresult {
   font-size: $primary-font-size;
   padding-top: 25px;
@@ -217,7 +230,34 @@ header {
               }
             }
             &:hover {
-              .cart,
+              .cart {
+                width: 100%;
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                top: 35%;
+                padding-top: 8px;
+                button {
+                  font-family: $primary-font;
+                  font-weight: $primary-font-weight;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  border-radius: 30px;
+                  background-color: $white;
+                  color: $black;
+                  margin-bottom: 10px;
+                  padding: 13px 20px;
+                  outline: none;
+                  border: none;
+                  box-shadow: 0px 5px 20px 0px #c8c8c8;
+                  &:hover {
+                    background-color: $green;
+                    transition: background-color 0.8s ease;
+                  }
+                }
+              }
               .more-info {
                 width: 100%;
                 display: flex;
@@ -322,28 +362,27 @@ header {
     .detail-button {
       display: flex;
       justify-content: space-between;
-      .detail-cart {
+      .detail-cart-button {
         width: 140px;
         height: 38px;
         text-align: center;
         border-radius: 30px;
+        background-color: $white;
         box-shadow: 0px 5px 20px 0px #c8c8c8;
         border: none;
         outline: none;
         margin-top: 5px;
         margin-left: 15px;
-        padding-top: 10px;
+        font-family: $primary-font;
+        font-weight: $primary-font-weight;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $black;
         &:hover {
           background-color: $green;
           transition: background-color 0.8s ease;
           cursor: pointer;
-        }
-        a {
-          font-family: $primary-font;
-          font-size: 14px;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: $black;
         }
       }
     }
@@ -702,7 +741,7 @@ footer {
         p {
           padding: 0;
         }
-        a {
+        remove-button {
           text-decoration: none;
           color: $black;
         }
@@ -808,7 +847,7 @@ footer {
 
 @media screen and (max-width: 1080px) {
   header nav .brand-name {
-    margin-right: 168px;
+    margin-right: 145px;
   }
   header nav .form-search .search-collection {
     width: 320px;

@@ -22,9 +22,16 @@
     <p> Price: € @pro_price@</p>
     <br>
     <div class="detail-button">
-        <div class="detail-cart">
-            <a href="#">Add To Cart</a>
-        </div>
+        <form method="post" action="./lib/manageCart.php">
+            <input type="hidden" value="@pro_name@" name="bookname">
+            <input type="number" value="1" name="quantity">
+            <input type="hidden" value="@pro_price@" name="price">
+            <div class="detail-cart">
+                <!--<a href="#">Add To Cart</a>-->
+                <button class="detail-cart-button" type="submit">Add To Cart</button>
+                <!--<a href="javascript:{}" onclick="document.getElementById('cart_form@PRODUCTID@').submit();">-->
+            </div>
+        </form>
     </div>
 </div>
     </div>

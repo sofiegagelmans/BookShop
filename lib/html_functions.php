@@ -6,9 +6,23 @@ function PrintHead()
     print $head;
 }
 
-function PrintCart()
+function PrintCartTop()
 {
-    $cart = file_get_contents("./templates/cart.html");
+    $cart = file_get_contents("./templates/cartTop.html");
+    print $cart;
+}
+function PrintCartRow($price,$image,$name,$quantity)
+{
+    $cart = file_get_contents("./templates/cartRow.html");
+    $cart = str_replace("@price@",$price,$cart);
+    $cart = str_replace("@pro_image@",$image,$cart);
+    $cart = str_replace("@pro_name@",$name,$cart);
+    $cart = str_replace("@quantity@",$quantity,$cart);
+    print $cart;
+}
+function PrintCartBottom()
+{
+    $cart = file_get_contents("./templates/cartBottom.html");
     print $cart;
 }
 function PrintSideMenu()

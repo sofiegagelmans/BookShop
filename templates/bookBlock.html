@@ -4,21 +4,23 @@
         <div class="book-info-body-text">
             <a class="#" href="#">
                 <img src="images/@pro_image@" alt="@pro_name@"/>
-                </a>
-            <div class="cart">
-                <a href="#" onclick="openNav()">Add to Cart</a>
+            </a>
+            <form method="post" action="./lib/manageCart.php">
+                <input type="hidden" value="@pro_name@" name="bookname">
+                <input type="hidden" value="1" name="quantity">
+                <input type="hidden" value="@pro_price@" name="price">
+                <div class="cart">
+                    <button class="cart-button" type="submit">Add to Cart</button>
                 </div>
+            </form>
             <div class="more-info">
-
-
-
                 <a href="detail_book.php?pro_id=@pro_id@">More Info</a>
-                </div>
             </div>
         </div>
+    </div>
     <div class="book-info-footer">
         <div class="book-title">@pro_name@</div>
         <div class="book-price">€ @pro_price@</div>
-        <div class="book-stock">@sto_name@</div>
-        </div>
+        <div class="book-stock">In Stock</div>
+    </div>
 </div>

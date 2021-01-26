@@ -1,0 +1,29 @@
+<!-- CART Row-->
+<div class="order-body">
+    <div class="order-body-book">
+        <img src="images/@pro_image@" alt="@pro_name@"/>
+    </div>
+    <div class="order-body-text">
+        <div class="text-col-first">
+            <p>@pro_name@</p>
+            <p>€ @price@</p>
+            <p>Quantity @quantity@</p>
+            <br>
+            <div class="remove-add">
+                <form method="post" action="./lib/manageCart.php">
+                    <input type="hidden" value="@pro_name@" name="bookname">
+                    <input type="hidden" value="-1" name="quantity">
+                    <input type="hidden" value="@pro_price@" name="price">
+                    <button class="remove-button" type="submit">Remove</button>
+                </form>
+                <p>&nbsp;/&nbsp;</p>
+                <form method="post" action="./lib/manageCart.php">
+                    <input type="hidden" value="@pro_name@" name="bookname">
+                    <input type="hidden" value="1" name="quantity">
+                    <input type="hidden" value="@pro_price@" name="price">
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
