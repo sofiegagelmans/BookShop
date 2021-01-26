@@ -65,9 +65,7 @@ if (isset($varGet)){
     $catFiltred = GetData($catBookQuery);
     $arrrr = [];
 
-    if (isset($varGet)){
-        $catFiltred = GetData($catBookQuery);
-        $arrrr = [];
+
 
     print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
 
@@ -89,11 +87,11 @@ else{
 
        <?php
 
-        $stock = "SELECT * FROM Product
-                  JOIN Stock ON Stock.sto_id = Product.pro_stock_id";
-        $data = GetData($sql);
-        $html = MergeViewWithData($template, $data);
-        print $html;
+//        $stock = "SELECT * FROM Product
+//                  JOIN Stock ON Stock.sto_id = Product.pro_stock_id";
+//        $data = GetData($stock);
+////        $html = MergeViewWithData($template, $data);
+////        print $html;
 
     $rows = GetData("select * from Product where pro_publish = 1 ");
     $template = file_get_contents("templates/bookBlock.html");

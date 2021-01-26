@@ -4,12 +4,12 @@ ini_set( 'display_errors', 1 );
 require_once "autoload.php";
 
 SaveFormData();
+
 function SaveFormData()
 {
     if ( $_SERVER['REQUEST_METHOD'] == "POST" )
     {
-
-//        controle CSRF token
+        //controle CSRF token
         if ( ! key_exists("csrf", $_POST)) die("Missing CSRF");
         if ( ! hash_equals( $_POST['csrf'], $_SESSION['lastest_csrf'] ) ) die("Problem with CSRF");
 
@@ -32,18 +32,15 @@ function SaveFormData()
         $sending_form_uri = $_SERVER['HTTP_REFERER'];
         CompareWithDatabase( $table, $pkey );
 
-
-//        Validaties voor het registratieformulier
+        //Validaties voor het registratieformulier
         if ( $table == "Customer" )
         {
             ValidateUsrPassword( $_POST['cus_password'] );
             ValidateUsrEmail( $_POST['cus_email'] );
             CheckUniqueUsrEmail( $_POST['cus_email'] );
-//            ConfirmPass($_POST['cus_password'], $_POST['cus_confirm_password']);
-
         }
 
-//        terugkeren naar afzender als er een fout is
+        //terugkeren naar afzender als er een fout is
         if ( count($_SESSION['errors']) > 0 )
         {
             $_SESSION['OLD_POST'] = $_POST;
@@ -51,8 +48,8 @@ function SaveFormData()
         }
 
         //insert or update?
-        if ( $_POST["$pkey"] > 0 ) $update = true;
-        else $insert = true;
+//        if ( $_POST["$pkey"] > 0 ) $update = true;
+        $insert = true;
 
         if ( $update ) $sql = "UPDATE $table SET ";
         if ( $insert ) $sql = "INSERT INTO $table SET ";
@@ -71,9 +68,6 @@ function SaveFormData()
                 if ( $update ) $where = " WHERE $pkey = $value ";
                 continue;
             }
-
-
-
 
             if ( $field == "cus_password" ) //encrypt usr_password
             {
@@ -100,10 +94,11 @@ function SaveFormData()
         //run SQL
         $result = ExecuteSQL( $sql );
 
-        //redirect after insert or update
+
+
+
+//        redirect after insert or update
         if ( $insert AND $_POST["afterinsert"] > "" ) header("Location: ../" . $_POST["afterinsert"] );
         if ( $update AND $_POST["afterupdate"] > "" ) header("Location: ../" . $_POST["afterupdate"] );
     }
 }
-
-
