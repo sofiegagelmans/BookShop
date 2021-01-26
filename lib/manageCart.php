@@ -4,32 +4,35 @@ session_start();
 
 $sending_form_uri = $_SERVER['HTTP_REFERER'];
 
-//checked of de ($_SESSION['cart']) bestaat en maakt een nieuwe session aan als ze niet bestaat en zet ze gelijk aan een lege array
+//checken of de "session cart" bestaat en
+// Zoniet, maak een nieuwe sessie aan en zet gelijk een een lege array
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
-//gaat altijd true zijn (voor security zie safe.php -> steven)
+//gaat altijd true zijn
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $cartBook = $_POST['bookname'];
+    $cartId = $_POST['bookId'];
     $cartquantity = $_POST['quantity'];
 
-    //controleren of ($_SESSION['cart'][$cartBook]) bestaat
-    if (!isset($_SESSION['cart']["$cartBook"])) {
-        $_SESSION['cart']["$cartBook"] = $cartquantity;
-    } if ($cartquantity > 0) {
-        if (isset($_SESSION['cart']["$cartBook"])) {
-            $_SESSION['cart']["$cartBook"] = $cartquantity;
-        }
-        else {
-            $_SESSION['cart']["$cartBook"] = $cartquantity;
-        }
+    //controleren of "session cart cart id" al bestaat
+    if (!isset($_SESSION['cart']["$cartId"])) {
+        $_SESSION['cart']["$cartId"] = $cartquantity;
     } else {
-        if ($cartquantity < 0) {
-            if (isset($_SESSION['cart']["$cartBook"]) and ($_SESSION['cart']["$cartBook"]) + $cartquantity > 0) {
-                $_SESSION['cart']["$cartBook"] += $cartquantity;
+        if ($cartquantity > 0) {
+            if (isset($_SESSION['cart']["$cartId"])) {
+                $_SESSION['cart']["$cartId"] += $cartquantity;
             }
-            if (isset($_SESSION['cart']["$cartBook"]) and ($_SESSION['cart']["$cartBook"]) + $cartquantity <= 0) {
-                unset($_SESSION['cart']["$cartBook"]);
+            else {
+                $_SESSION['cart']["$cartId"] = $cartquantity;
+            }
+        } else {
+            if ($cartquantity < 0) {
+                if (isset($_SESSION['cart']["$cartId"]) and ($_SESSION['cart']["$cartId"]) + $cartquantity > 0) {
+                    $_SESSION['cart']["$cartId"] += $cartquantity;
+                }
+                if (isset($_SESSION['cart']["$cartId"]) and ($_SESSION['cart']["$cartId"]) + $cartquantity <= 0) {
+                    unset($_SESSION['cart']["$cartId"]);
+                }
             }
         }
     }

@@ -1,4 +1,4 @@
-<!-- CART Row-->
+<!-- CART ROW-->
 <div class="order-body">
     <div class="order-body-book">
         <img src="images/@pro_image@" alt="@pro_name@"/>
@@ -10,20 +10,23 @@
             <p>Quantity @quantity@</p>
             <br>
             <div class="remove-add">
-                <form method="post" action="./lib/manageCart.php">
-                    <input type="hidden" value="@pro_name@" name="bookname">
+                <form id="cart_form_1@pro_id@" method="post" action="./lib/manageCart.php">
+                    <input type="hidden" value="@pro_id@" name="bookId">
                     <input type="hidden" value="-1" name="quantity">
                     <input type="hidden" value="@pro_price@" name="price">
-                    <button class="remove-button" type="submit">Remove</button>
-                </form>
-                <p>&nbsp;/&nbsp;</p>
-                <form method="post" action="./lib/manageCart.php">
-                    <input type="hidden" value="@pro_name@" name="bookname">
-                    <input type="hidden" value="1" name="quantity">
-                    <input type="hidden" value="@pro_price@" name="price">
-                    <button type="submit">Add</button>
-                </form>
-            </div>
-        </div>
-    </div>
+                    <!--<button class="remove-button" type="submit">Remove</button>-->
+                    <a href="javascript:{}" onclick="document.getElementById('cart_form_1@pro_id@').submit();">Remove</a>
+               </form>
+               <p>&nbsp;/&nbsp;</p>
+               <form id="cart_form_2@pro_id@" method="post" action="./lib/manageCart.php">
+                   <input type="hidden" value="@pro_id@" name="bookId">
+                   <input type="hidden" value="1" name="quantity">
+                   <input type="hidden" value="@pro_price@" name="price">
+                    <!--<button type="submit">Add</button>-->
+                     <a href="javascript:{}" onclick="document.getElementById('cart_form_2@pro_id@').submit();">Add</a>
+
+               </form>
+           </div>
+       </div>
+   </div>
 </div>

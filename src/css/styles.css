@@ -163,18 +163,6 @@ body {
   color: #000;
 }
 
-cart-button {
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 30px;
-  background-color: #fff;
-  color: #000;
-  margin-bottom: 10px;
-  padding: 13px 20px;
-  outline: none;
-  border: none;
-}
-
 div .msgs {
   position: fixed;
   top: 130px;
@@ -394,6 +382,19 @@ header nav ul li a {
 }
 .main section .section-body .book-info-body-text a {
   transition: 0.5s linear;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 10px;
+  padding: 13px 20px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 5px 20px 0px #c8c8c8;
+  cursor: pointer;
 }
 .main section .section-body .book-info-body-text a img {
   width: 100%;
@@ -410,7 +411,7 @@ header nav ul li a {
   top: 35%;
   padding-top: 8px;
 }
-.main section .section-body .book-info-body-text:hover .cart button {
+.main section .section-body .book-info-body-text:hover .cart a {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   text-decoration: none;
@@ -423,8 +424,9 @@ header nav ul li a {
   outline: none;
   border: none;
   box-shadow: 0px 5px 20px 0px #c8c8c8;
+  cursor: pointer;
 }
-.main section .section-body .book-info-body-text:hover .cart button:hover {
+.main section .section-body .book-info-body-text:hover .cart a:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
 }
@@ -526,7 +528,7 @@ header nav ul li a {
   display: flex;
   justify-content: space-between;
 }
-.main .detail-page .detail-button .detail-cart-button {
+.main .detail-page .detail-button a {
   width: 140px;
   height: 38px;
   text-align: center;
@@ -543,8 +545,9 @@ header nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
-.main .detail-page .detail-button .detail-cart-button:hover {
+.main .detail-page .detail-button a:hover {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
   cursor: pointer;
@@ -894,12 +897,12 @@ footer p {
   display: flex;
   padding-left: 25px;
 }
-.order-body .order-body-text .text-col-first .remove-add p {
-  padding: 0;
-}
-.order-body .order-body-text .text-col-first .remove-add remove-button {
+.order-body .order-body-text .text-col-first .remove-add a {
   text-decoration: none;
   color: #000;
+}
+.order-body .order-body-text .text-col-first .remove-add p {
+  padding: 0;
 }
 
 .side-menu {

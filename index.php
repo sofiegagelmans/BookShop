@@ -3,6 +3,9 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 require_once "lib/autoload.php";
+
+//$_SESSION['cart'] =[];
+
 //addproductifneded();
 PrintHead();
 PrintSideMenu();
@@ -12,10 +15,10 @@ PrintCartTop();
 
 if ((isset($_SESSION['cart']))) { //als de session cart bestaat
     foreach ($_SESSION['cart'] as $key => $value) { //voeren we voor elk element het volgende uit
-        $sql="SELECT pro_price,pro_name,pro_image FROM Product WHERE pro_name = '$key'"; //sql statement
+        $sql="SELECT pro_price,pro_name,pro_image,pro_id FROM Product WHERE pro_id = '$key'"; //sql statement
         $data = GetData($sql); //data uit de databank halen en stoppen in variable $data
 
-        printCartRow($data[0]['pro_price'],$data[0]['pro_image'],$data[0]['pro_name'],$value);
+        printCartRow($data[0]['pro_price'],$data[0]['pro_image'],$data[0]['pro_name'],$value,$data[0]['pro_id']);
     }
 }
 
@@ -82,19 +85,24 @@ $catBookQuery = "SELECT * FROM Product
         $catFiltred = GetData($catBookQuery);
         $arrrr = [];
 
-    print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
+        foreach ($catFiltred as $row) {
+            $arrrr[$row['pro_id']] = $row;
+        }
+        $items = count($arrrr);
 
-}
-else{
-    $rows = GetData("select * from Product where pro_publish = 1 ");
-    $arrrr = [];
-    foreach ($rows as $row) {
-        $arrrr[$row['pro_id']] = $row;
+        print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
+
     }
-    $items = count($arrrr);
-    print $span = "<span href='#' class='amount-items'> ($items Items)</span>";
-}
-?>
+    else{
+        $rows = GetData("select * from Product");
+        $arrrr = [];
+        foreach ($rows as $row) {
+            $arrrr[$row['pro_id']] = $row;
+        }
+        $items = count($arrrr);
+        print $span = "<span href='#' class='amount-items'> ($items Items) </span>";
+    }
+    ?>
 
     </div>
     <div class="section-body">

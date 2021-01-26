@@ -7,7 +7,6 @@ require_once "lib/autoload.php";
 
 
 PrintHead();
-PrintCart();
 PrintSideMainUI();
 PrintLittleSearchButton();
 PrintHeader();
