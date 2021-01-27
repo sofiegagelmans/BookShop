@@ -7,11 +7,23 @@ SaveFormData();
 
 function SaveFormData()
 {
+
+
+//    global $app_root;
+
+
     if ( $_SERVER['REQUEST_METHOD'] == "POST" )
     {
+
+
+
+//        if ( ! isset( $_POST['btnOpslaan'] ) )
+//        {
+//            GoHome(); exit;
+        }
         //controle CSRF token
-        if ( ! key_exists("csrf", $_POST)) die("Missing CSRF");
-        if ( ! hash_equals( $_POST['csrf'], $_SESSION['lastest_csrf'] ) ) die("Problem with CSRF");
+//        if ( ! key_exists("csrf", $_POST)) die("Missing CSRF");
+//        if ( ! hash_equals( $_POST['csrf'], $_SESSION['lastest_csrf'] ) ) die("Problem with CSRF");
 
         $_SESSION['lastest_csrf'] = "";
 
@@ -20,6 +32,7 @@ function SaveFormData()
         $_POST = ConvertSpecialChars($_POST);
 
         $table = $pkey = $update = $insert = $where = $str_keys_values = "";
+
 
         //get important metadata
         if ( ! key_exists("table", $_POST)) die("Missing table");
@@ -41,7 +54,7 @@ function SaveFormData()
         }
 
         //terugkeren naar afzender als er een fout is
-        if ( count($_SESSION['errors']) > 0 )
+        if ( isset( $_SESSION['errors'] ) AND count($_SESSION['errors']) > 0 )
         {
             $_SESSION['OLD_POST'] = $_POST;
             header( "Location: " . $sending_form_uri ); exit();
@@ -94,11 +107,8 @@ function SaveFormData()
         //run SQL
         $result = ExecuteSQL( $sql );
 
-
-
-
 //        redirect after insert or update
         if ( $insert AND $_POST["afterinsert"] > "" ) header("Location: ../" . $_POST["afterinsert"] );
         if ( $update AND $_POST["afterupdate"] > "" ) header("Location: ../" . $_POST["afterupdate"] );
-    }
+
 }

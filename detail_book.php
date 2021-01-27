@@ -25,7 +25,6 @@ if ((isset($_SESSION['cart']))) { //als de session cart bestaat
 <?php
     PrintHeader();
 
-//join zit een fout (zonder werkt het)
         $detailSQL = "SELECT * from Product
                       WHERE pro_id=" . $_GET['pro_id'];
 

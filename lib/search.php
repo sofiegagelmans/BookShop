@@ -10,7 +10,7 @@ function Search() {
 
     foreach ($list as $text){
 
-        $data = GetData("SELECT * FROM Product JOIN Author ON Product.pro_aut_id = Author.aut_id 
+        $data = GetData("SELECT * FROM Product  
                       WHERE aut_firstname LIKE '%$text%' 
                       OR aut_lastname LIKE '%$text%'  
                       OR pro_name LIKE '%$text%'");
@@ -24,6 +24,8 @@ function Search() {
     }
     $arrayUniek = array_unique($resultList);
     $template = file_get_contents("templates/bookBlock.html");
+    $extra_elements['csrf_token'] = GenerateCSRF("index.php");
     $html = MergeViewWithData($template, $arrayUniek);
+    $html = MergeViewWithExtraElements($html, $extra_elements);
     print $html;
 }

@@ -2,14 +2,16 @@
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
+//$public_access =  true;
 require_once "lib/autoload.php";
 
 
 
 PrintHead();
+//PrintCart();
 PrintSideMainUI();
 PrintLittleSearchButton();
-PrintHeader();
+//PrintHeader();
 
 
 
@@ -18,38 +20,18 @@ PrintHeader();
 
     <?php
     PrintHeader();
-//    PrintUserInfoMain();
+    $data = GetData( "select * from Customer order by cus_id desc limit 1");
 
-
-    //toon messages als er zijn
-
-
-
-    if (count($old_post) > 0) {
-        $data = [0 => [
-
-            "cus_firstname" => $old_post['cus_firstname'],
-            "cus_lastname" => $old_post['cus_lastname'],
-            "cus_email" => $old_post['cus_email'],
-            "cus_password" => $old_post['cus_password']
-        ]
-        ];
-    }
-    else $data = [0 => ["cus_firstname" => "", "cus_lastname" => "", "cus_email" => "", "cus_password" => ""]];
-    //, "cus_confirm_password" => ""]
     //get template
     $output = file_get_contents("templates/user_information.html");
-
-
-
     //add extra elements
-    $extra_elements['csrf_token'] = GenerateCSRF("user_account.php");
+//    $extra_elements['csrf_token'] = GenerateCSRF( "user_information.php"  );
 
     //merge
-    $output = MergeViewWithData($output, $data);
-    $output = MergeViewWithExtraElements($output, $extra_elements);
-    $output = MergeViewWithErrors($output, $errors);
-    $output = RemoveEmptyErrorTags($output, $data);
+    $output = MergeViewWithData( $output, $data );
+//    $output = MergeViewWithExtraElements( $output, $extra_elements );
+    //$output = MergeViewWithErrors( $output, $errors );
+    $output = RemoveEmptyErrorTags( $output, $data);
 
     print $output;
 
@@ -57,7 +39,7 @@ PrintHeader();
     {
         print '<div class="msgs">' . $msg . '</div>';
     }
-    ?>
+      ?>
 
 
 </div>
