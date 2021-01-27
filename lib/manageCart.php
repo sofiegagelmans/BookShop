@@ -30,14 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 if (isset($_SESSION['cart']["$cartId"]) and ($_SESSION['cart']["$cartId"]) + $cartquantity > 0) {
                     $_SESSION['cart']["$cartId"] += $cartquantity;
                 }
-                if (isset($_SESSION['cart']["$cartId"]) and ($_SESSION['cart']["$cartId"]) + $cartquantity <= 0) {
+                elseif (isset($_SESSION['cart']["$cartId"]) and ($_SESSION['cart']["$cartId"]) + $cartquantity <= 0) {
                     unset($_SESSION['cart']["$cartId"]);
                 }
             }
         }
     }
 }
-
-
 
 header("Location: " . $sending_form_uri); // dit stuurt je terug naar de pagina waar je op zat

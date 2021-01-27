@@ -19,11 +19,11 @@
     <p> Publisher: @pub_name@</p>
     <p> Year of publication: @pro_year@</p>
     <p> Number of pages: @pro_pages@</p>
-    <p> Price: € @pro_price@</p>
+    <p> Price: €@pro_price@</p>
     <br>
     <div class="detail-button">
         <form id="cart_form@pro_id@" method="post" action="./lib/manageCart.php">
-            <input type="hidden" value="@pro_name@" name="bookname">
+            <input type="hidden" value="@pro_id@" name="bookId">
             <input type="number" value="1" name="quantity">
             <input type="hidden" value="@pro_price@" name="price">
             <div class="detail-cart">

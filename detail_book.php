@@ -4,6 +4,8 @@
 
     require_once "lib/autoload.php";
 
+//$_SESSION['cart'] = [];
+
     PrintHead();
     PrintCartTop();
 
@@ -11,7 +13,6 @@ if ((isset($_SESSION['cart']))) { //als de session cart bestaat
     foreach ($_SESSION['cart'] as $key => $value) { //voeren we voor elk element het volgende uit
         $sql="SELECT pro_price,pro_name,pro_image,pro_id FROM Product WHERE pro_id = '$key'"; //sql statement
         $data = GetData($sql); //data uit de databank halen en stoppen in variable $data
-
         printCartRow($data[0]['pro_price'],$data[0]['pro_image'],$data[0]['pro_name'],$value,$data[0]['pro_id']);
     }
 }
