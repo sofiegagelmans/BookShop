@@ -1,13 +1,14 @@
 <?php
-require_once "autoload.php";
-function CreateConnection()
 
-{
-//    global $items;
+require_once "autoload.php";
+
+function CreateConnection() {
+
+    //globaal
     global $conn;
     global $servername, $dbname, $username, $password;
 
-    // Create and check connection
+    //creeër en controleer de connectie
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -17,41 +18,35 @@ function CreateConnection()
     }
 }
 
-function GetData( $sql )
-{
+function GetData($sql) {
+    //globaal
     global $conn;
 
     CreateConnection();
 
-    //define and execute query
-    $result = $conn->query( $sql );
+    //query definiëren en uitvoeren
+    $result = $conn->query($sql);
 
-    //show result (if there is any)
-    if ( $result->rowCount() > 0 )
-    {
-        $rows = $result->fetchAll(PDO::FETCH_ASSOC); //geeft array zoals ['lan_id'] => 1, ...
-//        $rows = $result->fetchAll(PDO::FETCH_NUM); //geeft array zoals [0] => 1, ...
-//        $rows = $result->fetchAll(PDO::FETCH_BOTH); //geeft array zoals [0] => 1, ['lan_id'] => 1, ...
-
-
+    //toon het resultaat als er een resultaat is
+    if ($result->rowCount() > 0) {
+        $rows = $result->fetchAll(PDO::FETCH_ASSOC);
+        //$rows = $result->fetchAll(PDO::FETCH_NUM);
+        //$rows = $result->fetchAll(PDO::FETCH_BOTH);
 
         return $rows;
-    }
-    else
-    {
+    } else {
         return [];
     }
-
 }
 
-function ExecuteSQL( $sql )
-{
+function ExecuteSQL($sql) {
+
     global $conn;
 
     CreateConnection();
 
-    //define and execute query
-    $result = $conn->query( $sql );
+    //query definiëren en uitvoeren
+    $result = $conn->query($sql);
 
     return $result;
 }

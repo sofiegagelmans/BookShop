@@ -1,37 +1,40 @@
+<!-- DETAIL BOOK -->
+
 <main class="main">
     <div class="detail-page">
        <div class="detail-book">
            <div class="detail-book-cover">
         <div class="detail-book-header">
             <a class="#" href="">
-                <img src="images/@pro_image@" alt="@pro_name@" />
+                <img src="images/@pro_image@" alt="@pro_name@"/>
             </a>
         </div>
     </div>
        </div>
-       <div class="detail-text">
-    <p>@pro_description@</p>
-    <br>
-    <p>@pro_description@</p>
-    <br>
-    <p> Title: @pro_name@</p>
-    <p> Author: @aut_firstname@ @aut_lastname@</p>
-    <p> Publisher: @pub_name@</p>
-    <p> Year of publication: @pro_year@</p>
-    <p> Number of pages: @pro_pages@</p>
-    <p> Price: €@pro_price@</p>
-    <br>
-    <div class="detail-button">
-        <form id="cart_form@pro_id@" method="post" action="./lib/manageCart.php">
-            <input type="hidden" value="@pro_id@" name="bookId">
-            <input type="number" value="1" name="quantity">
-            <input type="hidden" value="@pro_price@" name="price">
-            <div class="detail-cart">
-                <a href="javascript:{}" onclick="document.getElementById('cart_form@pro_id@').submit();">Add to Cart</a>
+            <div class="detail-text">
+            <p>@pro_description@</p>
+            <br>
+            <p>@pro_description@</p>
+            <br>
+            <p> Title: @pro_name@</p>
+            <p> Author: @aut_firstname@ @aut_lastname@</p>
+            <p> Publisher: @pub_name@</p>
+            <p> Year of publication: @pro_year@</p>
+            <p> Number of pages: @pro_pages@</p>
+            <p> Price: €@pro_price@</p>
+            <br>
+            <div class="detail-button">
+                <form id="cart_form@pro_id@" method="post" action="./lib/manageCart.php">
+                    <input type="hidden" value="@pro_id@" name="bookId">
+                    <input type="number" value="1" name="quantity">
+                    <input type="hidden" value="@pro_price@" name="price">
+                    <div class="detail-cart">
+                        <a href="javascript:{}" onclick="document.getElementById('cart_form@pro_id@').submit();">Add to Cart</a>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
+        </div>
     </div>
 </main>
+
 <a class="detail-return" href="index.php"><--- Go Back</a>

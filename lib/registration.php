@@ -1,7 +1,12 @@
 <?php
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
+
+$public_access =  true;
 require_once "autoload.php";
+
+
+
 
 SaveFormData();
 
@@ -9,18 +14,16 @@ function SaveFormData()
 {
 
 
-//    global $app_root;
+    global $app_root;
 
 
     if ( $_SERVER['REQUEST_METHOD'] == "POST" )
     {
 
-
-
-//        if ( ! isset( $_POST['btnOpslaan'] ) )
+//        if ( !isset( $_POST['btnOpslaan'] ) )
 //        {
 //            GoHome(); exit;
-        }
+//        }
         //controle CSRF token
 //        if ( ! key_exists("csrf", $_POST)) die("Missing CSRF");
 //        if ( ! hash_equals( $_POST['csrf'], $_SESSION['lastest_csrf'] ) ) die("Problem with CSRF");
@@ -41,16 +44,27 @@ function SaveFormData()
         $table = $_POST['table'];
         $pkey = $_POST['pkey'];
 
+
+        //insert or update?
+        if (key_exists("$pkey", $_POST) and $_POST["$pkey"] > 0 ){$update = true;}
+        else{
+            $insert = true;
+        }
+
+
         //validation
         $sending_form_uri = $_SERVER['HTTP_REFERER'];
         CompareWithDatabase( $table, $pkey );
 
+
         //Validaties voor het registratieformulier
-        if ( $table == "Customer" )
+        if ( $table == "Customer" AND $insert)
         {
+
             ValidateUsrPassword( $_POST['cus_password'] );
             ValidateUsrEmail( $_POST['cus_email'] );
             CheckUniqueUsrEmail( $_POST['cus_email'] );
+
         }
 
         //terugkeren naar afzender als er een fout is
@@ -60,9 +74,7 @@ function SaveFormData()
             header( "Location: " . $sending_form_uri ); exit();
         }
 
-        //insert or update?
-//        if ( $_POST["$pkey"] > 0 ) $update = true;
-        $insert = true;
+
 
         if ( $update ) $sql = "UPDATE $table SET ";
         if ( $insert ) $sql = "INSERT INTO $table SET ";
@@ -103,12 +115,14 @@ function SaveFormData()
 
         //extend SQL with WHERE
         $sql .= $where;
-
+//echo $sql;
+//var_dump($_SESSION['errors']);
+//die();
         //run SQL
-        $result = ExecuteSQL( $sql );
+         ExecuteSQL( $sql );
 
 //        redirect after insert or update
         if ( $insert AND $_POST["afterinsert"] > "" ) header("Location: ../" . $_POST["afterinsert"] );
         if ( $update AND $_POST["afterupdate"] > "" ) header("Location: ../" . $_POST["afterupdate"] );
-
+    }
 }

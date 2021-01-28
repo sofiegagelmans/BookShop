@@ -2,25 +2,23 @@
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
-//$public_access = true;
+$public_access = true;
 require_once "autoload.php";
 
-/*
 $user = LoginCheck();
 
 if ( $user )
 {
     $_SESSION['user'] = $user;
     $_SESSION['msgs'][] = "Welkom, " . $_SESSION['user']['cus_firstname'];
-//    header("Location: ../index.php");
-//    GoHome();
+    header("Location: ../index.php");
+    GoHome();
 }
 else
 {
     unset( $_SESSION['user'] );
-//   GoToNoAccess();
+    GoToNoAccess();
 }
-*/
 
 function LoginCheck()
 {

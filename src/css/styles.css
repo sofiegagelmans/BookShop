@@ -377,9 +377,6 @@ header nav ul li a {
 .main section .section-body .book-info-body-text .cart {
   display: none;
 }
-.main section .section-body .book-info-body-text .more-info {
-  display: none;
-}
 .main section .section-body .book-info-body-text a {
   transition: 0.5s linear;
 }
@@ -395,7 +392,7 @@ header nav ul li a {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  top: 35%;
+  top: 40%;
   padding-top: 8px;
 }
 .main section .section-body .book-info-body-text:hover .cart a {
@@ -417,42 +414,8 @@ header nav ul li a {
   background-color: #00ff00;
   transition: background-color 0.8s ease;
 }
-.main section .section-body .book-info-body-text:hover .more-info {
-  width: 100%;
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  top: 35%;
-  padding-top: 8px;
-}
-.main section .section-body .book-info-body-text:hover .more-info a {
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 30px;
-  background-color: #fff;
-  color: #000;
-  margin-bottom: 10px;
-  padding: 13px 20px;
-}
-.main section .section-body .book-info-body-text:hover .more-info a:hover {
-  background-color: #00ff00;
-  transition: background-color 0.8s ease;
-}
 .main section .section-body .book-info-body-text:hover .cart {
   font-size: 14px;
-}
-.main section .section-body .book-info-body-text:hover .more-info {
-  top: 160px;
-}
-.main section .section-body .book-info-body-text:hover .more-info a {
-  width: 135px;
-  text-align: center;
-}
-.main section .section-body .book-info-body-text:hover .more-info a:hover {
-  background-color: #00ff00;
-  transition: background-color 0.8s ease;
 }
 .main section .section-body .book-info-footer {
   display: flex;
@@ -461,8 +424,10 @@ header nav ul li a {
 .main section .section-body .book-info-footer .book-price {
   margin-left: 40px;
 }
-.main section .section-body .book-info-footer .book-stock {
+.main section .section-body .book-info-footer .more-info a {
+  text-decoration: none;
   text-transform: uppercase;
+  color: #000;
   margin-left: auto;
 }
 .main section .section-body .book-info-footer .book-more-info {

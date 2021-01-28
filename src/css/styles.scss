@@ -212,9 +212,6 @@ header {
             .cart {
               display: none;
             }
-            .more-info {
-              display: none;
-            }
             a {
               transition: 0.5s linear;
               img {
@@ -231,7 +228,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 font-size: 14px;
-                top: 35%;
+                top: 40%;
                 padding-top: 8px;
                 a {
                   font-family: $primary-font;
@@ -253,42 +250,8 @@ header {
                   }
                 }
               }
-              .more-info {
-                width: 100%;
-                display: flex;
-                position: absolute;
-                justify-content: center;
-                align-items: center;
-                font-size: 14px;
-                top: 35%;
-                padding-top: 8px;
-                a {
-                  text-decoration: none;
-                  text-transform: uppercase;
-                  border-radius: 30px;
-                  background-color: $white;
-                  color: $black;
-                  margin-bottom: 10px;
-                  padding: 13px 20px;
-                  &:hover {
-                    background-color: $green;
-                    transition: background-color 0.8s ease;
-                  }
-                }
-              }
               .cart {
                 font-size: 14px;
-              }
-              .more-info {
-                top: 160px;
-                a {
-                  width: 135px;
-                  text-align: center;
-                  &:hover {
-                    background-color: $green;
-                    transition: background-color 0.8s ease;
-                  }
-                }
               }
             }
           }
@@ -299,9 +262,13 @@ header {
           .book-price {
             margin-left: 40px;
           }
-          .book-stock {
-            text-transform: uppercase;
-            margin-left: auto;
+          .more-info {
+            a {
+              text-decoration: none;
+              text-transform: uppercase;
+              color: $black;
+              margin-left: auto;
+            }
           }
           .book-more-info {
             margin-left: 40px;

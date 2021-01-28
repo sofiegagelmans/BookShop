@@ -1,26 +1,22 @@
 <!-- MAIN -->
+
 <main class="main">
     <aside>
         <span>My Account</span>
     </aside>
+
     <!-- CREATE ACCOUNT -->
+
     <section>
         <div class="form-user">
             <div class="form-user-empty">
                 <form action="lib/login_check.php" id="mainform" name="mainform" class="form-user-account" method="post">
-<!--                    security-->
+                    <!--security-->
                     <input type="hidden" name="csrf" value="@csrf_token@">
-<!--                    end security-->
-
-
+                    <!--end security-->
                     <div class="form-user-col-first">
                         <h2 class="form-title-sign">Sign in</h2>
-                        <input
-                                class="account-user-input"
-                                type="email"
-                                id="cus_email"
-                                name="cus_email"
-                        />
+                            <input class="account-user-input" type="email" id="cus_email" name="cus_email"/>
                         <label class="account-user-label" for="cus_email">Email</label>
                         <input
                                 class="account-user-input"

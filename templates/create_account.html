@@ -1,13 +1,15 @@
 <!-- MAIN -->
+
 <main class="main">
     <aside>
         <span>My Account</span>
     </aside>
+
     <!-- CREATE ACCOUNT -->
+
     <section>
         <div class="form-user">
             <div class="form-user-empty">
-
                 <form action="lib/registration.php" name="mainform" class="form-user-account-second" method="post">
                     <!-- meta info -->
                     <input type="hidden" id="table" name="table" value="Customer">
@@ -18,77 +20,25 @@
 
                     <!--security-->
                     <input type="hidden" name="csrf" value="@csrf_token@">
-<!--                    <p><small>@csrf_token@</small></p>-->
+                    <!--<p><small>@csrf_token@</small></p>-->
                     <!--end security-->
-
-
-
 
                     <div class="form-user-col-second">
                         <h2 class="form-title-create">Create Account</h2>
-                        <input
-                                class="account-user-input"
-                                type="text"
-                                name="cus_firstname"
-                                id="cus_firstname"
-                                value="@cus_firstname@"
-
-                        />
-
-                        @cus_firstname_error@
-                        <label class="account-user-label" for="cus_firstname">First Name</label>
-                        <input
-                                class="account-user-input"
-                                type="text"
-                                name="cus_lastname"
-                                id="cus_lastname"
-                                value="@cus_lastname@"
-                        />
-
-                        @cus_lastname_error@
-                        <label class="account-user-label" for="cus_lastname">Last Name</label>
-                        <input
-                                class="account-user-input"
-                                type="text"
-                                id="cus_email"
-                                name="cus_email"
-                                value="@cus_email@"
-                        />
-
-                        @cus_email_error@
-                        <label class="account-user-label" for="cus_email">Email</label>
-                        <input
-                                class="account-user-input"
-                                type="password"
-                                id="cus_password"
-                                name="cus_password"
-                                value="@cus_password@"
-                        />
-<!--                        -->
-                        @cus_password_error@
-                        <label class="account-user-label" for="cus_password"
-                        >Password</label>
-<!--                        <input-->
-<!--                                class="account-user-input"-->
-<!--                                type="password"-->
-<!--                                id="cus_confirm_password"-->
-<!--                                name="cus_confirm_password"-->
-<!--                        />-->
-<!--                        value="@cus_confirm_password_error@"-->
-
-<!--                        @cus_confirm_password_error@-->
-<!--                        <label class="account-user-label" for="cus_confirm_password"-->
-<!--                        >Confirm Password</label>-->
-
-                        <button
-                                class="btn create-account"
-                                type="submit"
-                                value="Save"
-                        >create account</button>
-
+                            <input class="account-user-input" type="text" name="cus_firstname" id="cus_firstname" value="@cus_firstname@"/>
+                            @cus_firstname_error@
+                            <label class="account-user-label" for="cus_firstname">First Name</label>
+                            <input class="account-user-input" type="text" name="cus_lastname" id="cus_lastname" value="@cus_lastname@"/>
+                            @cus_lastname_error@
+                            <label class="account-user-label" for="cus_lastname">Last Name</label>
+                            <input class="account-user-input" type="text" id="cus_email" name="cus_email" value="@cus_email@"/>
+                            @cus_email_error@
+                            <label class="account-user-label" for="cus_email">Email</label>
+                            <input class="account-user-input" type="password" id="cus_password" name="cus_password" value="@cus_password@"/>
+                            @cus_password_error@
+                            <label class="account-user-label" for="cus_password">Password</label>
+                        <button class="btn create-account" type="submit" value="Save">create account</button>
                     </div>
-
-
                 </form>
             </div>
         </div>
