@@ -43,10 +43,6 @@ PrintHeader();
 
   ?>
 
-
-        ?>
-
-
     </div>
     <a class="detail-return" href="index.php"><--- Go Back</a>
 <?php
