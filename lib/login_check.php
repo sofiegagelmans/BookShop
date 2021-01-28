@@ -48,7 +48,7 @@ function LoginCheck() {
             header("Location: " . $sending_form_uri); exit();
         }
 
-        //search user in database
+        //search user in de database
         $email = $_POST['cus_email'];
         $ww = $_POST['cus_password'];
 
