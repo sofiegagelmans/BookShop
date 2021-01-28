@@ -11,7 +11,7 @@ function Search() {
 
     foreach ($list as $text) {
 
-        //sql
+        //sql statement
         $data = GetData("SELECT * FROM Product WHERE aut_firstname LIKE '%$text%' OR aut_lastname LIKE '%$text%' OR pro_name LIKE '%$text%'");
 
         if ($data ==  null) {

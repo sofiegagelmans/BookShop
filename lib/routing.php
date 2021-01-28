@@ -1,15 +1,13 @@
 <?php
 
-function GoToNoAccess()
-{
+function GoToNoAccess() {
     global $app_root;
 
     header("Location: " . $app_root . "/login.php");
     exit;
 }
 
-function GoHome()
-{
+function GoHome() {
     global $app_root;
 
     header("Location: " . $app_root . "/user_information.php");

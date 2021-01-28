@@ -127,7 +127,7 @@ function MergeViewWithErrors($template, $errors) {
 function RemoveEmptyErrorTags($template, $data) {
 
     foreach ($data as $row) {
-        foreach( array_keys($row) as $field ) {
+        foreach(array_keys($row) as $field ) {
             $template = str_replace( "@$field" . "_error@", "", $template );
         }
     }

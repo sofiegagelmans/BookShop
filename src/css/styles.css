@@ -424,11 +424,13 @@ header nav ul li a {
 .main section .section-body .book-info-footer .book-price {
   margin-left: 40px;
 }
+.main section .section-body .book-info-footer .more-info {
+  margin-left: auto;
+}
 .main section .section-body .book-info-footer .more-info a {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  margin-left: auto;
 }
 .main section .section-body .book-info-footer .book-more-info {
   margin-left: 40px;

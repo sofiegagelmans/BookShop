@@ -7,26 +7,21 @@ require_once "autoload.php";
 
 $user = LoginCheck();
 
-if ( $user )
-{
+if ($user) {
     $_SESSION['user'] = $user;
     $_SESSION['msgs'][] = "Welkom, " . $_SESSION['user']['cus_firstname'];
     header("Location: ../index.php");
     GoHome();
-}
-else
-{
+} else {
     unset( $_SESSION['user'] );
     GoToNoAccess();
 }
 
-function LoginCheck()
-{
-    if ( $_SERVER['REQUEST_METHOD'] == "POST" )
-    {
-        //controle CSRF token
-//        if ( ! key_exists("csrf", $_POST)) die("Missing CSRF");
-//        if ( ! hash_equals( $_POST['csrf'], $_SESSION['lastest_csrf'] ) ) die("Problem with CSRF");
+function LoginCheck() {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        //controle CSRF
+        //if (!key_exists("csrf", $_POST)) die("Missing CSRF");
+        //if (!hash_equals( $_POST['csrf'], $_SESSION['lastest_csrf'] ) ) die("Problem with CSRF");
 
         $_SESSION['lastest_csrf'] = "";
 
@@ -37,24 +32,20 @@ function LoginCheck()
         //validation
         $sending_form_uri = $_SERVER['HTTP_REFERER'];
 
-        //Validaties voor het loginformulier
-        if ( true )
-        {
-            if ( ! key_exists("cus_email", $_POST ) OR strlen($_POST['cus_email']) < 5 )
-            {
+        //validaties voor het loginformulier
+        if (true) {
+            if (!key_exists("cus_email", $_POST) OR strlen($_POST['cus_email']) < 5) {
                 $_SESSION['errors']['cus_email'] = "Het wachtwoord is niet correct ingevuld";
             }
-            if ( ! key_exists("cus_password", $_POST ) OR strlen($_POST['cus_password']) < 8 )
-            {
+            if (!key_exists("cus_password", $_POST) OR strlen($_POST['cus_password']) < 8) {
                 $_SESSION['errors']['cus_password'] = "Het wachtwoord is niet correct ingevuld";
             }
         }
 
         //terugkeren naar afzender als er een fout is
-        if ( key_exists("errors" , $_SESSION ) AND count($_SESSION['errors']) > 0 )
-        {
+        if (key_exists("errors" , $_SESSION) AND count($_SESSION['errors']) > 0) {
             $_SESSION['OLD_POST'] = $_POST;
-            header( "Location: " . $sending_form_uri ); exit();
+            header("Location: " . $sending_form_uri); exit();
         }
 
         //search user in database
@@ -64,14 +55,11 @@ function LoginCheck()
         $sql = "SELECT * FROM Customer WHERE cus_email='$email' ";
         $data = GetData($sql);
 
-        if ( count($data) > 0 )
-        {
-            foreach ( $data as $row )
-            {
+        if (count($data) > 0) {
+            foreach ($data as $row) {
                 if ( password_verify( $ww, $row['cus_password'] ) ) return $row;
             }
         }
-
         return null;
     }
 }

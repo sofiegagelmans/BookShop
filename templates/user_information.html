@@ -1,4 +1,5 @@
 <!-- MAIN -->
+
 <main class="main">
     <aside>
         <span>My Account</span>
@@ -8,87 +9,47 @@
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </aside>
+
     <!-- USER INFORMATION -->
     <section>
-
     <h2 class="form-title-user">User Information</h2>
         <div class="form-account">
             <form action="lib/registration.php" id="mainform" name="mainform" class="form" method="post">
-
                 <!-- meta info -->
-<!--                <input type="hidden" id="formname" name="formname" value="user_information">-->
+                <!--<input type="hidden" id="formname" name="formname" value="user_information">-->
                 <input type="hidden" id="table" name="table" value="Customer">
                 <input type="hidden" id="pkey" name="pkey" value="cus_id">
                 <input type="hidden" id="afterinsert" name="afterinsert" value="user_information.php">
                 <input type="hidden" id="afterupdate" name="afterupdate" value="user_information.php">
                 <!-- end meta info -->
 
-<!--                security-->
+                <!--security-->
                 <input type="hidden" name="csrf" value="@csrf_token@">
                 <input type="hidden" id="cus_id" name="cus_id" value="@cus_id@">
                 <!--end security-->
 
                 <div class="form-empty">
                     <div class="form-col-first">
-                        <input
-                                class="account-input"
-                                type="text"
-                                name="cus_firstname"
-                                id="cus_firstname"
-                                value="@cus_firstname@"
-                        />
+                        <input class="account-input" type="text" name="cus_firstname" id="cus_firstname" value="@cus_firstname@"/>
                         @cus_firstname_error@
-                        <label class="account-label" for="cus_firstname"
-                        >First Name</label
-                        >
-                        <input
-                                class="account-input"
-                                type="text"
-                                name="cus_lastname"
-                                id="cus_lastname"
-                                value="@cus_lastname@"
-                        />
+                        <label class="account-label" for="cus_firstname">First Name</label>
+                        <input class="account-input" type="text" name="cus_lastname" id="cus_lastname" value="@cus_lastname@"/>
                         @cus_lastname_error@
                         <label class="account-label" for="cus_lastname">Last Name</label>
-                        <input
-                                class="account-input"
-                                type="text"
-                                id="cus_phone"
-                                name="cus_phone"
-                                value="@cus_phone@"
-                        />
+                        <input class="account-input" type="text" id="cus_phone" name="cus_phone" value="@cus_phone@"/>
                         <label class="account-label" for="cus_phone">Phone Number</label>
                     </div>
                     <div class="form-col-second">
-                        <input
-                                class="account-input"
-                                type="text"
-                                id="cus_street"
-                                name="cus_street"
-                                value="@cus_street@"
-                        />
-
+                        <input class="account-input" type="text" id="cus_street" name="cus_street" value="@cus_street@"/>
                         <label class="account-label" for="cus_street">Address</label>
-                        <input
-                                class="account-input"
-                                type="text"
-                                id="cus_city"
-                                name="cus_city"
-                                value="@cus_city@"
-                        />
+                        <input class="account-input" type="text" id="cus_city" name="cus_city" value="@cus_city@"/>
                         <label class="account-label" for="cus_city">City</label>
-                        <input
-                                class="account-input"
-                                type="text"
-                                id="cus_postalcode_id"
-                                name="cus_postalcode_id"
-                                value="@cus_postalcode_id@"
-                        />
+                        <input class="account-input" type="text" id="cus_postalcode_id" name="cus_postalcode_id" value="@cus_postalcode_id@"/>
                         <label class="account-label" for="cus_postalcode_id">Postal Code</label>
                     </div>
                 </div>
-                <input class="btn submit"  type="submit" value="Save" />
-                <input class="btn reset" name="btnAnnuleren" type="reset" value="reset" />
+                <input class="btn submit" type="submit" value="Save"/>
+                <input class="btn reset" name="btnAnnuleren" type="reset" value="reset"/>
             </form>
         </div>
     </section>
