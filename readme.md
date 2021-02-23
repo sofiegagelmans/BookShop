@@ -1,1 +1,3 @@
-# Online Bookshop of Sofie and Khachatur
+# Online Bookshop
+
+# Sofie and Khachatur
