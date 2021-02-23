@@ -1,3 +1,3 @@
-# Online Bookshop
+# Bookshop
 
 # Sofie and Khachatur
