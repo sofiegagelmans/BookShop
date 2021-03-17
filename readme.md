@@ -1,3 +1,3 @@
-# Bookshop
+# Bookshop Exercise
 
 # Sofie and Khachatur
